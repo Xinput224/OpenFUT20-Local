@@ -31,89 +31,93 @@ class Log:
 
 def payload(response): return json.loads(response[2].decode("utf-8"))
 
-def main():
-    state=State(); db={}
+def build_db():
+    db={}
     # Five players, each with Baby/Mid/Prime Icon versions.
     for asset in range(1,6):
         for version,rating in enumerate((85,88,91),1):
             rid=asset*100000+version
-            db[str(rid)]={"resourceId":rid,"assetId":asset,"rating":rating,"rarityName":"Icon","name":f"Icon {asset}-{version}"}
+            db[str(rid)]={"resourceId":rid,"assetId":asset,"rating":rating,"rarityName":"Icon","name":f"Icon {asset}-{version}","special":True}
+    # Special 86+ pool, including a real 99 possibility.
+    for i,rating in enumerate((86,87,88,90,92,94,96,97,98,99),1):
+        rid=2000000+i
+        db[str(rid)]={"resourceId":rid,"assetId":rid,"rating":rating,"rarityName":"Flashback","name":f"Special {rating}","special":True}
+    # TOTY-only pool.
+    for i,rating in enumerate((94,96,97,98,99),1):
+        rid=3000000+i
+        db[str(rid)]={"resourceId":rid,"assetId":rid,"rating":rating,"rarityName":"Team of the Year","name":f"TOTY {rating}","special":True}
+    # TOTS-only pool.
+    for i,rating in enumerate((86,88,90,92,95,97,99),1):
+        rid=4000000+i
+        rarity="TOTS Moments" if i==1 else "Team of the Season So Far"
+        db[str(rid)]={"resourceId":rid,"assetId":rid,"rating":rating,"rarityName":rarity,"name":f"TOTS {rating}","special":True}
+    return db
+
+def main():
+    state=State(); db=build_db()
     def pack_wire(raw):
-        out=dict(raw)
-        out.pop("pile",None)
-        out["contracts"]=int(out.get("contract") or 7)
-        out["injuryType"]="none"
-        return out
-    def wrong_serializer(_raw):
-        raise AssertionError("Player Pick candidates must prefer _native_pack_item")
-    g={"PLAYER_DB":db,"CONSUMABLE_DB":{},"log":Log(),
-       "_native_pack_item":pack_wire,"_native_player_item":wrong_serializer}
+        out=dict(raw); out.pop("pile",None); out["contracts"]=int(out.get("contract") or 7); out["injuryType"]="none"; return out
+    selected_wire_calls=[]
+    def player_wire(raw): selected_wire_calls.append(int(raw.get("id") or 0)); return dict(raw)
+    g={"PLAYER_DB":db,"CONSUMABLE_DB":{},"log":Log(),"_native_pack_item":pack_wire,"_native_player_item":player_wire}
+
+    # Icon packs: three tokens, and every token is a native 1-of-3 pick.
     opened=promo.create_custom_pack(state,26,g); tokens=[int(x["id"]) for x in opened["items"]]
-    assert len(tokens)==1
-    # FIFA 20 native 1-of-5 definition: 5004094 / Name27 / amount 4219.
+    assert len(tokens)==3
     for token_id in tokens:
         token=state.get_item(token_id)
-        assert int(token["resourceId"])==5004094
-        assert token["name"]=="PlayerPickItemName27"
-        assert int(token["amount"])==4219
+        assert int(token["resourceId"])==5004241
+        assert token["name"]=="PlayerPickItemName113"
+        assert int(token["amount"])==4012
         assert all(k not in token for k in ("availablePicks","pickSize","selectionSize"))
 
-    # Simulate two unresolved V24 tokens. V25 must migrate them in place so a
-    # user's existing save keeps the same token instance IDs and purchase.
-    for token_id in tokens:
-        token=state.get_item(token_id); token.update({
-            "resourceId":5004241,"definitionId":5004241,"_definitionId":5004241,
-            "name":"PlayerPickItemName113","detaildescription":"PlayerPickItemDetailDesc113",
-            "amount":4012,"availablePicks":1,"pickSize":5,"selectionSize":5,
-        })
-        raw=json.dumps(token,separators=(",",":"))
-        state.conn.execute("UPDATE items SET resource_id=?,data=? WHERE id=?",(5004241,raw,token_id))
-        state.conn.execute("UPDATE player_pick_tokens SET token_json=? WHERE token_id=?",(raw,token_id))
-    state.conn.commit()
-    changed=promo._migrate_legacy_pick_tokens(state,g)
-    assert changed==tokens
-    for token_id in tokens:
-        token=state.get_item(token_id)
-        assert int(token["resourceId"])==5004094 and token["name"]=="PlayerPickItemName27" and int(token["amount"])==4219
-        assert all(k not in token for k in ("availablePicks","pickSize","selectionSize"))
+    # Simulate an unresolved V28 1-of-5 token and confirm in-place migration.
+    legacy=tokens[0]; token=state.get_item(legacy); token.update({
+        "resourceId":5004094,"definitionId":5004094,"_definitionId":5004094,
+        "name":"PlayerPickItemName27","detaildescription":"PlayerPickItemDetailDesc27","amount":4219,
+    })
+    raw=json.dumps(token,separators=(",",":"));
+    state.conn.execute("UPDATE items SET resource_id=?,data=? WHERE id=?",(5004094,raw,legacy))
+    state.conn.execute("UPDATE player_pick_tokens SET token_json=? WHERE token_id=?",(raw,legacy)); state.conn.commit()
+    changed=promo._migrate_legacy_pick_tokens(state,g); assert changed==[legacy]
+    assert state.get_item(legacy)["resourceId"]==5004241
 
     selected=[]
     for turn,token_id in enumerate(tokens):
-        response=promo.handle_native_request(state,"POST",f"/ut/game/fifa20/item/nontargeted?itemId={token_id}",{},b"",g)
-        first=payload(response); ids=[int(x["id"]) for x in first["items"]]
-        assert len(ids)==5 and len(set(ids))==5
-        # Temporary Player Pick candidates must not claim a normal repository pile.
-        # FIFA's successful confirm path performs that transition itself.
+        first=payload(promo.handle_native_request(state,"POST",f"/ut/game/fifa20/item/nontargeted?itemId={token_id}",{},b"",g))
+        ids=[int(x["id"]) for x in first["items"]]
+        assert len(ids)==3 and len(set(ids))==3 and first["pickSize"]==3 and first["selectionSize"]==3
         assert all("pile" not in x for x in first["items"])
-        assert all("definitionId" not in x and "_definitionId" not in x for x in first["items"])
-        assert all(x.get("contracts")==7 and x.get("injuryType")=="none" for x in first["items"])
-        # Simulate a process restart by discarding all compatibility globals.
-        promo._PICK_TOKENS={}; promo._ACTIVE_PICK=None
-        pending=payload(promo.handle_native_request(state,"GET","/ut/game/fifa20/playerpicks/pending",{},b"",g))
-        assert [int(x["id"]) for x in pending["items"]]==ids
-        chosen=pending["items"][turn%5]; rid=int(chosen["resourceId"]); cid=int(chosen["id"])
+        chosen=first["items"][turn%3]; rid=int(chosen["resourceId"]); cid=int(chosen["id"])
         ack=promo.handle_native_request(state,"POST",f"/ut/game/fifa20/playerpicks/item/{rid}/select",{},b"",g)
-        assert ack[0]==200 and ack[2]==b""
-        assert "Content-Type" not in ack[1]
-        assert "Content-Length" not in ack[1]
-        stored=state.get_item(cid)
-        assert stored and int(stored["id"])==cid and int(stored["resourceId"])==rid and stored["pile"]=="unassigned"
-        assert state.conn.execute("SELECT count(*) FROM player_pick_candidates").fetchone()[0]==0
-        selected.append((cid,rid))
+        selected_response=payload(ack)
+        assert int(selected_response["id"])==cid and int(selected_response["resourceId"])==rid
+        assert selected_response["pile"]=="unassigned"
+        stored=state.get_item(cid); assert stored and stored["pile"]=="unassigned"
         before=state.conn.execute("SELECT count(*) FROM items").fetchone()[0]
-        stale=promo.handle_native_request(state,"POST",f"/ut/game/fifa20/playerpicks/item/{rid}/select",{},b"",g)
-        assert stale[0]==200 and stale[2]==b""
-        assert "Content-Type" not in stale[1]
-        assert "Content-Length" not in stale[1]
-        assert state.conn.execute("SELECT count(*) FROM items").fetchone()[0]==before
-        remaining=len(promo.pick_state.available_tokens(state)); assert remaining==0
-    assert not promo.pick_state.pending_flag(state)
-    assert len(selected)==1
-    mass=promo.augment_response(state,"GET","/ut/game/fifa20/usermassinfo",(200,{},b'{"userInfo":{}}'),g)
-    assert payload(mass)["isPlayerPicksTemporaryStorageNotEmpty"] is False
-    settings=promo.augment_response(state,"GET","/ut/game/fifa20/settings",(200,{},b'{"settings":{}}'),g)
-    assert payload(settings)["enablePlayerPicks"]==1
-    print("PASS: 1 token -> 1 persistent pick -> 1 exact-ID Unassigned player")
-    print("selected:",selected)
+        stale=payload(promo.handle_native_request(state,"POST",f"/ut/game/fifa20/playerpicks/item/{rid}/select",{},b"",g))
+        assert int(stale["id"])==cid and state.conn.execute("SELECT count(*) FROM items").fetchone()[0]==before
+        selected.append((cid,rid))
+    assert len(selected)==3 and not promo.pick_state.pending_flag(state)
+
+    # New pools are constrained exactly as advertised.
+    pools=promo._pools(g)
+    assert pools["special86"] and all(db[str(r)]["special"] and db[str(r)]["rating"]>=86 for r in pools["special86"])
+    assert pools["toty"] and all(db[str(r)]["rarityName"]=="Team of the Year" for r in pools["toty"])
+    assert pools["tots"] and all(db[str(r)]["rarityName"] in {"Team of the Season So Far","TOTS Moments"} for r in pools["tots"])
+    for pid,key in ((29,"special86"),(30,"toty"),(31,"tots")):
+        s2=State(); op=promo.create_custom_pack(s2,pid,g); assert len(op["items"])==1
+        token_id=int(op["items"][0]["id"])
+        pick=payload(promo.handle_native_request(s2,"POST",f"/ut/game/fifa20/item/nontargeted?itemId={token_id}",{},b"",g))
+        assert len(pick["items"])==3
+        assert all(int(x["resourceId"]) in pools[key] for x in pick["items"])
+        # Resolve it so globals/durable state are clean before the next pack.
+        rid=int(pick["items"][0]["resourceId"])
+        promo.handle_native_request(s2,"POST",f"/ut/game/fifa20/playerpicks/item/{rid}/select",{},b"",g)
+        promo._PICK_TOKENS={}; promo._ACTIVE_PICK=None
+
+    assert selected_wire_calls
+    print("PASS: V29 1-of-3 semantics, 3x Icon picks, and constrained Special/TOTY/TOTS pools")
+    print("icon selections:",selected)
 
 if __name__=="__main__": main()

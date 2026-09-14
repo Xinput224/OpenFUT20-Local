@@ -1,5 +1,5 @@
 {
-  "next_pack_id": 30,
+  "next_pack_id": 32,
   "packs": {
     "1": {
       "enabled": true,
@@ -39,7 +39,7 @@
       "silver_weight": 0,
       "bronze_weight": 0,
       "rare_slots": 1,
-      "special_chance": 0.025,
+      "special_chance": 0.04,
       "store_group": "gold",
       "special_weights": {
         "3": 55,
@@ -64,7 +64,7 @@
       "rare_slots": 5,
       "min_rating": 80,
       "guaranteed_specials": 0,
-      "special_chance": 0.08,
+      "special_chance": 0.11,
       "store_group": "special",
       "special_weights": {
         "3": 45,
@@ -98,7 +98,7 @@
       "rare_slots": 7,
       "min_rating": 82,
       "guaranteed_specials": 1,
-      "special_chance": 0.17,
+      "special_chance": 0.21,
       "store_group": "special",
       "special_weights": {
         "3": 45,
@@ -132,7 +132,7 @@
       "rare_slots": 10,
       "min_rating": 84,
       "guaranteed_specials": 3,
-      "special_chance": 0.3,
+      "special_chance": 0.36,
       "store_group": "special",
       "special_weights": {
         "3": 45,
@@ -166,7 +166,7 @@
       "rare_slots": 11,
       "min_rating": 87,
       "guaranteed_specials": 7,
-      "special_chance": 0.55,
+      "special_chance": 0.62,
       "store_group": "special",
       "pack_asset_id": 4,
       "special_weights": {
@@ -408,7 +408,7 @@
     "23": {
       "enabled": true,
       "name": "Jumbo bambo",
-      "bio": "10 player items rated 85 or higher.",
+      "bio": "10 player items rated 85-99, with slightly improved odds of pulling special/high-end cards.",
       "price": 200000,
       "size": 10,
       "gold_weight": 100,
@@ -418,7 +418,7 @@
       "min_rating": 85,
       "max_rating": 99,
       "guaranteed_specials": 0,
-      "special_chance": 0.15,
+      "special_chance": 0.26,
       "store_group": "special",
       "pack_asset_id": 4,
       "content_type": "players",
@@ -435,25 +435,25 @@
     },
     "28": {
       "enabled": true,
-      "name": "Xinput Specials",
-      "bio": "5 special player items rated 95 or lower.",
+      "name": "Xinput 87+ Mix",
+      "bio": "5 player items rated 87-99. Mix of elite Gold and special cards, with good high-end odds without guaranteeing a 99.",
       "price": 300000,
       "size": 5,
       "gold_weight": 100,
       "silver_weight": 0,
       "bronze_weight": 0,
       "rare_slots": 5,
-      "min_rating": 75,
-      "max_rating": 95,
-      "guaranteed_specials": 5,
-      "special_chance": 1.0,
+      "min_rating": 87,
+      "max_rating": 99,
+      "guaranteed_specials": 2,
+      "special_chance": 0.4,
       "store_group": "special",
       "pack_asset_id": 4,
       "content_type": "players",
       "special_weights": {
         "3": 45,
         "4": 5,
-        "5": 2,
+        "5": 3,
         "6": 4,
         "7": 5,
         "8": 12,
@@ -465,30 +465,13 @@
         "51": 5,
         "61": 3,
         "64": 3,
-        "66": 10,
+        "66": 12,
         "73": 3,
-        "84": 2
-      }
-    },
-    "29": {
-      "enabled": true,
-      "name": "GET IT IF YOU CAN",
-      "bio": "3 ShapeShifters player items.",
-      "price": 250000,
-      "size": 3,
-      "gold_weight": 100,
-      "silver_weight": 0,
-      "bronze_weight": 0,
-      "rare_slots": 3,
-      "min_rating": 75,
-      "max_rating": 99,
-      "guaranteed_specials": 3,
-      "special_chance": 1.0,
-      "store_group": "special",
-      "pack_asset_id": 4,
-      "content_type": "players",
-      "special_weights": {
-        "97": 100
+        "84": 3,
+        "30": 4,
+        "71": 4,
+        "95": 4,
+        "97": 4
       }
     }
   }

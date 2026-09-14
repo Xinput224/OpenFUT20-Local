@@ -28,8 +28,8 @@
     },
     "localfut20.server": {
       "file": "localfut20/server.py",
-      "marshal_sha256": "840fb8ff2822ac5c688d46e25e41eeba0f9e6412d263989005c54c570f822418",
-      "marshal_bytes": 730070
+      "marshal_sha256": "257077c22bf86a9879903096b826f02a5867ef9537456863016795540ce4f754",
+      "marshal_bytes": 730085
     },
     "redirector_tls": {
       "file": "runtime-source/redirector_tls.py",

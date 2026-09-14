@@ -10,7 +10,7 @@
   "club_abbr": "OFC",
   "squad_id": 1,
   "squad_name": "Local Test XI",
-  "credits": 0,
+  "credits": 100000000,
   "fut_game": "fifa20",
   "game_sku": "FFA20PCC",
   "fut_sku": "FUT20PCC",
@@ -42,7 +42,7 @@
   "reserve_players": [],
   "pack_size": 12,
   "pack_cost": 7500,
-  "special_pack_chance": 0.1,
+  "special_pack_chance": 0.12,
   "rare_flag": 1,
   "debug_unknown_http": true,
   "starter_xi_only": true

@@ -7,30 +7,30 @@ from localfut20 import player_pick_state as pick_state
 
 # Custom store packs. These are intentionally store/runtime-only and do not touch launcher/auth.
 CUSTOM_CONFIG = {
-    24: {"enabled": True, "name": "Baby Icon 1x5 Player Pick", "bio": "1 Player Pick. Shows 5 Baby Icons. Choose 1 player.", "price": 1000000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
-    25: {"enabled": True, "name": "Mid Icon 1x5 Player Pick", "bio": "1 Player Pick. Shows 5 Mid Icons. Choose 1 player.", "price": 1000000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 5, "special_weights": {}, "_special_weights": {}},
-    26: {"enabled": True, "name": "Prime Icon 1x5 Player Pick", "bio": "1 Player Pick. Shows 5 Prime Icons. Choose 1 player.", "price": 1000000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 6, "special_weights": {}, "_special_weights": {}},
-    27: {"enabled": True, "name": "Icon Moments 1x5 Player Pick", "bio": "1 Player Pick. Shows 5 Icon Moments. Choose 1 player.", "price": 1000000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    24: {"enabled": True, "name": "Baby Icon 3x3 Player Pick", "bio": "3 Player Picks. Each pick shows 3 Baby Icons. Choose 1 player from each pick.", "price": 1000000, "size": 3, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 3, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    25: {"enabled": True, "name": "Mid Icon 3x3 Player Pick", "bio": "3 Player Picks. Each pick shows 3 Mid Icons. Choose 1 player from each pick.", "price": 1000000, "size": 3, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 3, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 5, "special_weights": {}, "_special_weights": {}},
+    26: {"enabled": True, "name": "Prime Icon 3x3 Player Pick", "bio": "3 Player Picks. Each pick shows 3 Prime Icons. Choose 1 player from each pick.", "price": 1000000, "size": 3, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 3, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 6, "special_weights": {}, "_special_weights": {}},
+    27: {"enabled": True, "name": "Icon Moments 3x3 Player Pick", "bio": "3 Player Picks. Each pick shows 3 Icon Moments. Choose 1 player from each pick.", "price": 1000000, "size": 3, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 3, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    29: {"enabled": True, "name": "86+ Special 1 of 3 Player Pick", "bio": "1 Player Pick. Shows 3 special players rated 86-99. Choose 1. High-end cards are possible, not guaranteed.", "price": 500000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    30: {"enabled": True, "name": "TOTY 1 of 3 Player Pick", "bio": "1 Player Pick. Shows 3 Team of the Year players. Choose 1.", "price": 750000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    31: {"enabled": True, "name": "TOTS 1 of 3 Player Pick", "bio": "1 Player Pick. Shows 3 Team of the Season players. Choose 1.", "price": 500000, "size": 1, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 1.0, "store_group": "special", "pack_asset_id": 4, "special_weights": {}, "_special_weights": {}},
+    32: {"enabled": True, "name": "Gold Players Pack", "bio": "12 Gold players only. Contains at least 1 Rare Gold player and no Silver, Bronze, or special cards.", "price": 12500, "size": 12, "gold_weight": 100, "silver_weight": 0, "bronze_weight": 0, "rare_slots": 1, "special_chance": 0.0, "store_group": "gold", "pack_asset_id": 3, "special_weights": {}, "_special_weights": {}},
 }
 CUSTOM_IDS=set(CUSTOM_CONFIG)
-PICK_IDS={24,25,26,27}
+PICK_IDS={24,25,26,27,29,30,31}
 
-# Real FIFA 20 *1-of-5* player-pick item from the FUT 20 static catalog.
-# V18-V24 used 5004241 / PlayerPickItemName113 / amount 4012, but the
-# original FIFA 20 catalog defines that item as a 1-of-3 FUT Champions pick.
-# A native 1-of-5 pick is 5004094 / PlayerPickItemName27 / amount 4219.
-# Matching the token's static definition to the five-card carousel matters on
-# FIFA's successful-selection cleanup path, so unresolved legacy tokens are
-# migrated to this definition before they are exposed to the client.
-LEGACY_PICK_RESOURCE_IDS = {5004241}
-REAL_PICK_RESOURCE_ID = 5004094
+# FIFA 20 native 1-of-3 player-pick item from the FUT 20 static catalog.
+# V28 proved the successful selection contract; V29 switches the carousel back
+# to the matching 1-of-3 static definition for all current custom Player Picks.
+LEGACY_PICK_RESOURCE_IDS = {5004094}
+REAL_PICK_RESOURCE_ID = 5004241
 REAL_PICK_CARD_ASSET_ID = 44
 REAL_PICK_STATIC = {
     "cardassetid": REAL_PICK_CARD_ASSET_ID,
     "cardsubtypeid": 237,
     "rating": 99,
     "rareflag": 1,
-    "amount": 4219,
+    "amount": 4012,
     "bronze": 0,
     "silver": 0,
     "gold": 0,
@@ -62,6 +62,8 @@ def _store_entry(pid,cfg):
     # Match the stock Local FUT store schema one-for-one. Keep all IDs aligned,
     # and expose the copy in every title/description field FIFA has been seen to read.
     visual_asset_id = int(cfg.get("pack_asset_id") or 4)
+    store_group = str(cfg.get("store_group") or "special")
+    rare_qty = max(0,min(size,int(cfg.get("rare_slots") or 0)))
     return {
       "id":pid,"assetId":visual_asset_id,"packId":pid,"packAssetId":visual_asset_id,
       "quantity":1,"unopenedQuantity":0,"unopened":False,"isReward":False,"isMyPack":False,"tradable":True,"tradeable":True,
@@ -71,9 +73,9 @@ def _store_entry(pid,cfg):
       "localizedName":name,"localizedDescription":bio,"titleText":name,"descriptionText":bio,"packDesc":bio,
       "finalPrice":price,"originalPrice":price,"coins":price,"points":0,
       "currencies":[{"name":"coins","funds":price,"finalFunds":price},{"name":"points","funds":0,"finalFunds":0}],
-      "categoryList":{"categoryId":4,"orderInCategory":pid},"displayGroup":{"value":"special","priority":4},
-      "purchaseGroup":"special","group":"special","state":"active","packType":"GOLD","sortPriority":pid,
-      "packContentInfo":{"itemQuantity":size,"goldQuantity":size,"silverQuantity":0,"bronzeQuantity":0,"rareQuantity":size},
+      "categoryList":{"categoryId":4,"orderInCategory":pid},"displayGroup":{"value":store_group,"priority":4},
+      "purchaseGroup":store_group,"group":store_group,"state":"active","packType":"GOLD","sortPriority":pid,
+      "packContentInfo":{"itemQuantity":size,"goldQuantity":size,"silverQuantity":0,"bronzeQuantity":0,"rareQuantity":rare_qty},
       "visible":True,"isPurchaseable":True,"isCoinPurchasable":True,"isFifaPointPurchasable":False,"isPromo":True,"isAvailableInStore":True,
     }
 
@@ -110,13 +112,13 @@ def _valid_head_file(path):
 
 
 def _register_pick_head_aliases(g, resource_ids):
-    """Map each Icon pick resource/base ID to an already bundled portrait of the same player.
+    """Register only verified same-player portrait aliases for Player Picks.
 
-    FIFA 20 asks for the selected player's DDS head while closing the native
-    Player Pick view. Many Baby/Mid/Prime Icon resource IDs do not have their
-    own head file, but the same player's Icon Moments variant does. Reusing the
-    same-player portrait is visually correct and avoids the fatal 404 seen in
-    the crash trace.
+    V29 used a generic bundled Icon portrait when no matching file existed.
+    That prevented the normal FUT content resolver from handling non-Icon
+    special cards and produced the repeated/wrong face seen on TOTY/TOTS/TOTW
+    picks. V30 deliberately leaves unresolved heads unaliased so the server's
+    catalog portrait path can build the correct DDS for that exact resource.
     """
     db=g.get("PLAYER_DB") or {}
     by_asset=defaultdict(list)
@@ -129,54 +131,48 @@ def _register_pick_head_aliases(g, resource_ids):
         if rid and aid:
             by_asset[aid].append(meta)
 
-    # Rare fallback only for an Icon with no bundled same-player portrait.
-    generic=None
-    preferred=(67348386, 67345928, 67348385)
-    for rid in preferred:
-        for p in _head_file_candidates(rid):
-            if _valid_head_file(p):
-                generic=p
-                break
-        if generic:
-            break
-    if generic is None:
-        root=Path(__file__).resolve().parent
-        for p in sorted((root / "localfut20" / "playerheads").glob("p*.dds")):
-            if _valid_head_file(p):
-                generic=p
-                break
-
     log=g.get("log")
     for rid0 in resource_ids:
         rid=int(rid0)
         meta=_meta(g,rid)
         aid=int(meta.get("assetId") or rid)
         source=None
-        # Prefer an exact file first, then another card version of the same player.
-        for candidate_rid in (rid,):
-            for p in _head_file_candidates(candidate_rid):
-                if _valid_head_file(p):
-                    source=p; break
-            if source: break
-        if source is None:
+
+        # Exact resource portrait always wins.
+        for p in _head_file_candidates(rid):
+            if _valid_head_file(p):
+                source=p
+                break
+
+        # Icons may safely reuse another version of the *same player*.
+        rarity=str(meta.get("rarityName") or "")
+        if source is None and rarity in {"Icon","Icon Moments"}:
             rows=sorted(
                 by_asset.get(aid,[]),
-                key=lambda m:(0 if str(m.get("rarityName") or "")=="Icon Moments" else 1, -int(m.get("rating") or 0), int(m.get("resourceId") or 0))
+                key=lambda m:(0 if str(m.get("rarityName") or "")=="Icon Moments" else 1,
+                              -int(m.get("rating") or 0), int(m.get("resourceId") or 0))
             )
             for candidate in rows:
                 crid=int(candidate.get("resourceId") or 0)
                 for p in _head_file_candidates(crid):
                     if _valid_head_file(p):
-                        source=p; break
-                if source: break
-        if source is None:
-            source=generic
+                        source=p
+                        break
+                if source:
+                    break
+
         if source is not None:
             _PICK_HEAD_ALIASES[rid]=str(source)
+            # Asset-id alias is safe only when the source is the same player's image.
             _PICK_HEAD_ALIASES[aid]=str(source)
             if log:
                 log.warning("PLAYER-PICK HEAD MAP resource=%s asset=%s source=%s",rid,aid,source.name)
-
+        else:
+            # Remove stale aliases so the stock dynamic portrait resolver gets the request.
+            _PICK_HEAD_ALIASES.pop(rid,None)
+            _PICK_HEAD_ALIASES.pop(aid,None)
+            if log:
+                log.warning("PLAYER-PICK HEAD FALLTHROUGH resource=%s asset=%s rarity=%s",rid,aid,rarity)
 
 def _serve_pick_head(raw_path, g):
     match=_PICK_HEAD_RE.search(urlsplit(str(raw_path)).path)
@@ -212,13 +208,20 @@ def _all99(g):
 
 
 def _pools(g):
-    by=defaultdict(list); moments=[]
+    by=defaultdict(list); moments=[]; special86=[]; toty=[]; tots=[]
     for m in g["PLAYER_DB"].values():
         rid=_rid(m)
         if not rid: continue
         rarity=str(m.get("rarityName") or "")
+        rating=int(m.get("rating") or 0)
         if rarity=="Icon": by[int(m.get("assetId") or rid)].append(m)
         elif rarity=="Icon Moments": moments.append(rid)
+        if bool(m.get("special")) and rating>=86:
+            special86.append(rid)
+        if rarity=="Team of the Year":
+            toty.append(rid)
+        if rarity in {"Team of the Season So Far","TOTS Moments"}:
+            tots.append(rid)
     baby=[]; mid=[]; prime=[]; overflow=[]
     for rows in by.values():
         rows=sorted(rows,key=lambda m:(int(m.get("rating") or 0),_rid(m)))
@@ -227,7 +230,31 @@ def _pools(g):
         if len(rows)>=3: prime.append(_rid(rows[2]))
         if len(rows)>3: overflow.extend(_rid(m) for m in rows[3:])
     moments.extend(overflow)
-    return {"baby":sorted(set(baby)),"mid":sorted(set(mid)),"prime":sorted(set(prime)),"moments":sorted(set(moments))}
+    return {
+        "baby":sorted(set(baby)),"mid":sorted(set(mid)),"prime":sorted(set(prime)),
+        "moments":sorted(set(moments)),"special86":sorted(set(special86)),
+        "toty":sorted(set(toty)),"tots":sorted(set(tots)),
+    }
+
+
+def _weighted_sample_resources(pool, g, count, rating_bias=1.0):
+    """Unique random sample with a gentle rating bias for the 86+ special pick."""
+    rng=random.SystemRandom(); remaining=list(dict.fromkeys(int(x) for x in pool)); out=[]
+    count=min(int(count),len(remaining))
+    while remaining and len(out)<count:
+        weights=[]
+        for rid in remaining:
+            rating=int(_meta(g,rid).get("rating") or 0)
+            weights.append(float(rating_bias) ** max(0,rating-86))
+        total=sum(weights)
+        needle=rng.random()*total
+        acc=0.0; chosen_index=len(remaining)-1
+        for i,w in enumerate(weights):
+            acc+=w
+            if needle<=acc:
+                chosen_index=i; break
+        out.append(remaining.pop(chosen_index))
+    return out
 
 
 def _response(state,g,pid,resources):
@@ -260,7 +287,7 @@ def _ensure_real_pick_static(g):
 
 
 def _token_item(backing, pack_id, title, sequence):
-    """Return a subtype-237 token whose static identity is FIFA 20's 1-of-5 pick."""
+    """Return a subtype-237 token whose static identity is FIFA 20's 1-of-3 pick."""
     item=dict(backing or {})
     token_id=int(item.get("id") or 0)
     item.update({
@@ -278,24 +305,24 @@ def _token_item(backing, pack_id, title, sequence):
         "owners":1,"untradeable":True,"pile":"unassigned","discardValue":0,
         "formation":"f433","teamid":0,"leagueId":0,"loans":0,
         "statsList":[],"lifetimeStats":[],"attributeList":[],
-        "resourceGameYear":2020,"weightrare":0,"amount":4219,
-        "name":"PlayerPickItemName27",
-        "detaildescription":"PlayerPickItemDetailDesc27",
-        "description":"1 of 5 FUT Champions Players",
+        "resourceGameYear":2020,"weightrare":0,"amount":4012,
+        "name":"PlayerPickItemName113",
+        "detaildescription":"PlayerPickItemDetailDesc113",
+        "description":"1 of 3 FUT Champions Players",
         # These aliases are retained because the local repository uses them to
         # classify an owned item; the underlying static resource is now exact.
         "displayName":title,"shortName":title,"title":title,
         "sequence":int(sequence),"customPackId":int(pack_id),"isPlayerPick":True,
     })
-    # V24 added synthetic cardinality fields to compensate for using a 1-of-3
-    # static definition. The genuine 1-of-5 static item does not need them.
+    # Keep synthetic cardinality fields off the owned token. The native 1-of-3
+    # static definition already carries its own cardinality semantics.
     for key in ("availablePicks","pickSize","selectionSize"):
         item.pop(key,None)
     return item
 
 
 def _migrate_legacy_pick_tokens(state, g=None):
-    """Upgrade only unresolved V18-V24 pick tokens; never touch resolved players."""
+    """Upgrade unresolved older custom pick tokens; never touch resolved players."""
     pick_state.ensure(state)
     changed=[]
     with state.lock:
@@ -329,7 +356,7 @@ def _migrate_legacy_pick_tokens(state, g=None):
         g["log"].warning(
             "PLAYER-PICK STATIC MIGRATION tokens=%s old=%s new=%s name=%s amount=%s",
             changed,sorted(LEGACY_PICK_RESOURCE_IDS),REAL_PICK_RESOURCE_ID,
-            "PlayerPickItemName27",4219,
+            "PlayerPickItemName113",4012,
         )
     return changed
 
@@ -347,12 +374,20 @@ def _persist_pick_token(state, pack_id, title, sequence, g):
 
 def _create_pick_tokens(state, pack_id, g):
     pid=int(pack_id)
-    specs={24:("baby","Baby Icon 1x5 Player Pick"),25:("mid","Mid Icon 1x5 Player Pick"),26:("prime","Prime Icon 1x5 Player Pick"),27:("moments","Icon Moments 1x5 Player Pick")}
-    key,title=specs[pid]
+    specs={
+        24:("baby","Baby Icon 3x3 Player Pick",3),
+        25:("mid","Mid Icon 3x3 Player Pick",3),
+        26:("prime","Prime Icon 3x3 Player Pick",3),
+        27:("moments","Icon Moments 3x3 Player Pick",3),
+        29:("special86","86+ Special 1 of 3 Player Pick",1),
+        30:("toty","TOTY 1 of 3 Player Pick",1),
+        31:("tots","TOTS 1 of 3 Player Pick",1),
+    }
+    key,title,token_count=specs[pid]
     pool=list(_pools(g)[key])
-    if len(pool)<5: raise RuntimeError(f"{title}: player pool has only {len(pool)} cards")
+    if len(pool)<3: raise RuntimeError(f"{title}: player pool has only {len(pool)} cards")
     out=[]
-    for seq in range(1,2):
+    for seq in range(1,int(token_count)+1):
         token=_persist_pick_token(state,pid,title,seq,g)
         token_id=int(token["id"])
         pick_state.register_token(state,token,pid,key,title,seq,pool)
@@ -362,6 +397,32 @@ def _create_pick_tokens(state, pack_id, g):
     return out
 
 
+def _gold_players_pack_resources(g, count=12, rare_slots=1):
+    """Return base Gold player resources only; specials are intentionally excluded."""
+    normal=[]; rare=[]
+    for m in (g.get("PLAYER_DB") or {}).values():
+        try:
+            rid=_rid(m); rating=int(m.get("rating") or 0)
+        except Exception:
+            continue
+        if not rid or bool(m.get("special")) or rating < 75:
+            continue
+        tier=str(m.get("tier") or "").lower()
+        rarity=str(m.get("rarityName") or "")
+        if tier != "gold" and "Gold" not in rarity:
+            continue
+        (rare if int(m.get("rareflag") or 0) else normal).append(rid)
+    rng=random.SystemRandom()
+    rare_slots=max(1,min(int(rare_slots),int(count)))
+    if len(rare) < rare_slots or len(normal)+len(rare) < count:
+        raise RuntimeError("Gold Players Pack: not enough eligible Gold players")
+    chosen=rng.sample(rare,rare_slots)
+    pool=[rid for rid in normal+rare if rid not in chosen]
+    chosen.extend(rng.sample(pool,int(count)-len(chosen)))
+    rng.shuffle(chosen)
+    return chosen
+
+
 def create_custom_pack(state,pid,g):
     pid=int(pid)
     if pid in PICK_IDS:
@@ -369,6 +430,11 @@ def create_custom_pack(state,pid,g):
         log=g.get("log")
         if log: log.warning("NATIVE PLAYER PICK pack=%s tokens=%s",pid,[x["id"] for x in tokens])
         return {"packId":pid,"purchasedPackId":pid,"packType":"PLAYER_PICK","itemList":tokens,"itemData":tokens,"items":tokens,"newcards":len(tokens),"numberItems":len(tokens),"duplicateItemIdList":[],"credits":state.credits()}
+    if pid==32:
+        resources=_gold_players_pack_resources(g,12,1)
+        log=g.get("log")
+        if log: log.warning("CUSTOM GOLD PLAYERS PACK pack=%s resources=%s",pid,resources)
+        return _response(state,g,pid,resources)
     raise RuntimeError(f"Unknown custom pack id {pid}")
 
 
@@ -380,7 +446,7 @@ def _candidate_payload(state, g, token_id):
         return _pick_payload(state,active,g,"PICK_PENDING_RETURNED")
     spec=pick_state.token(state,token_id)
     if not spec: return None
-    candidates=random.SystemRandom().sample(list(spec["pool"]),5)
+    candidates=(_weighted_sample_resources(spec["pool"],g,3,1.10) if spec.get("pool_key")=="special86" else random.SystemRandom().sample(list(spec["pool"]),3))
     _register_pick_head_aliases(g,candidates)
     owned=set(int(x) for x in state.owned_player_resource_ids())
     # Player-pick candidates are temporary reward items, not Unassigned-repository
@@ -425,7 +491,7 @@ def _pick_payload(state,active,g,event=None):
         "data":{"playerPicks":items,"availablePicks":1,"ownership":ownership},
         "response":{"items":items,"availablePicks":1,"ownership":ownership},
         "playerPicks":items,"itemData":items,"itemList":items,"items":items,
-        "numberItems":len(items),"availablePicks":1,"pickSize":5,"selectionSize":5,
+        "numberItems":len(items),"availablePicks":1,"pickSize":3,"selectionSize":3,
         "ownership":ownership,"duplicateItemIdList":[],"credits":state.credits()}
 
 
@@ -455,7 +521,7 @@ def _confirm_active(state, selected_value, g):
 
 
 def _commit_pending_confirmation(state, g):
-    # V21 commits during /select because the five candidates are virtual and
+    # V21 commits during /select because the three candidates are virtual and
     # therefore there is no live DB candidate object to mutate unsafely.
     return False
 
@@ -561,31 +627,58 @@ def handle_native_request(state, method, raw_path, headers, body, g):
                 if log: log.warning("PLAYER-PICK CONFIRM ROUTE hit=%s via=%s %s body=%r",hit,method,raw_path,body_obj)
                 confirmed = _confirm_active(state,hit,g)
                 if confirmed is not None:
-                    # The legacy Player Pick select service is a successful void
-                    # command.  The crash reports prove the status/body were not the
-                    # root cause; the fatal path starts only after FIFA accepts success.
-                    # Keep the ordinary FUT JSON content type and a zero-byte body while
-                    # the candidate wire shape above matches temporary pack rewards.
+                    # FUT 19's native PC Player Pick flow does NOT finish selection
+                    # with an empty acknowledgement.  It persists the exact selected
+                    # candidate into New Items first, then returns that selected player
+                    # as the top-level JSON response.  FIFA wraps/consumes the item as
+                    # part of the successful view transition.  Our previous FIFA 20
+                    # builds returned HTTP 200 with a zero-byte body; the game then
+                    # exited before it ever requested /purchased/items.
+                    #
+                    # Keep the three carousel candidates on the proven pack-wire shape,
+                    # but return the selected *owned/unassigned* item using the normal
+                    # native player serializer after the transactional state move.
+                    # This mirrors FutDeba FUT19's /playerpicks/item/{resourceId}/select
+                    # contract while retaining FIFA 20's own static Pick Item identity.
+                    native_selected = g.get("_native_player_item")
+                    selected_wire = (native_selected(dict(confirmed))
+                                     if callable(native_selected) else dict(confirmed))
                     if log:
                         log.warning(
-                            "PLAYER-PICK CONFIRM RESPONSE status=200 VOID bytes=0 candidateWire=pack realPickDefinition=%s",
-                            REAL_PICK_RESOURCE_ID,
+                            "PLAYER-PICK CONFIRM RESPONSE status=200 selectedItem=%s resource=%s pile=%s bytes=json semantics=FUT19",
+                            selected_wire.get("id"), selected_wire.get("resourceId"),
+                            selected_wire.get("pile"),
                         )
-                    return 200, {
-                        "Cache-Control":"no-store",
-                    }, b""
+                    return _json_tuple(selected_wire)
 
     # A late /select from a pick that has already been confirmed must NEVER
     # activate another token. FIFA 20 can replay one of the old candidate
     # resource IDs while rebuilding New Items. Treat that replay as an
     # idempotent success and leave the two untouched pick tokens alone.
     if select_route and method in {"POST","PUT","DELETE"} and _ACTIVE_PICK is None:
+        # Make a repeated native confirmation idempotent. If FIFA replays the
+        # exact selection while rebuilding New Items, return the same selected
+        # player object again instead of an empty body. This preserves the FUT19
+        # selection contract and cannot create a second inventory row.
+        last_item = dict((_LAST_CONFIRMED or {}).get("item") or {})
+        last_values = {
+            int((_LAST_CONFIRMED or {}).get("candidate_id") or 0),
+            int((_LAST_CONFIRMED or {}).get("resource_id") or 0),
+            int(last_item.get("id") or 0),
+            int(last_item.get("resourceId") or 0),
+        }
+        if last_item and any(v and v in vals for v in last_values):
+            native_selected = g.get("_native_player_item")
+            selected_wire = (native_selected(last_item)
+                             if callable(native_selected) else last_item)
+            if log:
+                log.warning("PLAYER-PICK STALE SELECT replayed selected item via=%s %s values=%s",
+                            method,raw_path,sorted(vals))
+            return _json_tuple(selected_wire)
         if log:
-            log.warning("PLAYER-PICK STALE SELECT ignored via=%s %s values=%s last=%s",
+            log.warning("PLAYER-PICK STALE SELECT ignored unmatched via=%s %s values=%s last=%s",
                         method,raw_path,sorted(vals),_LAST_CONFIRMED)
-        return 200, {
-            "Cache-Control":"no-store",
-        }, b""
+        return 200, {"Cache-Control":"no-store"}, b""
 
     # Redeem/open a player-pick token. Permit GET as well because different FUT
     # clients expose the instance id in a query-string read before opening.
@@ -609,7 +702,7 @@ def handle_native_request(state, method, raw_path, headers, body, g):
         # v14 crash telemetry proved that automatic fallback activation is
         # unsafe: FIFA can replay an old /select request after the first pick
         # has already completed. Only an explicit token redemption may arm a
-        # new pick. If a pick is active, return its existing five candidates;
+        # new pick. If a pick is active, return its existing three candidates;
         # otherwise report no pending selection.
         if _ACTIVE_PICK:
             a=_ACTIVE_PICK
@@ -716,7 +809,7 @@ def augment_response(state, method, raw_path, response, g):
         rows=list(obj.get("itemData") or [])
         # V21 candidates live only in temporary player-pick state, so there are no
         # native success transition sees a valid inventory object. They must not
-        # appear in New Items before a choice is confirmed, so hide the five active
+        # appear in New Items before a choice is confirmed, so hide the three active
         # temporary candidate instance IDs to filter from purchased/items serialization.
         hidden_candidate_ids=set()
         if _ACTIVE_PICK:

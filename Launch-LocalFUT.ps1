@@ -56,6 +56,115 @@ function Save-Status([hashtable]$Status) {
     $Status | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $StatusPath -Encoding utf8
 }
 
+# V29: keep the FUT club in one Windows-local profile instead of tying the save
+# to the extracted build folder.  runtime\data becomes a junction to this
+# location, so coins, squads, club items, Player Picks and progress survive
+# restarts and future OpenFUT20 build folders.
+function Initialize-PersistentSave {
+    if (-not $env:LOCALAPPDATA) {
+        Write-Host '[SAVE] LOCALAPPDATA is unavailable; using this build folder for the save.' -ForegroundColor Yellow
+        New-Item -ItemType Directory -Force -Path (Join-Path $RuntimeRoot 'data') | Out-Null
+        return
+    }
+
+    $persistentRoot = Join-Path $env:LOCALAPPDATA 'OpenFUT20'
+    $persistentData = Join-Path $persistentRoot 'data'
+    $persistentBackups = Join-Path $persistentRoot 'backups'
+    $projectData = Join-Path $RuntimeRoot 'data'
+    $dbName = 'localfut20.sqlite3'
+    $persistentDb = Join-Path $persistentData $dbName
+
+    New-Item -ItemType Directory -Force -Path $persistentData | Out-Null
+    New-Item -ItemType Directory -Force -Path $persistentBackups | Out-Null
+
+    $projectItem = Get-Item -LiteralPath $projectData -Force -ErrorAction SilentlyContinue
+    if ($projectItem -and (($projectItem.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) {
+        Write-Host ("[SAVE] Persistent FUT profile: {0}" -f $persistentDb) -ForegroundColor DarkGray
+        return
+    }
+
+    # First V29 launch can discover the newest save from a nearby V27/V28 build
+    # so the user does not have to rebuild the squad or re-enter coins just
+    # because the new ZIP was extracted into a different folder.
+    $projectLegacyDb = Join-Path $projectData $dbName
+    if (-not (Test-Path -LiteralPath $persistentDb -PathType Leaf) -and
+        -not (Test-Path -LiteralPath $projectLegacyDb -PathType Leaf)) {
+        $searchRoots = @(
+            (Split-Path -Path $ProjectRoot -Parent),
+            (Join-Path $HOME 'Downloads'),
+            (Join-Path $HOME 'Desktop'),
+            (Join-Path $HOME 'Documents\GitHub')
+        ) | Where-Object { $_ -and (Test-Path -LiteralPath $_ -PathType Container) } | Select-Object -Unique
+        $candidates = @()
+        foreach ($root in $searchRoots) {
+            Get-ChildItem -LiteralPath $root -Directory -ErrorAction SilentlyContinue |
+                Where-Object { $_.Name -like 'OpenFUT20*' -and $_.FullName -ne $ProjectRoot } |
+                ForEach-Object {
+                    $candidate = Join-Path $_.FullName 'runtime\data\localfut20.sqlite3'
+                    if (Test-Path -LiteralPath $candidate -PathType Leaf) {
+                        $candidates += Get-Item -LiteralPath $candidate
+                    }
+                }
+        }
+        $sourceDb = @($candidates | Sort-Object LastWriteTimeUtc -Descending | Select-Object -First 1)[0]
+        if ($sourceDb) {
+            Get-ChildItem -LiteralPath $sourceDb.Directory.FullName -Force -ErrorAction SilentlyContinue |
+                Where-Object { $_.Name -like 'localfut20.sqlite3*' } |
+                Copy-Item -Destination $persistentData -Force
+            Write-Host ("[SAVE] Imported previous OpenFUT20 club from: {0}" -f $sourceDb.FullName) -ForegroundColor Green
+        }
+    }
+
+    if ($projectItem) {
+        $legacyDb = Join-Path $projectData $dbName
+        if (Test-Path -LiteralPath $legacyDb -PathType Leaf) {
+            $useLegacy = -not (Test-Path -LiteralPath $persistentDb -PathType Leaf)
+            if (-not $useLegacy) {
+                try {
+                    $useLegacy = (Get-Item -LiteralPath $legacyDb).LastWriteTimeUtc -gt (Get-Item -LiteralPath $persistentDb).LastWriteTimeUtc
+                } catch { $useLegacy = $false }
+            }
+            if ($useLegacy) {
+                if (Test-Path -LiteralPath $persistentDb -PathType Leaf) {
+                    $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
+                    Copy-Item -LiteralPath $persistentDb -Destination (Join-Path $persistentBackups ("before-migration-{0}.sqlite3" -f $stamp)) -Force
+                }
+                Get-ChildItem -LiteralPath $projectData -Force -ErrorAction SilentlyContinue |
+                    Where-Object { $_.Name -like 'localfut20.sqlite3*' } |
+                    Copy-Item -Destination $persistentData -Force
+                Write-Host '[SAVE] Migrated the existing build save into the persistent FUT profile.' -ForegroundColor Green
+            } else {
+                $stamp = Get-Date -Format 'yyyyMMdd-HHmmss'
+                $legacyBackup = Join-Path $persistentBackups ("unused-build-save-{0}.sqlite3" -f $stamp)
+                Copy-Item -LiteralPath $legacyDb -Destination $legacyBackup -Force -ErrorAction SilentlyContinue
+            }
+        }
+
+        # Keep repository placeholders such as .gitkeep visible through the junction.
+        Get-ChildItem -LiteralPath $projectData -Force -ErrorAction SilentlyContinue |
+            Where-Object { $_.Name -notlike 'localfut20.sqlite3*' } |
+            ForEach-Object {
+                if (-not $_.PSIsContainer) {
+                    Copy-Item -LiteralPath $_.FullName -Destination $persistentData -Force -ErrorAction SilentlyContinue
+                }
+            }
+        Remove-Item -LiteralPath $projectData -Recurse -Force
+    }
+
+    try {
+        New-Item -ItemType Junction -Path $projectData -Target $persistentData -Force | Out-Null
+        Write-Host ("[SAVE] Persistent FUT profile: {0}" -f $persistentDb) -ForegroundColor Green
+    } catch {
+        # A normal folder is still safe for this run; never fail game launch only
+        # because the junction could not be created. Copy the persistent profile
+        # back so this fallback never starts the user with an empty club.
+        New-Item -ItemType Directory -Force -Path $projectData | Out-Null
+        Get-ChildItem -LiteralPath $persistentData -Force -ErrorAction SilentlyContinue |
+            Copy-Item -Destination $projectData -Force -ErrorAction SilentlyContinue
+        Write-Host ("[SAVE] Could not create persistent junction; using {0}" -f $projectData) -ForegroundColor Yellow
+    }
+}
+
 function Test-Administrator {
     $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
     $principal = [Security.Principal.WindowsPrincipal]::new($identity)
@@ -542,6 +651,7 @@ try {
     Assert-ProjectFiles $settings
     Write-Host '      OK - project files are ready.' -ForegroundColor Green
     Write-Host '[2/5] Preparing Python and local club data...' -ForegroundColor Cyan
+    Initialize-PersistentSave
 
     $python = Get-Command py -ErrorAction Stop
     & $python.Source -3.13 -c 'import cryptography' 2>$null

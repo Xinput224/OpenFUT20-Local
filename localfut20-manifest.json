@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "product": "FIFA20LocalFUT",
-  "version": "0.2.4-NATIVE-V27-GITHUB-CLEAN",
+  "version": "0.2.5-NATIVE-V30-SPECIAL-PORTRAITS-GOLD-PACK",
   "runtimeIdentifier": "win-x64",
   "entryPoint": "START_LOCAL_FUT.cmd",
   "control": {
@@ -42,5 +42,5 @@
       "enabled": false
     }
   },
-  "release": "OpenFUT20 Local V27 GitHub Clean"
+  "release": "OpenFUT20 Local V30 Special Portrait Fix + Gold Players Pack"
 }
