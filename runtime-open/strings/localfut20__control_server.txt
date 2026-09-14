@@ -1,0 +1,51 @@
+runtime_root
+session.json
+localfut20-manifest.json
+f20.
+f20-ticket.
+f20-refresh.
+f20-access.
+session_lifetime_seconds
+ENROLLED
+.tmp
+utf-8
+expiresAt
+ControlHandler
+FIFA20LocalControl/0.3
+[CONTROL] 
+Content-Type
+application/json; charset=utf-8
+Content-Length
+Connection
+close
+?
+/
+/v1/health
+FIFA20LocalFUT.Control
+0.3.1
+NONE
+/v1/session
+session
+error
+no active session
+not found
+0
+/v1/session/bootstrap
+accountId
+test_account_id
+local-test-account-001
+personaId
+persona_id
+displayName
+display_name
+Local Test Player
+/v1/session/logout
+ok
+--host
+bind_host
+127.0.0.1
+--port
+control_port
+FIFA20Local Control READY on 
+:
+__main__

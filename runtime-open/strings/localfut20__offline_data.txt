@@ -1,0 +1,124 @@
+Seed and validate the local FUT data layer without starting any service.
+
+This module intentionally uses only JSON and SQLite. It does not import the
+server, open a socket, touch routing/certificates, or inspect FIFA20.exe.
+
+_config_path
+launcher-settings.json
+players_path
+runtime_root
+database_path
+utf-8
+config.json and players.json must contain JSON objects
+player 
+ is not an object
+ missing fields: 
+rating
+ has an invalid rating
+face
+ must have six face values in [0,99]
+starter_players
+reserve_players
+config must contain either zero or 11 unique starters and unique reserves
+an empty starter squad cannot contain reserve players
+configured roster player 
+ is not defined
+id
+timestamp
+resourceId
+assetId
+itemState
+free
+rareflag
+formation
+f442
+leagueId
+injuryType
+none
+injuryGames
+lastSalePrice
+fitness
+training
+suspension
+contract
+contracts
+preferredPosition
+playStyle
+discardValue
+itemType
+player
+cardsubtypeid
+owners
+untradeable
+morale
+statsList
+lifetimeStats
+attributeList
+teamid
+assists
+lifetimeAssists
+loyaltyBonus
+pile
+nation
+starter_xi_only
+starter_xi_only_v1
+
+        PRAGMA journal_mode=WAL;
+        CREATE TABLE IF NOT EXISTS kv(key TEXT PRIMARY KEY, value TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS items(id INTEGER PRIMARY KEY, resource_id INTEGER NOT NULL,
+            pile TEXT NOT NULL DEFAULT 'club', data TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS squads(id INTEGER PRIMARY KEY, name TEXT NOT NULL,
+            active INTEGER NOT NULL DEFAULT 0, data TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS unopened_packs(id INTEGER PRIMARY KEY AUTOINCREMENT,
+            pack_id INTEGER NOT NULL, data TEXT NOT NULL);
+        CREATE TABLE IF NOT EXISTS sbc_squads(challenge_id INTEGER PRIMARY KEY,
+            data TEXT NOT NULL, updated_at INTEGER NOT NULL);
+        CREATE TABLE IF NOT EXISTS sbc_completions(challenge_id INTEGER PRIMARY KEY,
+            times_completed INTEGER NOT NULL DEFAULT 0, completed_at INTEGER NOT NULL);
+        CREATE TABLE IF NOT EXISTS sbc_set_completions(set_id INTEGER PRIMARY KEY,
+            times_completed INTEGER NOT NULL DEFAULT 0, completed_at INTEGER NOT NULL);
+    
+INSERT INTO kv(key,value) VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value
+INSERT OR IGNORE INTO kv(key,value) VALUES(?,?)
+SELECT value FROM kv WHERE key=?
+credits
+account_id
+test_account_id
+local-test-account-001
+nucleus_id
+persona_id
+club_id
+club_name
+Local Test FC
+club_abbr
+LTF
+entitlements
+game_sku
+FFA20PCC
+ONLINE_ACCESS
+ACTIVE
+fut_sku
+FUT20PCC
+FUT_ACCESS
+DELETE FROM items
+DELETE FROM squads
+DELETE FROM unopened_packs
+DELETE FROM sbc_squads
+DELETE FROM sbc_completions
+DELETE FROM sbc_set_completions
+SELECT 1 FROM sqlite_master WHERE type='table' AND name='draft_runs'
+DELETE FROM draft_runs
+INSERT INTO items(id,resource_id,pile,data) VALUES(?,?,?,?)
+club
+squad_id
+squad_name
+Local Test XI
+INSERT INTO squads(id,name,active,data) VALUES(?,?,1,?)
+next_item_id
+owned_player_resource_ids
+SELECT data FROM items
+data
+SELECT 1 FROM kv WHERE key='credits'
+starter XI only migration applied
+preserved existing club
+__main__

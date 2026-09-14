@@ -1,0 +1,69 @@
+gos2015-original-modulus.bin
+local-gos2015-modulus.bin
+kernel32
+PROCESSENTRY32W
+dwSize
+cntUsage
+th32ProcessID
+th32DefaultHeapID
+th32ModuleID
+cntThreads
+th32ParentProcessID
+pcPriClassBase
+dwFlags
+szExeFile
+MEMORY_BASIC_INFORMATION
+BaseAddress
+AllocationBase
+AllocationProtect
+PartitionId
+RegionSize
+State
+Protect
+Type
+[ERROR]
+Press Enter to close...
+Find the real FIFA process after the launcher hand-off.
+
+FIFA can briefly create a launcher process and then replace/spawn the
+long-lived game process.  The old one-shot scan raced that transition and
+reported a false trust-bridge failure, which also prevented hosts setup.
+
+Requested FIFA20.exe PID 
+ is not running.
+Could not enumerate processes.
+fifa20.exe
+FIFA20.exe did not remain running after launch; trust bridge was not applied.
+--pid
+Exact running FIFA20.exe PID to patch
+Missing 
+Missing local-gos2015-modulus.bin. Run GENERATE_LOCAL_CERT.cmd first.
+Expected both RSA moduli to be exactly 256 bytes.
+Local CA modulus unexpectedly equals the original modulus.
+FIFA 20 localhost trust bridge
+==============================
+Scope: running FIFA20.exe only
+Patch: exact copies of the known GOS 2015 2048-bit public modulus
+Original SHA256:
+Local SHA256:   
+[INFO] FIFA20.exe PID:
+OpenProcess failed. Run this script as Administrator, and make sure FIFA20.exe is still running.
+[INFO] Scanning FIFA20.exe memory for the exact original GOS 2015 modulus...
+[INFO] Exact original copies found: 
+       0x
+016X
+No exact original modulus copies were found. Nothing was changed.
+[PATCHED] 0x
+[FAILED]  0x
+The modulus was found, but no copy could be patched.
+[SUCCESS] Patched 
+ exact copy/copies in the running FIFA20.exe.
+No file on disk was modified.
+NEXT:
+  1. Leave FIFA 20 open.
+  2. Install the hosts redirect.
+  3. Start the local FUT 20 runtime.
+  4. Click Ultimate Team once.
+If FIFA20.exe exits, the in-memory patch disappears automatically.
+Press Enter to close this bridge window...
+__main__

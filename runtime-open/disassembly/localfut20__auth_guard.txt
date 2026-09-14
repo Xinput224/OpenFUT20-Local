@@ -1,0 +1,26 @@
+====================================================================================================
+localfut20.auth_guard :: <module>
+filename='/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py' firstlineno=1 argcount=0 posonly=0 kwonly=0 locals=0 stacksize=1 flags=0x1000000
+====================================================================================================
+  0           RESUME                   0
+
+  1           LOAD_CONST               0 (<code object require_authorized_runtime at 0x7fb7c56f86a0, file "/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py", line 1>)
+              MAKE_FUNCTION
+              STORE_NAME               0 (require_authorized_runtime)
+              RETURN_CONST             1 (None)
+
+Disassembly of <code object require_authorized_runtime at 0x7fb7c56f86a0, file "/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py", line 1>:
+  1           RESUME                   0
+
+  2           RETURN_CONST             1 (True)
+
+
+====================================================================================================
+localfut20.auth_guard :: require_authorized_runtime
+filename='/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py' firstlineno=1 argcount=0 posonly=0 kwonly=0 locals=0 stacksize=1 flags=0x1000003
+====================================================================================================
+  1           RESUME                   0
+
+  2           RETURN_CONST             1 (True)
+
+

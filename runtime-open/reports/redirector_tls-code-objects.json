@@ -1,0 +1,80 @@
+[
+  {
+    "qualname": "<module>",
+    "name": "<module>",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 1,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 0,
+    "stacksize": 7,
+    "flags": 16777216,
+    "bytecode_len": 674
+  },
+  {
+    "qualname": "mark_state",
+    "name": "mark_state",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 37,
+    "argcount": 2,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 4,
+    "stacksize": 7,
+    "flags": 16777219,
+    "bytecode_len": 610
+  },
+  {
+    "qualname": "Handler",
+    "name": "Handler",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 58,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 0,
+    "stacksize": 1,
+    "flags": 16777216,
+    "bytecode_len": 44
+  },
+  {
+    "qualname": "Handler.log_message",
+    "name": "log_message",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 61,
+    "argcount": 2,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 3,
+    "stacksize": 6,
+    "flags": 16777223,
+    "bytecode_len": 62
+  },
+  {
+    "qualname": "Handler.reply",
+    "name": "reply",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 64,
+    "argcount": 1,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 3,
+    "stacksize": 10,
+    "flags": 16777219,
+    "bytecode_len": 734
+  },
+  {
+    "qualname": "main",
+    "name": "main",
+    "filename": "runtime-source/redirector_tls.py",
+    "firstlineno": 82,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 2,
+    "stacksize": 7,
+    "flags": 16777219,
+    "bytecode_len": 980
+  }
+]

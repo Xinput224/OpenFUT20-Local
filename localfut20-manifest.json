@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "product": "FIFA20LocalFUT",
+  "version": "0.2.4-NATIVE-V27-GITHUB-CLEAN",
+  "runtimeIdentifier": "win-x64",
+  "entryPoint": "START_LOCAL_FUT.cmd",
+  "control": {
+    "bindAddress": "127.0.0.1",
+    "port": 47220
+  },
+  "protocols": {
+    "Redirector": {
+      "port": 42230,
+      "enabled": true
+    },
+    "Blaze": {
+      "port": 44321,
+      "enabled": true
+    },
+    "FutHttp": {
+      "port": 8080,
+      "enabled": true
+    },
+    "FutTls": {
+      "port": 443,
+      "enabled": true
+    },
+    "EaswHttp": {
+      "port": 42232,
+      "enabled": true
+    },
+    "QosHttp": {
+      "port": 17502,
+      "enabled": true
+    },
+    "OriginLsx": {
+      "port": 3216,
+      "enabled": false
+    },
+    "LegacyFut": {
+      "port": 8081,
+      "enabled": false
+    }
+  },
+  "release": "OpenFUT20 Local V27 GitHub Clean"
+}

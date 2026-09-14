@@ -1,0 +1,3665 @@
+====================================================================================================
+localfut20.config_loader :: <module>
+filename='localfut20/config_loader.py' firstlineno=1 argcount=0 posonly=0 kwonly=0 locals=0 stacksize=4 flags=0x1000000
+====================================================================================================
+  0           RESUME                   0
+
+  1           SETUP_ANNOTATIONS
+              LOAD_CONST               0 (0)
+              LOAD_CONST               1 (('annotations',))
+              IMPORT_NAME              0 (__future__)
+              IMPORT_FROM              1 (annotations)
+              STORE_NAME               1 (annotations)
+              POP_TOP
+
+  3           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              2 (json)
+              STORE_NAME               2 (json)
+
+  4           LOAD_CONST               0 (0)
+              LOAD_CONST               2 (None)
+              IMPORT_NAME              3 (os)
+              STORE_NAME               3 (os)
+
+  5           LOAD_CONST               0 (0)
+              LOAD_CONST               3 (('Path',))
+              IMPORT_NAME              4 (pathlib)
+              IMPORT_FROM              5 (Path)
+              STORE_NAME               5 (Path)
+              POP_TOP
+
+  6           LOAD_CONST               0 (0)
+              LOAD_CONST               4 (('Any',))
+              IMPORT_NAME              6 (typing)
+              IMPORT_FROM              7 (Any)
+              STORE_NAME               7 (Any)
+              POP_TOP
+
+  8           LOAD_NAME                5 (Path)
+              PUSH_NULL
+              LOAD_NAME                8 (__file__)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_ATTR               19 (resolve + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_ATTR               20 (parent)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              STORE_NAME              11 (LOCAL_ROOT)
+
+  9           LOAD_NAME               11 (LOCAL_ROOT)
+              LOAD_ATTR               20 (parent)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              STORE_NAME              12 (PROJECT_ROOT)
+
+ 11           BUILD_LIST               0
+              LOAD_CONST               5 ((24630, 210665, 200677, 198176, 172316, 205257, 184703, 184271, 234913, 235410, 223816))
+              LIST_EXTEND              1
+              STORE_NAME              13 (DEFAULT_STARTERS)
+
+ 12           BUILD_LIST               0
+              STORE_NAME              14 (DEFAULT_RESERVES)
+              LOAD_CONST               6 ('list[int]')
+              LOAD_NAME               15 (__annotations__)
+              LOAD_CONST               7 ('DEFAULT_RESERVES')
+              STORE_SUBSCR
+              CACHE                    0 (counter: 0)
+
+ 14           BUILD_MAP                0
+
+ 15           LOAD_CONST               8 ('fifa_exe')
+              LOAD_CONST               9 ('')
+
+ 14           MAP_ADD                  1
+
+ 16           LOAD_CONST              10 ('gameReadyDelaySeconds')
+              LOAD_CONST              11 (5)
+
+ 14           MAP_ADD                  1
+
+ 17           LOAD_CONST              12 ('display_name')
+              LOAD_CONST              13 ('Local Test Player')
+
+ 14           MAP_ADD                  1
+
+ 18           LOAD_CONST              14 ('test_account_id')
+              LOAD_CONST              15 ('local-test-account-001')
+
+ 14           MAP_ADD                  1
+
+ 19           LOAD_CONST              16 ('date_of_birth')
+              LOAD_CONST              17 ('2001-08-20')
+
+ 14           MAP_ADD                  1
+
+ 20           LOAD_CONST              18 ('minimum_age')
+              LOAD_CONST              19 (18)
+
+ 14           MAP_ADD                  1
+
+ 21           LOAD_CONST              20 ('nucleus_id')
+              LOAD_CONST              21 (1000000001)
+
+ 14           MAP_ADD                  1
+
+ 22           LOAD_CONST              22 ('persona_id')
+              LOAD_CONST              23 (1000000002)
+
+ 14           MAP_ADD                  1
+
+ 23           LOAD_CONST              24 ('club_id')
+              LOAD_CONST              25 (1)
+
+ 14           MAP_ADD                  1
+
+ 24           LOAD_CONST              26 ('club_name')
+              LOAD_CONST              27 ('Local Test FC')
+
+ 14           MAP_ADD                  1
+
+ 25           LOAD_CONST              28 ('club_abbr')
+              LOAD_CONST              29 ('LTF')
+
+ 14           MAP_ADD                  1
+
+ 26           LOAD_CONST              30 ('squad_id')
+              LOAD_CONST              25 (1)
+
+ 14           MAP_ADD                  1
+
+ 27           LOAD_CONST              31 ('squad_name')
+              LOAD_CONST              32 ('Local Test XI')
+
+ 14           MAP_ADD                  1
+
+ 28           LOAD_CONST              33 ('credits')
+              LOAD_CONST              34 (70000000)
+
+ 14           MAP_ADD                  1
+
+ 29           LOAD_CONST              35 ('fut_game')
+              LOAD_CONST              36 ('fifa20')
+
+ 14           MAP_ADD                  1
+
+ 30           LOAD_CONST              37 ('game_sku')
+              LOAD_CONST              38 ('FFA20PCC')
+
+ 14           MAP_ADD                  1
+
+ 31           LOAD_CONST              39 ('fut_sku')
+              LOAD_CONST              40 ('FUT20PCC')
+
+ 14           MAP_ADD                  1
+              BUILD_MAP                0
+
+ 32           LOAD_CONST              41 ('bind_host')
+              LOAD_CONST              42 ('127.0.0.1')
+
+ 14           MAP_ADD                  1
+
+ 33           LOAD_CONST              43 ('local_host')
+              LOAD_CONST              42 ('127.0.0.1')
+
+ 14           MAP_ADD                  1
+
+ 34           LOAD_CONST              44 ('redirector_bind_host')
+              LOAD_CONST              45 ('0.0.0.0')
+
+ 14           MAP_ADD                  1
+
+ 35           LOAD_CONST              46 ('redirector_host')
+              LOAD_CONST              47 ('spring18.gosredirector.ea.com')
+
+ 14           MAP_ADD                  1
+
+ 36           LOAD_CONST              48 ('redirector_port')
+              LOAD_CONST              49 (42230)
+
+ 14           MAP_ADD                  1
+
+ 37           LOAD_CONST              50 ('tls_redirector_port')
+              LOAD_CONST              49 (42230)
+
+ 14           MAP_ADD                  1
+
+ 38           LOAD_CONST              51 ('redirect_port')
+              LOAD_CONST              52 (42231)
+
+ 14           MAP_ADD                  1
+
+ 39           LOAD_CONST              53 ('redirect_debug_port')
+              LOAD_CONST              52 (42231)
+
+ 14           MAP_ADD                  1
+
+ 40           LOAD_CONST              54 ('blaze_port')
+              LOAD_CONST              55 (44321)
+
+ 14           MAP_ADD                  1
+
+ 41           LOAD_CONST              56 ('qos_port')
+              LOAD_CONST              57 (17502)
+
+ 14           MAP_ADD                  1
+
+ 42           LOAD_CONST              58 ('easw_port')
+              LOAD_CONST              59 (42232)
+
+ 14           MAP_ADD                  1
+
+ 43           LOAD_CONST              60 ('fut_port')
+              LOAD_CONST              61 (8080)
+
+ 14           MAP_ADD                  1
+
+ 46           LOAD_CONST              62 ('fut_tls_port')
+              LOAD_CONST              63 (443)
+
+ 14           MAP_ADD                  1
+
+ 47           LOAD_CONST              64 ('legacy_fut_port')
+              LOAD_CONST              65 (8081)
+
+ 14           MAP_ADD                  1
+
+ 48           LOAD_CONST              66 ('lsx_port')
+              LOAD_CONST              67 (3216)
+
+ 14           MAP_ADD                  1
+
+ 49           LOAD_CONST              68 ('control_port')
+              LOAD_CONST              69 (47220)
+
+ 14           MAP_ADD                  1
+
+ 50           LOAD_CONST              70 ('session_lifetime_seconds')
+              LOAD_CONST              71 (900)
+
+ 14           MAP_ADD                  1
+              DICT_UPDATE              1
+              BUILD_MAP                0
+
+ 51           LOAD_CONST              72 ('runtime_root')
+              LOAD_CONST               9 ('')
+
+ 14           MAP_ADD                  1
+
+ 52           LOAD_CONST              73 ('database_path')
+              LOAD_CONST               9 ('')
+
+ 14           MAP_ADD                  1
+
+ 53           LOAD_CONST              74 ('players_path')
+              LOAD_CONST              75 ('localfut20/players.json')
+
+ 14           MAP_ADD                  1
+
+ 54           LOAD_CONST              76 ('certificate_path')
+              LOAD_CONST              77 ('runtime-source/certs/spring18-cert.pem')
+
+ 14           MAP_ADD                  1
+
+ 55           LOAD_CONST              78 ('certificate_key_path')
+              LOAD_CONST              79 ('runtime-source/certs/spring18-key.pem')
+
+ 14           MAP_ADD                  1
+
+ 56           LOAD_CONST              80 ('logging_level')
+              LOAD_CONST              81 ('INFO')
+
+ 14           MAP_ADD                  1
+
+ 57           LOAD_CONST              82 ('pack_size')
+              LOAD_CONST              83 (12)
+
+ 14           MAP_ADD                  1
+
+ 58           LOAD_CONST              84 ('pack_cost')
+              LOAD_CONST              85 (7500)
+
+ 14           MAP_ADD                  1
+
+ 59           LOAD_CONST              86 ('special_pack_chance')
+              LOAD_CONST              87 (0.1)
+
+ 14           MAP_ADD                  1
+
+ 60           LOAD_CONST              88 ('rare_flag')
+              LOAD_CONST              25 (1)
+
+ 14           MAP_ADD                  1
+
+ 61           LOAD_CONST              89 ('debug_unknown_http')
+              LOAD_CONST              90 (True)
+
+ 14           MAP_ADD                  1
+
+ 62           LOAD_CONST              91 ('starter_xi_only')
+              LOAD_CONST              90 (True)
+
+ 14           MAP_ADD                  1
+
+ 63           LOAD_CONST              92 ('prefetch_pack_player_images')
+              LOAD_CONST              90 (True)
+
+ 14           MAP_ADD                  1
+
+ 64           LOAD_CONST              93 ('prefer_catalog_player_images')
+              LOAD_CONST              90 (True)
+
+ 14           MAP_ADD                  1
+
+ 65           LOAD_CONST              94 ('starter_players')
+              LOAD_NAME               13 (DEFAULT_STARTERS)
+
+ 14           MAP_ADD                  1
+
+ 66           LOAD_CONST              95 ('reserve_players')
+              LOAD_NAME               14 (DEFAULT_RESERVES)
+
+ 14           MAP_ADD                  1
+              DICT_UPDATE              1
+              STORE_NAME              16 (DEFAULT_CONFIG)
+              LOAD_CONST              96 ('dict[str, Any]')
+              LOAD_NAME               15 (__annotations__)
+              LOAD_CONST              97 ('DEFAULT_CONFIG')
+              STORE_SUBSCR
+              CACHE                    0 (counter: 0)
+
+ 70           LOAD_CONST             106 (('return', 'Path'))
+              LOAD_CONST              98 (<code object default_runtime_root at 0x7fb7c569d000, file "localfut20/config_loader.py", line 70>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              17 (default_runtime_root)
+
+ 77           LOAD_CONST             107 ((None,))
+              LOAD_CONST             108 (('value', 'str | os.PathLike[str] | None', 'base', 'Path | None', 'return', 'Path | None'))
+              LOAD_CONST              99 (<code object resolve_path at 0x7fb7bcd92900, file "localfut20/config_loader.py", line 77>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              18 (resolve_path)
+
+ 86           LOAD_CONST             109 (('path', 'Path', 'return', 'dict[str, Any] | None'))
+              LOAD_CONST             100 (<code object _read_json at 0x7fb7bcd93080, file "localfut20/config_loader.py", line 86>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              19 (_read_json)
+
+ 94           LOAD_CONST             110 (('raw', 'dict[str, Any]', 'return', 'dict[str, Any]'))
+              LOAD_CONST             101 (<code object _flatten at 0x7fb7bd110d40, file "localfut20/config_loader.py", line 94>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              20 (_flatten)
+
+106           LOAD_CONST             111 (('value', 'Any', 'fallback', 'list[int]', 'return', 'list[int]'))
+              LOAD_CONST             102 (<code object _int_list at 0x7fb7bcd93b00, file "localfut20/config_loader.py", line 106>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              21 (_int_list)
+
+120           LOAD_CONST             112 (('cfg', 'dict[str, Any]', 'return', 'None'))
+              LOAD_CONST             103 (<code object _coerce_ints at 0x7fb7c5697300, file "localfut20/config_loader.py", line 120>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              22 (_coerce_ints)
+
+135           LOAD_CONST             113 (('project_root', 'Path', 'return', 'list[Path]'))
+              LOAD_CONST             104 (<code object _candidate_paths at 0x7fb7bcf03400, file "localfut20/config_loader.py", line 135>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              STORE_NAME              23 (_candidate_paths)
+
+155           LOAD_CONST             107 ((None,))
+              LOAD_CONST             114 (('project_root', 'str | os.PathLike[str] | None', 'return', 'dict[str, Any]'))
+              LOAD_CONST             105 (<code object load_config at 0x7fb7c55c8800, file "localfut20/config_loader.py", line 155>)
+              MAKE_FUNCTION
+              SET_FUNCTION_ATTRIBUTE   4 (annotations)
+              SET_FUNCTION_ATTRIBUTE   1 (defaults)
+              STORE_NAME              24 (load_config)
+              RETURN_CONST             2 (None)
+
+Disassembly of <code object default_runtime_root at 0x7fb7c569d000, file "localfut20/config_loader.py", line 70>:
+ 70           RESUME                   0
+
+ 71           LOAD_GLOBAL              0 (os)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                2 (environ)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_ATTR                5 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_CONST               1 ('LOCALAPPDATA')
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               0 (local_app_data)
+
+ 72           LOAD_FAST                0 (local_app_data)
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       14 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 73           LOAD_GLOBAL              7 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (local_app_data)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 ('FIFA20LocalFUT')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              RETURN_VALUE
+
+ 74   L1:     LOAD_GLOBAL              6 (Path)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                8 (home)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              PUSH_NULL
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               3 ('AppData')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              LOAD_CONST               4 ('Local')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              LOAD_CONST               2 ('FIFA20LocalFUT')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              RETURN_VALUE
+
+Disassembly of <code object resolve_path at 0x7fb7bcd92900, file "localfut20/config_loader.py", line 77>:
+ 77           RESUME                   0
+
+ 78           LOAD_FAST                0 (value)
+              POP_JUMP_IF_NONE        29 (to L1)
+              CACHE                    0 (counter: 0)
+              LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_ATTR                3 (strip + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               1 ('')
+              COMPARE_OP              88 (bool(==))
+              CACHE                    0 (counter: 0)
+              POP_JUMP_IF_FALSE        1 (to L2)
+              CACHE                    0 (counter: 0)
+
+ 79   L1:     RETURN_CONST             0 (None)
+
+ 80   L2:     LOAD_GLOBAL              5 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               2 (path)
+
+ 81           LOAD_FAST                2 (path)
+              LOAD_ATTR                7 (is_absolute + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE        18 (to L4)
+              CACHE                    0 (counter: 0)
+
+ 82           LOAD_FAST                1 (base)
+              COPY                     1
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE         6 (to L3)
+              CACHE                    0 (counter: 0)
+              POP_TOP
+              LOAD_GLOBAL              8 (PROJECT_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+      L3:     LOAD_FAST                2 (path)
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               2 (path)
+
+ 83   L4:     LOAD_FAST                2 (path)
+              RETURN_VALUE
+
+Disassembly of <code object _read_json at 0x7fb7bcd93080, file "localfut20/config_loader.py", line 86>:
+  86           RESUME                   0
+
+  87           NOP
+
+  88   L1:     LOAD_GLOBAL              0 (json)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_ATTR                2 (loads)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               PUSH_NULL
+               LOAD_FAST                0 (path)
+               LOAD_ATTR                5 (read_text + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               1 ('utf-8-sig')
+               LOAD_CONST               2 (('encoding',))
+               CALL_KW                  1
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               1 (raw)
+
+  91   L2:     LOAD_GLOBAL              9 (isinstance + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (raw)
+               LOAD_GLOBAL             10 (dict)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE        2 (to L3)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                1 (raw)
+               RETURN_VALUE
+       L3:     LOAD_CONST               0 (None)
+               RETURN_VALUE
+
+  --   L4:     PUSH_EXC_INFO
+
+  89           LOAD_GLOBAL              6 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE        3 (to L6)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+  90   L5:     POP_EXCEPT
+               RETURN_CONST             0 (None)
+
+  89   L6:     RERAISE                  0
+
+  --   L7:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L4 [0]
+  L4 to L5 -> L7 [1] lasti
+  L6 to L7 -> L7 [1] lasti
+
+Disassembly of <code object _flatten at 0x7fb7bd110d40, file "localfut20/config_loader.py", line 94>:
+ 94           RESUME                   0
+
+ 95           BUILD_MAP                0
+              STORE_FAST               1 (flat)
+
+ 96           LOAD_FAST                0 (raw)
+              LOAD_ATTR                1 (items + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              GET_ITER
+      L1:     FOR_ITER                32 (to L3)
+              CACHE                    0 (counter: 0)
+              UNPACK_SEQUENCE          2
+              CACHE                    0 (counter: 0)
+              STORE_FAST_STORE_FAST   35 (key, value)
+
+ 97           LOAD_GLOBAL              3 (isinstance + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (value)
+              LOAD_GLOBAL              4 (dict)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     2
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE        2 (to L2)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           28 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 98   L2:     LOAD_FAST_LOAD_FAST     49 (value, flat)
+              LOAD_FAST                2 (key)
+              STORE_SUBSCR
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           34 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 96   L3:     END_FOR
+              POP_TOP
+
+ 99           LOAD_CONST               1 (('game', 'launcher', 'identity', 'services', 'paths', 'certificates', 'logging'))
+              GET_ITER
+      L4:     FOR_ITER                60 (to L6)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               4 (section)
+
+100           LOAD_FAST                0 (raw)
+              LOAD_ATTR                7 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                4 (section)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               3 (value)
+
+101           LOAD_GLOBAL              3 (isinstance + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (value)
+              LOAD_GLOBAL              4 (dict)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     2
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE         2 (to L5)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           43 (to L4)
+              CACHE                    0 (counter: 0)
+
+102   L5:     LOAD_FAST                1 (flat)
+              LOAD_ATTR                9 (update + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                3 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+              JUMP_BACKWARD           62 (to L4)
+              CACHE                    0 (counter: 0)
+
+ 99   L6:     END_FOR
+              POP_TOP
+
+103           LOAD_FAST                1 (flat)
+              RETURN_VALUE
+
+Disassembly of <code object _int_list at 0x7fb7bcd93b00, file "localfut20/config_loader.py", line 106>:
+ 106           RESUME                   0
+
+ 107           LOAD_GLOBAL              1 (isinstance + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                0 (value)
+               LOAD_GLOBAL              2 (list)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 108           LOAD_GLOBAL              3 (list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (fallback)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               RETURN_VALUE
+
+ 109   L1:     BUILD_LIST               0
+               STORE_FAST               2 (out)
+
+ 110           LOAD_FAST                0 (value)
+               GET_ITER
+       L2:     FOR_ITER                30 (to L5)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               3 (item)
+
+ 111           NOP
+
+ 112   L3:     LOAD_FAST                2 (out)
+               LOAD_ATTR                5 (append + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_GLOBAL              7 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                3 (item)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+       L4:     JUMP_BACKWARD           32 (to L2)
+               CACHE                    0 (counter: 0)
+
+ 110   L5:     END_FOR
+               POP_TOP
+
+ 117           LOAD_FAST                2 (out)
+               RETURN_VALUE
+
+  --   L6:     PUSH_EXC_INFO
+
+ 113           LOAD_GLOBAL              8 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE        4 (to L8)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+ 114   L7:     POP_EXCEPT
+               JUMP_BACKWARD           49 (to L2)
+               CACHE                    0 (counter: 0)
+
+ 113   L8:     RERAISE                  0
+
+  --   L9:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L3 to L4 -> L6 [1]
+  L6 to L7 -> L9 [2] lasti
+  L8 to L9 -> L9 [2] lasti
+
+Disassembly of <code object _coerce_ints at 0x7fb7c5697300, file "localfut20/config_loader.py", line 120>:
+ 120           RESUME                   0
+
+ 121           LOAD_CONST               1 (('gameReadyDelaySeconds', 'minimum_age', 'nucleus_id', 'persona_id', 'club_id', 'squad_id', 'credits', 'redirector_port', 'tls_redirector_port', 'redirect_debug_port', 'redirect_port', 'blaze_port', 'qos_port', 'easw_port', 'fut_port', 'legacy_fut_port', 'fut_tls_port', 'lsx_port', 'control_port', 'session_lifetime_seconds', 'pack_size', 'pack_cost', 'rare_flag'))
+               GET_ITER
+       L1:     FOR_ITER                19 (to L4)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               1 (key)
+
+ 129           NOP
+
+ 130   L2:     LOAD_GLOBAL              1 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+       L3:     JUMP_BACKWARD           21 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 121   L4:     END_FOR
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L5:     PUSH_EXC_INFO
+
+ 131           LOAD_GLOBAL              2 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE       24 (to L7)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+ 132           LOAD_GLOBAL              1 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL              4 (DEFAULT_CONFIG)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (key)
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+       L6:     POP_EXCEPT
+               JUMP_BACKWARD           57 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 131   L7:     RERAISE                  0
+
+  --   L8:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L2 to L3 -> L5 [1]
+  L5 to L6 -> L8 [2] lasti
+  L7 to L8 -> L8 [2] lasti
+
+Disassembly of <code object _candidate_paths at 0x7fb7bcf03400, file "localfut20/config_loader.py", line 135>:
+135           RESUME                   0
+
+136           BUILD_LIST               0
+              STORE_FAST               1 (candidates)
+
+137           LOAD_GLOBAL              0 (os)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                2 (environ)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_ATTR                5 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_CONST               1 ('LOCALFUT20_CONFIG')
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               2 (env_config)
+
+138           LOAD_FAST                2 (env_config)
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       26 (to L1)
+              CACHE                    0 (counter: 0)
+
+139           LOAD_FAST                1 (candidates)
+              LOAD_ATTR                7 (append + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_GLOBAL              9 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (env_config)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+140   L1:     LOAD_FAST                1 (candidates)
+              LOAD_ATTR               11 (extend + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+
+141           LOAD_FAST                0 (project_root)
+              LOAD_CONST               2 ('launcher-settings.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+142           LOAD_GLOBAL             12 (PROJECT_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               2 ('launcher-settings.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+143           LOAD_GLOBAL             14 (LOCAL_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               3 ('config.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+140           BUILD_LIST               3
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+145           LOAD_GLOBAL             17 (set + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               3 (seen)
+
+146           BUILD_LIST               0
+              STORE_FAST               4 (out)
+
+147           LOAD_FAST                1 (candidates)
+              GET_ITER
+      L2:     FOR_ITER                97 (to L6)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               5 (path)
+
+148           LOAD_FAST                5 (path)
+              LOAD_ATTR               19 (exists + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       16 (to L3)
+              CACHE                    0 (counter: 0)
+              LOAD_FAST                5 (path)
+              LOAD_ATTR               21 (resolve + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              JUMP_FORWARD            15 (to L4)
+      L3:     LOAD_FAST                5 (path)
+              LOAD_ATTR               23 (absolute + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+      L4:     STORE_FAST               6 (key)
+
+149           LOAD_FAST_LOAD_FAST     99 (key, seen)
+              CONTAINS_OP              1
+              CACHE                    0 (counter: 0)
+              POP_JUMP_IF_TRUE         2 (to L5)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           63 (to L2)
+              CACHE                    0 (counter: 0)
+
+150   L5:     LOAD_FAST                3 (seen)
+              LOAD_ATTR               25 (add + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                6 (key)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+151           LOAD_FAST                4 (out)
+              LOAD_ATTR                7 (append + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                5 (path)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+              JUMP_BACKWARD           99 (to L2)
+              CACHE                    0 (counter: 0)
+
+147   L6:     END_FOR
+              POP_TOP
+
+152           LOAD_FAST                4 (out)
+              RETURN_VALUE
+
+Disassembly of <code object load_config at 0x7fb7c55c8800, file "localfut20/config_loader.py", line 155>:
+155            RESUME                   0
+
+156            LOAD_FAST                0 (project_root)
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE       25 (to L1)
+               CACHE                    0 (counter: 0)
+               LOAD_GLOBAL              1 (Path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                0 (project_root)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_ATTR                3 (resolve + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               JUMP_FORWARD             5 (to L2)
+       L1:     LOAD_GLOBAL              4 (PROJECT_ROOT)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+       L2:     STORE_FAST               1 (base)
+
+157            LOAD_GLOBAL              7 (dict + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL              8 (DEFAULT_CONFIG)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               2 (cfg)
+
+158            LOAD_CONST               0 (None)
+               STORE_FAST               3 (config_path)
+
+159            LOAD_GLOBAL             11 (_candidate_paths + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (base)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               GET_ITER
+       L3:     FOR_ITER                70 (to L6)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               4 (path)
+
+160            LOAD_FAST                4 (path)
+               LOAD_ATTR               13 (exists + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         2 (to L4)
+               CACHE                    0 (counter: 0)
+
+161            JUMP_BACKWARD           26 (to L3)
+               CACHE                    0 (counter: 0)
+
+162    L4:     LOAD_GLOBAL             15 (_read_json + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                4 (path)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               5 (raw)
+
+163            LOAD_FAST                5 (raw)
+               POP_JUMP_IF_NOT_NONE     2 (to L5)
+               CACHE                    0 (counter: 0)
+
+164            JUMP_BACKWARD           42 (to L3)
+               CACHE                    0 (counter: 0)
+
+165    L5:     LOAD_FAST                2 (cfg)
+               LOAD_ATTR               17 (update + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_GLOBAL             19 (_flatten + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                5 (raw)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+
+166            LOAD_FAST                4 (path)
+               STORE_FAST               3 (config_path)
+
+167            POP_TOP
+               JUMP_FORWARD             2 (to L7)
+
+159    L6:     END_FOR
+               POP_TOP
+
+169    L7:     LOAD_CONST               1 ('gamePath')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       30 (to L8)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               2 ('fifa_exe')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L8)
+               CACHE                    0 (counter: 0)
+
+170            LOAD_FAST                2 (cfg)
+               LOAD_CONST               1 ('gamePath')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               2 ('fifa_exe')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+171    L8:     LOAD_CONST               3 ('game_path')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       30 (to L9)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               2 ('fifa_exe')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L9)
+               CACHE                    0 (counter: 0)
+
+172            LOAD_FAST                2 (cfg)
+               LOAD_CONST               3 ('game_path')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               2 ('fifa_exe')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+174    L9:     LOAD_CONST               4 ('redirector_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE        8 (to L10)
+               CACHE                    0 (counter: 0)
+
+175            LOAD_FAST                2 (cfg)
+               LOAD_CONST               4 ('redirector_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               5 ('tls_redirector_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+176   L10:     LOAD_CONST               6 ('redirect_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       14 (to L11)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST               7 ('redirect_debug_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              1
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE        8 (to L11)
+               CACHE                    0 (counter: 0)
+
+177            LOAD_FAST                2 (cfg)
+               LOAD_CONST               6 ('redirect_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               7 ('redirect_debug_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+179   L11:     LOAD_GLOBAL             23 (_coerce_ints + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+
+180            LOAD_GLOBAL             25 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               5 ('tls_redirector_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               4 ('redirector_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+181            LOAD_GLOBAL             25 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               7 ('redirect_debug_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               6 ('redirect_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+183            LOAD_GLOBAL             27 (_int_list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               8 ('starter_players')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_GLOBAL             28 (DEFAULT_STARTERS)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               8 ('starter_players')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+184            LOAD_GLOBAL             27 (_int_list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               9 ('reserve_players')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_GLOBAL             30 (DEFAULT_RESERVES)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               9 ('reserve_players')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+186            LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              10 ('runtime_root')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        10 (to L12)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_GLOBAL             37 (default_runtime_root + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+      L12:     STORE_FAST               6 (runtime_root)
+
+187            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                6 (runtime_root)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              10 ('runtime_root')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+188            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+
+189            LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              12 ('database_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L13)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+190            LOAD_FAST                6 (runtime_root)
+               LOAD_CONST              13 ('data')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              14 ('localfut20.sqlite3')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+
+188   L13:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              12 ('database_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+192            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              15 ('players_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         9 (to L14)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_GLOBAL             38 (LOCAL_ROOT)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_CONST              16 ('players.json')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L14:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              15 ('players_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+193            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              17 ('certificate_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L15)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_FAST                1 (base)
+               LOAD_CONST              18 ('runtime-source')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              19 ('certs')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              20 ('spring18-cert.pem')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L15:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              17 ('certificate_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+194            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              21 ('certificate_key_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L16)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_FAST                1 (base)
+               LOAD_CONST              18 ('runtime-source')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              19 ('certs')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              22 ('spring18-key.pem')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L16:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              21 ('certificate_key_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+195            LOAD_FAST                3 (config_path)
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE       11 (to L17)
+               CACHE                    0 (counter: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                3 (config_path)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               JUMP_FORWARD             1 (to L18)
+      L17:     LOAD_CONST              11 ('')
+      L18:     LOAD_FAST                2 (cfg)
+               LOAD_CONST              23 ('_config_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+196            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (base)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              24 ('_project_root')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+197            LOAD_FAST                2 (cfg)
+               RETURN_VALUE
+
+
+====================================================================================================
+localfut20.config_loader :: default_runtime_root
+filename='localfut20/config_loader.py' firstlineno=70 argcount=0 posonly=0 kwonly=0 locals=1 stacksize=3 flags=0x1000003
+====================================================================================================
+ 70           RESUME                   0
+
+ 71           LOAD_GLOBAL              0 (os)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                2 (environ)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_ATTR                5 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_CONST               1 ('LOCALAPPDATA')
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               0 (local_app_data)
+
+ 72           LOAD_FAST                0 (local_app_data)
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       14 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 73           LOAD_GLOBAL              7 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (local_app_data)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 ('FIFA20LocalFUT')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              RETURN_VALUE
+
+ 74   L1:     LOAD_GLOBAL              6 (Path)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                8 (home)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              PUSH_NULL
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               3 ('AppData')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              LOAD_CONST               4 ('Local')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              LOAD_CONST               2 ('FIFA20LocalFUT')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.config_loader :: resolve_path
+filename='localfut20/config_loader.py' firstlineno=77 argcount=2 posonly=0 kwonly=0 locals=3 stacksize=3 flags=0x1000003
+====================================================================================================
+ 77           RESUME                   0
+
+ 78           LOAD_FAST                0 (value)
+              POP_JUMP_IF_NONE        29 (to L1)
+              CACHE                    0 (counter: 0)
+              LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_ATTR                3 (strip + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               1 ('')
+              COMPARE_OP              88 (bool(==))
+              CACHE                    0 (counter: 0)
+              POP_JUMP_IF_FALSE        1 (to L2)
+              CACHE                    0 (counter: 0)
+
+ 79   L1:     RETURN_CONST             0 (None)
+
+ 80   L2:     LOAD_GLOBAL              5 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               2 (path)
+
+ 81           LOAD_FAST                2 (path)
+              LOAD_ATTR                7 (is_absolute + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE        18 (to L4)
+              CACHE                    0 (counter: 0)
+
+ 82           LOAD_FAST                1 (base)
+              COPY                     1
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE         6 (to L3)
+              CACHE                    0 (counter: 0)
+              POP_TOP
+              LOAD_GLOBAL              8 (PROJECT_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+      L3:     LOAD_FAST                2 (path)
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               2 (path)
+
+ 83   L4:     LOAD_FAST                2 (path)
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.config_loader :: _read_json
+filename='localfut20/config_loader.py' firstlineno=86 argcount=1 posonly=0 kwonly=0 locals=2 stacksize=6 flags=0x1000003
+====================================================================================================
+  86           RESUME                   0
+
+  87           NOP
+
+  88   L1:     LOAD_GLOBAL              0 (json)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_ATTR                2 (loads)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               PUSH_NULL
+               LOAD_FAST                0 (path)
+               LOAD_ATTR                5 (read_text + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               1 ('utf-8-sig')
+               LOAD_CONST               2 (('encoding',))
+               CALL_KW                  1
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               1 (raw)
+
+  91   L2:     LOAD_GLOBAL              9 (isinstance + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (raw)
+               LOAD_GLOBAL             10 (dict)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE        2 (to L3)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                1 (raw)
+               RETURN_VALUE
+       L3:     LOAD_CONST               0 (None)
+               RETURN_VALUE
+
+  --   L4:     PUSH_EXC_INFO
+
+  89           LOAD_GLOBAL              6 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE        3 (to L6)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+  90   L5:     POP_EXCEPT
+               RETURN_CONST             0 (None)
+
+  89   L6:     RERAISE                  0
+
+  --   L7:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L1 to L2 -> L4 [0]
+  L4 to L5 -> L7 [1] lasti
+  L6 to L7 -> L7 [1] lasti
+
+
+====================================================================================================
+localfut20.config_loader :: _flatten
+filename='localfut20/config_loader.py' firstlineno=94 argcount=1 posonly=0 kwonly=0 locals=5 stacksize=5 flags=0x1000003
+====================================================================================================
+ 94           RESUME                   0
+
+ 95           BUILD_MAP                0
+              STORE_FAST               1 (flat)
+
+ 96           LOAD_FAST                0 (raw)
+              LOAD_ATTR                1 (items + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              GET_ITER
+      L1:     FOR_ITER                32 (to L3)
+              CACHE                    0 (counter: 0)
+              UNPACK_SEQUENCE          2
+              CACHE                    0 (counter: 0)
+              STORE_FAST_STORE_FAST   35 (key, value)
+
+ 97           LOAD_GLOBAL              3 (isinstance + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (value)
+              LOAD_GLOBAL              4 (dict)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     2
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE        2 (to L2)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           28 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 98   L2:     LOAD_FAST_LOAD_FAST     49 (value, flat)
+              LOAD_FAST                2 (key)
+              STORE_SUBSCR
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           34 (to L1)
+              CACHE                    0 (counter: 0)
+
+ 96   L3:     END_FOR
+              POP_TOP
+
+ 99           LOAD_CONST               1 (('game', 'launcher', 'identity', 'services', 'paths', 'certificates', 'logging'))
+              GET_ITER
+      L4:     FOR_ITER                60 (to L6)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               4 (section)
+
+100           LOAD_FAST                0 (raw)
+              LOAD_ATTR                7 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                4 (section)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               3 (value)
+
+101           LOAD_GLOBAL              3 (isinstance + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (value)
+              LOAD_GLOBAL              4 (dict)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     2
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_TRUE         2 (to L5)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           43 (to L4)
+              CACHE                    0 (counter: 0)
+
+102   L5:     LOAD_FAST                1 (flat)
+              LOAD_ATTR                9 (update + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                3 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+              JUMP_BACKWARD           62 (to L4)
+              CACHE                    0 (counter: 0)
+
+ 99   L6:     END_FOR
+              POP_TOP
+
+103           LOAD_FAST                1 (flat)
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.config_loader :: _int_list
+filename='localfut20/config_loader.py' firstlineno=106 argcount=2 posonly=0 kwonly=0 locals=4 stacksize=6 flags=0x1000003
+====================================================================================================
+ 106           RESUME                   0
+
+ 107           LOAD_GLOBAL              1 (isinstance + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                0 (value)
+               LOAD_GLOBAL              2 (list)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 108           LOAD_GLOBAL              3 (list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (fallback)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               RETURN_VALUE
+
+ 109   L1:     BUILD_LIST               0
+               STORE_FAST               2 (out)
+
+ 110           LOAD_FAST                0 (value)
+               GET_ITER
+       L2:     FOR_ITER                30 (to L5)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               3 (item)
+
+ 111           NOP
+
+ 112   L3:     LOAD_FAST                2 (out)
+               LOAD_ATTR                5 (append + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_GLOBAL              7 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                3 (item)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+       L4:     JUMP_BACKWARD           32 (to L2)
+               CACHE                    0 (counter: 0)
+
+ 110   L5:     END_FOR
+               POP_TOP
+
+ 117           LOAD_FAST                2 (out)
+               RETURN_VALUE
+
+  --   L6:     PUSH_EXC_INFO
+
+ 113           LOAD_GLOBAL              8 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE        4 (to L8)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+ 114   L7:     POP_EXCEPT
+               JUMP_BACKWARD           49 (to L2)
+               CACHE                    0 (counter: 0)
+
+ 113   L8:     RERAISE                  0
+
+  --   L9:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L3 to L4 -> L6 [1]
+  L6 to L7 -> L9 [2] lasti
+  L8 to L9 -> L9 [2] lasti
+
+
+====================================================================================================
+localfut20.config_loader :: _coerce_ints
+filename='localfut20/config_loader.py' firstlineno=120 argcount=1 posonly=0 kwonly=0 locals=2 stacksize=6 flags=0x1000003
+====================================================================================================
+ 120           RESUME                   0
+
+ 121           LOAD_CONST               1 (('gameReadyDelaySeconds', 'minimum_age', 'nucleus_id', 'persona_id', 'club_id', 'squad_id', 'credits', 'redirector_port', 'tls_redirector_port', 'redirect_debug_port', 'redirect_port', 'blaze_port', 'qos_port', 'easw_port', 'fut_port', 'legacy_fut_port', 'fut_tls_port', 'lsx_port', 'control_port', 'session_lifetime_seconds', 'pack_size', 'pack_cost', 'rare_flag'))
+               GET_ITER
+       L1:     FOR_ITER                19 (to L4)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               1 (key)
+
+ 129           NOP
+
+ 130   L2:     LOAD_GLOBAL              1 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+       L3:     JUMP_BACKWARD           21 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 121   L4:     END_FOR
+               POP_TOP
+               RETURN_CONST             0 (None)
+
+  --   L5:     PUSH_EXC_INFO
+
+ 131           LOAD_GLOBAL              2 (Exception)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CHECK_EXC_MATCH
+               POP_JUMP_IF_FALSE       24 (to L7)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+ 132           LOAD_GLOBAL              1 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL              4 (DEFAULT_CONFIG)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (key)
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST_LOAD_FAST      1 (cfg, key)
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+       L6:     POP_EXCEPT
+               JUMP_BACKWARD           57 (to L1)
+               CACHE                    0 (counter: 0)
+
+ 131   L7:     RERAISE                  0
+
+  --   L8:     COPY                     3
+               POP_EXCEPT
+               RERAISE                  1
+ExceptionTable:
+  L2 to L3 -> L5 [1]
+  L5 to L6 -> L8 [2] lasti
+  L7 to L8 -> L8 [2] lasti
+
+
+====================================================================================================
+localfut20.config_loader :: _candidate_paths
+filename='localfut20/config_loader.py' firstlineno=135 argcount=1 posonly=0 kwonly=0 locals=7 stacksize=6 flags=0x1000003
+====================================================================================================
+135           RESUME                   0
+
+136           BUILD_LIST               0
+              STORE_FAST               1 (candidates)
+
+137           LOAD_GLOBAL              0 (os)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_ATTR                2 (environ)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_ATTR                5 (get + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_CONST               1 ('LOCALFUT20_CONFIG')
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               2 (env_config)
+
+138           LOAD_FAST                2 (env_config)
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       26 (to L1)
+              CACHE                    0 (counter: 0)
+
+139           LOAD_FAST                1 (candidates)
+              LOAD_ATTR                7 (append + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_GLOBAL              9 (Path + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (env_config)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+140   L1:     LOAD_FAST                1 (candidates)
+              LOAD_ATTR               11 (extend + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+
+141           LOAD_FAST                0 (project_root)
+              LOAD_CONST               2 ('launcher-settings.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+142           LOAD_GLOBAL             12 (PROJECT_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               2 ('launcher-settings.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+143           LOAD_GLOBAL             14 (LOCAL_ROOT)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               3 ('config.json')
+              BINARY_OP               11 (/)
+              CACHE                    0 (counter: 0)
+
+140           BUILD_LIST               3
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+145           LOAD_GLOBAL             17 (set + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              STORE_FAST               3 (seen)
+
+146           BUILD_LIST               0
+              STORE_FAST               4 (out)
+
+147           LOAD_FAST                1 (candidates)
+              GET_ITER
+      L2:     FOR_ITER                97 (to L6)
+              CACHE                    0 (counter: 0)
+              STORE_FAST               5 (path)
+
+148           LOAD_FAST                5 (path)
+              LOAD_ATTR               19 (exists + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              TO_BOOL
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              POP_JUMP_IF_FALSE       16 (to L3)
+              CACHE                    0 (counter: 0)
+              LOAD_FAST                5 (path)
+              LOAD_ATTR               21 (resolve + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              JUMP_FORWARD            15 (to L4)
+      L3:     LOAD_FAST                5 (path)
+              LOAD_ATTR               23 (absolute + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              CALL                     0
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+      L4:     STORE_FAST               6 (key)
+
+149           LOAD_FAST_LOAD_FAST     99 (key, seen)
+              CONTAINS_OP              1
+              CACHE                    0 (counter: 0)
+              POP_JUMP_IF_TRUE         2 (to L5)
+              CACHE                    0 (counter: 0)
+              JUMP_BACKWARD           63 (to L2)
+              CACHE                    0 (counter: 0)
+
+150   L5:     LOAD_FAST                3 (seen)
+              LOAD_ATTR               25 (add + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                6 (key)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+
+151           LOAD_FAST                4 (out)
+              LOAD_ATTR                7 (append + NULL|self)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (version: 0)
+              CACHE                    0
+              CACHE                    0 (keys_version: 0)
+              CACHE                    0
+              CACHE                    0 (descr: 0)
+              CACHE                    0
+              CACHE                    0
+              CACHE                    0
+              LOAD_FAST                5 (path)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              POP_TOP
+              JUMP_BACKWARD           99 (to L2)
+              CACHE                    0 (counter: 0)
+
+147   L6:     END_FOR
+              POP_TOP
+
+152           LOAD_FAST                4 (out)
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.config_loader :: load_config
+filename='localfut20/config_loader.py' firstlineno=155 argcount=1 posonly=0 kwonly=0 locals=7 stacksize=10 flags=0x1000003
+====================================================================================================
+155            RESUME                   0
+
+156            LOAD_FAST                0 (project_root)
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE       25 (to L1)
+               CACHE                    0 (counter: 0)
+               LOAD_GLOBAL              1 (Path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                0 (project_root)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_ATTR                3 (resolve + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               JUMP_FORWARD             5 (to L2)
+       L1:     LOAD_GLOBAL              4 (PROJECT_ROOT)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+       L2:     STORE_FAST               1 (base)
+
+157            LOAD_GLOBAL              7 (dict + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL              8 (DEFAULT_CONFIG)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               2 (cfg)
+
+158            LOAD_CONST               0 (None)
+               STORE_FAST               3 (config_path)
+
+159            LOAD_GLOBAL             11 (_candidate_paths + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (base)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               GET_ITER
+       L3:     FOR_ITER                70 (to L6)
+               CACHE                    0 (counter: 0)
+               STORE_FAST               4 (path)
+
+160            LOAD_FAST                4 (path)
+               LOAD_ATTR               13 (exists + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         2 (to L4)
+               CACHE                    0 (counter: 0)
+
+161            JUMP_BACKWARD           26 (to L3)
+               CACHE                    0 (counter: 0)
+
+162    L4:     LOAD_GLOBAL             15 (_read_json + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                4 (path)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               STORE_FAST               5 (raw)
+
+163            LOAD_FAST                5 (raw)
+               POP_JUMP_IF_NOT_NONE     2 (to L5)
+               CACHE                    0 (counter: 0)
+
+164            JUMP_BACKWARD           42 (to L3)
+               CACHE                    0 (counter: 0)
+
+165    L5:     LOAD_FAST                2 (cfg)
+               LOAD_ATTR               17 (update + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_GLOBAL             19 (_flatten + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                5 (raw)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+
+166            LOAD_FAST                4 (path)
+               STORE_FAST               3 (config_path)
+
+167            POP_TOP
+               JUMP_FORWARD             2 (to L7)
+
+159    L6:     END_FOR
+               POP_TOP
+
+169    L7:     LOAD_CONST               1 ('gamePath')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       30 (to L8)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               2 ('fifa_exe')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L8)
+               CACHE                    0 (counter: 0)
+
+170            LOAD_FAST                2 (cfg)
+               LOAD_CONST               1 ('gamePath')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               2 ('fifa_exe')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+171    L8:     LOAD_CONST               3 ('game_path')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       30 (to L9)
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               2 ('fifa_exe')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L9)
+               CACHE                    0 (counter: 0)
+
+172            LOAD_FAST                2 (cfg)
+               LOAD_CONST               3 ('game_path')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               2 ('fifa_exe')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+174    L9:     LOAD_CONST               4 ('redirector_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE        8 (to L10)
+               CACHE                    0 (counter: 0)
+
+175            LOAD_FAST                2 (cfg)
+               LOAD_CONST               4 ('redirector_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               5 ('tls_redirector_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+176   L10:     LOAD_CONST               6 ('redirect_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              0
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE       14 (to L11)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST               7 ('redirect_debug_port')
+               LOAD_FAST                2 (cfg)
+               CONTAINS_OP              1
+               CACHE                    0 (counter: 0)
+               POP_JUMP_IF_FALSE        8 (to L11)
+               CACHE                    0 (counter: 0)
+
+177            LOAD_FAST                2 (cfg)
+               LOAD_CONST               6 ('redirect_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               7 ('redirect_debug_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+179   L11:     LOAD_GLOBAL             23 (_coerce_ints + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               POP_TOP
+
+180            LOAD_GLOBAL             25 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               5 ('tls_redirector_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               4 ('redirector_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+181            LOAD_GLOBAL             25 (int + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               7 ('redirect_debug_port')
+               BINARY_SUBSCR
+               CACHE                    0 (counter: 0)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               6 ('redirect_port')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+183            LOAD_GLOBAL             27 (_int_list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               8 ('starter_players')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_GLOBAL             28 (DEFAULT_STARTERS)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               8 ('starter_players')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+184            LOAD_GLOBAL             27 (_int_list + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST               9 ('reserve_players')
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_GLOBAL             30 (DEFAULT_RESERVES)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST               9 ('reserve_players')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+186            LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              10 ('runtime_root')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        10 (to L12)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_GLOBAL             37 (default_runtime_root + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               CALL                     0
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+      L12:     STORE_FAST               6 (runtime_root)
+
+187            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                6 (runtime_root)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              10 ('runtime_root')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+188            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+
+189            LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              12 ('database_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         8 (to L13)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+
+190            LOAD_FAST                6 (runtime_root)
+               LOAD_CONST              13 ('data')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              14 ('localfut20.sqlite3')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+
+188   L13:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              12 ('database_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+192            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              15 ('players_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE         9 (to L14)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_GLOBAL             38 (LOCAL_ROOT)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_CONST              16 ('players.json')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L14:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              15 ('players_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+193            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              17 ('certificate_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L15)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_FAST                1 (base)
+               LOAD_CONST              18 ('runtime-source')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              19 ('certs')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              20 ('spring18-cert.pem')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L15:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              17 ('certificate_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+194            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             33 (resolve_path + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                2 (cfg)
+               LOAD_ATTR               21 (get + NULL|self)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               CACHE                    0 (keys_version: 0)
+               CACHE                    0
+               CACHE                    0 (descr: 0)
+               CACHE                    0
+               CACHE                    0
+               CACHE                    0
+               LOAD_CONST              21 ('certificate_key_path')
+               LOAD_CONST              11 ('')
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                1 (base)
+               CALL                     2
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               COPY                     1
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_TRUE        11 (to L16)
+               CACHE                    0 (counter: 0)
+               POP_TOP
+               LOAD_FAST                1 (base)
+               LOAD_CONST              18 ('runtime-source')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              19 ('certs')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+               LOAD_CONST              22 ('spring18-key.pem')
+               BINARY_OP               11 (/)
+               CACHE                    0 (counter: 0)
+      L16:     CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              21 ('certificate_key_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+195            LOAD_FAST                3 (config_path)
+               TO_BOOL
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (version: 0)
+               CACHE                    0
+               POP_JUMP_IF_FALSE       11 (to L17)
+               CACHE                    0 (counter: 0)
+               LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                3 (config_path)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               JUMP_FORWARD             1 (to L18)
+      L17:     LOAD_CONST              11 ('')
+      L18:     LOAD_FAST                2 (cfg)
+               LOAD_CONST              23 ('_config_path')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+196            LOAD_GLOBAL             35 (str + NULL)
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (index: 0)
+               CACHE                    0 (module_keys_version: 0)
+               CACHE                    0 (builtin_keys_version: 0)
+               LOAD_FAST                1 (base)
+               CALL                     1
+               CACHE                    0 (counter: 0)
+               CACHE                    0 (func_version: 0)
+               CACHE                    0
+               LOAD_FAST                2 (cfg)
+               LOAD_CONST              24 ('_project_root')
+               STORE_SUBSCR
+               CACHE                    0 (counter: 0)
+
+197            LOAD_FAST                2 (cfg)
+               RETURN_VALUE
+
+

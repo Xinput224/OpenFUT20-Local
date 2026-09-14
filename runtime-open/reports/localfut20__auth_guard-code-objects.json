@@ -1,0 +1,28 @@
+[
+  {
+    "qualname": "<module>",
+    "name": "<module>",
+    "filename": "/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py",
+    "firstlineno": 1,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 0,
+    "stacksize": 1,
+    "flags": 16777216,
+    "bytecode_len": 10
+  },
+  {
+    "qualname": "require_authorized_runtime",
+    "name": "require_authorized_runtime",
+    "filename": "/mnt/data/FUT20_PRIVATE_TESTER_1.0.6/localfut20/auth_guard.py",
+    "firstlineno": 1,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 0,
+    "stacksize": 1,
+    "flags": 16777219,
+    "bytecode_len": 4
+  }
+]

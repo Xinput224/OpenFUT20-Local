@@ -1,0 +1,67 @@
+[
+  {
+    "qualname": "<module>",
+    "name": "<module>",
+    "filename": "localfut20/sbc_catalog.py",
+    "firstlineno": 1,
+    "argcount": 0,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 3,
+    "stacksize": 34,
+    "flags": 16777216,
+    "bytecode_len": 3864
+  },
+  {
+    "qualname": "pack",
+    "name": "pack",
+    "filename": "localfut20/sbc_catalog.py",
+    "firstlineno": 12,
+    "argcount": 2,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 2,
+    "stacksize": 5,
+    "flags": 16777219,
+    "bytecode_len": 50
+  },
+  {
+    "qualname": "coins",
+    "name": "coins",
+    "filename": "localfut20/sbc_catalog.py",
+    "firstlineno": 16,
+    "argcount": 1,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 1,
+    "stacksize": 4,
+    "flags": 16777219,
+    "bytecode_len": 32
+  },
+  {
+    "qualname": "rule",
+    "name": "rule",
+    "filename": "localfut20/sbc_catalog.py",
+    "firstlineno": 20,
+    "argcount": 5,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 5,
+    "stacksize": 7,
+    "flags": 16777219,
+    "bytecode_len": 108
+  },
+  {
+    "qualname": "challenge",
+    "name": "challenge",
+    "filename": "localfut20/sbc_catalog.py",
+    "firstlineno": 30,
+    "argcount": 6,
+    "posonlyargcount": 0,
+    "kwonlyargcount": 0,
+    "nlocals": 6,
+    "stacksize": 12,
+    "flags": 16777219,
+    "bytecode_len": 126
+  }
+]

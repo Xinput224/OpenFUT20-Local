@@ -1,0 +1,2443 @@
+FIFA20 Local FUT FIX22-DRAFT-AUTOFILL-SCHEMA-FORMATIONS
+1.0.5-CATALOG-MARKET-CONSUMABLES-SOURCE
+contentfifa
+runtime_root
+data
+logs
+content-cache
+database_path
+_config_path
+launcher-settings.json
+Return the age of the local test account from its test-only DOB.
+date_of_birth
+minimum_age
+pack_settings.json
+3
+4
+5
+6
+7
+8
+9
+11
+25
+48
+50
+51
+61
+64
+66
+73
+84
+1
+Bronze Pack
+Twelve Bronze players with one rare.
+bronze
+2
+Silver Pack
+Twelve Silver players with one rare.
+silver
+Gold Pack
+Twelve Gold players with one rare.
+gold
+Prospect Pulse Pack
+Five Rare Gold players rated 80 or higher, with a chance of a promo player.
+special
+Spotlight Selection Pack
+Seven Rare Gold players rated 82 or higher, including at least 1 promo player.
+Champions Vault Pack
+Ten Rare Gold players rated 84 or higher, including at least 3 promo players.
+Ultimate Legacy XI Pack
+The best pack: eleven Rare Gold players rated 87 or higher, including at least 7 promo players.
+Premium Bronze Pack
+Twelve Bronze players with three rares.
+Jumbo Premium Bronze Pack
+Twenty-four Bronze players with seven rares.
+10
+Premium Silver Pack
+Twelve Silver players with three rares.
+Jumbo Premium Silver Pack
+Twenty-four Silver players with seven rares.
+12
+Premium Gold Pack
+Twelve Gold players with three rares.
+13
+Jumbo Premium Gold Pack
+Twenty-four Gold players with seven rares.
+14
+Gold Players Pack
+15
+Premium Gold Players Pack
+16
+Prime Gold Players Pack
+Twelve Gold players with six rares.
+17
+Rare Players Pack
+Twelve Rare Gold players.
+18
+Jumbo Rare Players Pack
+Twenty-four Rare Gold players.
+19
+Gold Consumables Pack
+Ten mixed FUT consumables: contracts, fitness, healing, training, chemistry styles and manager leagues.
+consumables
+20
+Gold Club Items Pack
+A Home Kit, Away Kit, Badge, Stadium and Ball for club customization.
+club_items
+21
+enabled
+built_in_store
+name
+OtaGoat Special Pack
+bio
+Twenty-five Rare Gold players rated 83 or higher, including at least 8 promo players.
+price
+size
+gold_weight
+silver_weight
+bronze_weight
+rare_slots
+min_rating
+guaranteed_specials
+special_chance
+store_group
+pack_asset_id
+special_weights
+22
+Gold Position Modifiers Pack
+Twelve usable Gold position modifiers for permanent player position changes.
+position_modifiers
+1001
+Bronze Reward Pack
+A small pack of Bronze players earned from a Squad Building Challenge.
+1002
+Silver Players Pack
+A pack of Silver players earned from a Squad Building Challenge.
+1003
+A pack of Gold players earned from a Squad Building Challenge.
+1004
+Mixed Players Pack
+A mixture of Bronze, Silver and Gold players earned from an SBC.
+1005
+A Premium Gold Pack earned from a Squad Building Challenge.
+1006
+Twelve Gold players with six rares, earned from an SBC.
+1007
+Twelve Rare Gold players earned from an SBC.
+1008
+Mega Pack
+A large Gold player pack earned from a Squad Building Challenge.
+1009
+Rare Mega Pack
+A Rare Mega Pack earned by completing an Advanced SBC group.
+1010
+Two Rare Gold Players Pack
+Two Rare Gold players earned from a Squad Building Challenge.
+1011
+Three Common Gold Players Pack
+Three Common Gold players earned from the Silver Upgrade SBC.
+1012
+Two Silver Players Pack
+Two Silver players earned from the Bronze Upgrade SBC.
+Twelve Gold players with three rares, earned from an SBC.
+Premium Silver Players Pack
+Twelve Silver players with three rares, earned from an SBC.
+Jumbo Gold Pack
+A 24-item Gold reward pack.
+A 24-item Premium Gold reward pack with seven rares.
+Rare Gold Pack
+A Premium Bronze reward pack with three rares.
+Premium Loan Player Reward Pack
+A local replacement for the original Premium Loan Player reward.
+reward_only
+Gold CB Reward (Max 80 OVR)
+A Gold centre-back reward replacing the retired FIFA 20 player-pick service.
+max_rating
+position
+CB
+Gold CM Reward (Max 80 OVR)
+A Gold central-midfielder reward replacing the retired FIFA 20 player-pick service.
+CM
+Gold ST Reward (Max 80 OVR)
+A Gold striker reward replacing the retired FIFA 20 player-pick service.
+ST
+Gold GK Reward (Max 80 OVR)
+A Gold goalkeeper reward replacing the retired FIFA 20 player-pick service.
+GK
+A standard Gold Pack earned as a mode reward.
+Prime Mixed Players Pack
+Twelve players: four Gold, four Silver and four Bronze, with six rares.
+Twenty-four Silver players with seven rares, earned as a Draft reward.
+A standard Silver Pack earned as a Draft reward.
+Elite Ten 82+ Pack
+82+ x10 Rare Gold Players Pack
+Inde Nav's Uncharted Pack
+81+ x2 Rare Gold Players Pack
+Gattouz Warrior Squad
+83+ x5 Rare Gold Players Pack
+Mia Khalifa Jaw-Dropper
+85+ x10 Rare Gold Players Pack
+packs
+Custom Pack 
+A custom FIFA 20 Ultimate Team pack.
+
+next_pack_id
+utf-8
+Could not load pack_settings.json: %s
+_special_weights
+Cristiano Ronaldo
+LW
+Lionel Messi
+CF
+Neymar Jr
+Luis Suarez
+Gareth Bale
+RM
+Robert Lewandowski
+Sergio Aguero
+Eden Hazard
+LM
+Manuel Neuer
+Sergio Ramos
+Thiago Silva
+Luka Modric
+Toni Kroos
+Paul Pogba
+players.json
+teamid
+assetId
+Major League Soccer
+Ansu Fati
+Anssumane
+Fati
+Reject definitions which cannot render a stable native player identity.
+commonName
+commonname
+lastName
+rating
+nativeDatabase
+dict[int, int]
+PLAYER_RESOURCE_ALIASES
+legacyResourceIds
+dict[int, list[int]]
+_dynamic_resource_candidates
+dynamicImageResourceId
+Map IDs emitted by older local catalogs to their native FUT card ID.
+Return optional identity fields for cards absent from FIFA's base DB.
+
+Most FUT cards resolve these values from assetId. Late FIFA 20 cards such
+as Ansu Fati and unlicensed players such as Ribery do not always exist in
+the installed database, so the native UI otherwise renders a blank name
+and default bio values. Extra JSON fields are ignored for normal cards.
+
+firstName
+Player 
+displayName
+playerName
+shortName
+firstname
+lastname
+surname
+playerCommonName
+knownAs
+knownas
+dateOfBirth
+height
+weight
+preferredFoot
+weakFoot
+skillMoves
+workRateAttack
+workRateDefense
+face
+managers.json
+dict[int, dict[str, Any]]
+MANAGER_DB
+Keep only managers the installed FIFA 20 database can render.
+
+The original catalog came from FIFA 21, which left every club at zero and
+included people whose portraits do not exist in FIFA 20. Join it against
+FIFA 20's native manager and league tables so cards have real portraits,
+club badges, nations and leagues.
+
+runtime
+mined
+native-fifa20
+tables
+fifa_ng_db
+manager.json
+leagueteamlinks.json
+leagueid
+managerid
+nationality
+nation
+consumablesContractPlayer
+consumablesFitnessPlayer
+consumablesFitnessTeam
+CONSUMABLE_DB
+dict[int, tuple[str, str]]
+POSITION_MODIFIER_EFFECTS
+consumablesPosition
+rareflag
+consumablesContractManager
+consumablesHealing
+consumablesTrainingGk
+consumablesTrainingPlayer
+consumablesTrainingPlayerPlayStyle
+consumablesTrainingGkPlayStyle
+consumablesTrainingManagerLeagueModifier
+sourceMember
+Contract
+contracts
+Fitness
+fitness
+healing
+training_player
+training_gk
+PlayStyle
+playstyle
+manager_league
+stadiums
+fcc_stadium
+stadium
+activeStadium
+kits
+fcc_kitcards
+kit
+activeHomeKit
+activeAwayKit
+badges
+fcc_badgecards
+custom
+activeBadge
+balls
+fcc_balls
+ball
+activeBall
+CLUB_ITEM_DB
+teamkits.json
+teamtechid
+teamkitid
+teamkittypetechid
+free
+year
+Expose the stadiums and balls shipped in FIFA 20 as persistent FUT cards.
+value
+stadiums.json
+stadiumid
+isstadiumavailable
+gmavailability
+issmallsided
+ _
+islicensed
+family
+table
+cardassetid
+itemType
+cardsubtypeid
+itemState
+weightrare
+category
+capacity
+boost
+_
+teamballs.json
+ballid
+isavailableinstore
+isembargoed
+logging_level
+INFO
+%(asctime)s %(levelname)s %(message)s
+localfut20.log
+localfut20
+[Config] Loaded config from %s
+[DB] SQLite path %s
+[FUT] Loaded %d FIFA 20 player definitions
+[FUT] Loaded %d FUT manager definitions
+[FUT] Special rarity pools: %s
+RuntimeFlow
+START
+FIFA20
+runtime imported
+FUT_HOME
+FUT READY
+ OBSERVED
+[FIFA20] State: %s component=%s session=%s detail=%s
+-
+[%s] HTTP method=%s path=%s requestBytes=%d responseBytes=%d status=%d session=%s state=%s
+[%s] HTTP failure method=%s path=%s requestBytes=%d responseBytes=%d status=%d session=%s state=%s
+[Blaze] component=0x%04X command=0x%04X seq=%d requestBytes=%d responseBytes=%d result=%s session=%s state=%s
+unknown-empty
+[Blaze] UNKNOWN component=0x%04X command=0x%04X seq=%d len=%d session=%s state=%s
+replace
+application/json; charset=utf-8
+application/octet-stream
+https://fifa20.content.easports.com/fifa/fltOnlineAssets/20C1B296-B15C-4F72-AF0F-882F187EC2C9/2020
+dict[str, threading.Lock]
+_CONTENT_FILE_LOCKS
+set[int]
+_PLAYER_HEAD_PRIME_ACTIVE
+^/fut/items/images/backgrounds/itembgs/[0-9a-f-]{36}/cards_bg_[cesj]_\d+_\d+_\d+\.dds$
+^/fut/playerheads/g4/single/p(\d+)\.dds$
+89504e470d0a1a0a0000000d4948445200000001000000010804000000b51c0c020000000b4944415478da6364f80f00010501012718e3660000000049454e44ae426082
+/
+application/json
+Ignoring invalid bundled FUT startup JSON: %s
+Fetch one allow-listed FIFA 20 presentation asset and cache it locally.
+User-Agent
+FIFA/20 PC
+FIFA20 content fetch failed url=%s error=%s
+Rejected invalid FIFA20 DDS url=%s bytes=%d
+.tmp
+Normalize Pillow's BC3 output to FIFA 20's native DXT5 container.
+<II
+<I
+Mozilla/5.0 FIFA20-LocalFUT/0.9
+image/avif,image/webp,image/apng,image/png,*/*;q=0.8
+Referer
+unexpected download size: 
+Resolve the portrait belonging to this exact WeFUT card definition.
+wefutCard
+resourceIdSource
+wefut-custom-avatar
+url
+ignore
+fut20/playeravatars/custom/(\d+)\.png
+fut20/playeravatars/(\d+)\.png
+custom/
+https://static.wefut.com/assets/images/fut20/playeravatars/
+.png
+Accept only a prepared transparent dynamic-player canvas.
+
+WeFUT's /custom/ namespace contains both 485x567 prepared canvases and
+ordinary square player photos. Square replacements cover FIFA's initially
+correct native portrait and are the source of the oversized face/white
+rectangle seen on many MOTM, IF and UCL cards. Rejecting them lets the
+dynamic endpoint continue to the installed EA DDS or native atlas fallback.
+
+Create a native-size DXT5 head from the exact card's transparent art.
+prefer_catalog_player_images
+playerheads
+p
+.dds
+Pillow unavailable; cannot build player portrait: %s
+catalog-playerheads-v12
+https://wefut.com/
+portrait response is not PNG
+RGBA
+A
+portrait is fully transparent
+Rejected unprepared catalog portrait resource=%d size=%dx%d; using native fallback
+DDS
+DXT5
+generated portrait does not match FIFA's native DDS contract
+.dds.tmp
+Cached exact catalog portrait resource=%d player=%s source=%s
+Exact catalog portrait unavailable resource=%d player=%s source=%s error=%s
+Begin portrait preparation without blocking the pack purchase reply.
+prefetch_pack_player_images
+player
+resourceId
+Background player-head preparation resource=%d resolved=%s elapsed=%.2fs
+Background player-head preparation failed resource=%d
+fut-head-
+Could not schedule player-head preparation resource=%d
+Queued %d/%d pack player heads without blocking pack response
+Resolve card backgrounds and per-player heads requested by the PC client.
+/itembgs/
+/itemBGs/
+/fut/playerheads/g4/single/p
+State
+
+                PRAGMA journal_mode=WAL;
+                CREATE TABLE IF NOT EXISTS kv(key TEXT PRIMARY KEY, value TEXT NOT NULL);
+                CREATE TABLE IF NOT EXISTS items(
+                    id INTEGER PRIMARY KEY,
+                    resource_id INTEGER NOT NULL,
+                    pile TEXT NOT NULL DEFAULT 'club',
+                    data TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS squads(
+                    id INTEGER PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    active INTEGER NOT NULL DEFAULT 0,
+                    data TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS unopened_packs(
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    pack_id INTEGER NOT NULL,
+                    data TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS draft_runs(
+                    id INTEGER PRIMARY KEY,
+                    data TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS sbc_squads(
+                    challenge_id INTEGER PRIMARY KEY,
+                    data TEXT NOT NULL,
+                    updated_at INTEGER NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS sbc_completions(
+                    challenge_id INTEGER PRIMARY KEY,
+                    times_completed INTEGER NOT NULL DEFAULT 0,
+                    completed_at INTEGER NOT NULL DEFAULT 0
+                );
+                CREATE TABLE IF NOT EXISTS sbc_set_completions(
+                    set_id INTEGER PRIMARY KEY,
+                    times_completed INTEGER NOT NULL DEFAULT 0,
+                    completed_at INTEGER NOT NULL DEFAULT 0
+                );
+                CREATE TABLE IF NOT EXISTS auctions(
+                    trade_id INTEGER PRIMARY KEY,
+                    item_id INTEGER NOT NULL DEFAULT 0,
+                    resource_id INTEGER NOT NULL,
+                    seller_type TEXT NOT NULL,
+                    seller_name TEXT NOT NULL,
+                    starting_bid INTEGER NOT NULL,
+                    current_bid INTEGER NOT NULL DEFAULT 0,
+                    buy_now_price INTEGER NOT NULL,
+                    highest_bidder TEXT NOT NULL DEFAULT '',
+                    expires_at INTEGER NOT NULL,
+                    duration INTEGER NOT NULL,
+                    status TEXT NOT NULL DEFAULT 'active',
+                    created_at INTEGER NOT NULL,
+                    item_data TEXT NOT NULL,
+                    coins_claimed INTEGER NOT NULL DEFAULT 0,
+                    item_delivered INTEGER NOT NULL DEFAULT 0,
+                    watched INTEGER NOT NULL DEFAULT 0
+                );
+                CREATE INDEX IF NOT EXISTS auctions_status_seller
+                    ON auctions(status, seller_type);
+                
+credits
+next_item_id
+next_trade_id
+sid
+LOCAL20-
+token
+LOCAL20TOKEN-
+established
+account_id
+test_account_id
+local-test-account-001
+nucleus_id
+persona_id
+club_id
+club_name
+club_abbr
+entitlements
+game_sku
+ONLINE_ACCESS
+ACTIVE
+fut_sku
+FUT_ACCESS
+Give every existing or new club a varied FIFA 20 manager pool.
+manager
+club
+id
+pile
+Added %d FIFA 20 starter manager(s); club now owns %d manager card(s)
+Grant a small native consumable collection once per local save.
+starter_consumables_v094_seeded
+Added %d FIFA 20 starter consumable stack(s)
+SELECT 1 FROM kv WHERE key=?
+INSERT INTO kv(key,value) VALUES(?,?)
+SELECT value FROM kv WHERE key=?
+INSERT INTO kv(key,value) VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value
+SELECT data FROM draft_runs WHERE id=1
+Ignoring malformed saved Draft run
+INSERT INTO draft_runs(id,data) VALUES(1,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data
+DELETE FROM draft_runs WHERE id=1
+SELECT 1 FROM items LIMIT 1
+SELECT 1 FROM squads LIMIT 1
+item_data
+{}
+trade_id
+item_id
+resource_id
+seller_type
+seller_name
+starting_bid
+current_bid
+buy_now_price
+highest_bidder
+expires_at
+duration
+status
+active
+created_at
+coins_claimed
+item_delivered
+watched
+INSERT INTO auctions(trade_id,item_id,resource_id,seller_type,seller_name,starting_bid,current_bid,buy_now_price,highest_bidder,expires_at,duration,status,created_at,item_data,coins_claimed,item_delivered,watched) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+SELECT * FROM auctions ORDER BY trade_id
+SELECT * FROM auctions WHERE seller_type=? ORDER BY trade_id
+SELECT * FROM auctions WHERE trade_id=?
+,
+=?
+UPDATE auctions SET 
+ WHERE trade_id=?
+DELETE FROM auctions WHERE trade_id=?
+Remove a listed card from every saved squad without disturbing slots.
+SELECT id,data FROM squads
+players
+itemData
+itemId
+UPDATE squads SET data=? WHERE id=?
+Local FUT quick-sell values.
+
+User-selected economy:
+  common/base non-rare = 360
+  base rare            = 700
+  special              = 10,000-17,000 based on card rarity/type
+
+Build a FIFA 20 player-item dict without persisting it.
+
+Shared by make_player_item (club/pack items are stored) and the FUT
+Draft flow (choice cards are transient and live only inside the saved
+draft run).
+
+timestamp
+rare_flag
+formation
+f442
+leagueId
+injuryType
+none
+injuryGames
+lastSalePrice
+training
+suspension
+contract
+preferredPosition
+playStyle
+discardValue
+owners
+untradeable
+morale
+statsList
+lifetimeStats
+attributeList
+assists
+lifetimeAssists
+loans
+loyaltyBonus
+Build a FIFA 20 manager-item dict from a real manager definition.
+unknown FIFA 20 manager definition 
+carddbid
+stackCount
+untradeableCount
+negotiation
+Repair manager asset IDs created by the original 0.8.1 hotfix.
+SELECT id, resource_id, data FROM items
+UPDATE items SET resource_id=?, pile=?, data=? WHERE id=?
+Repaired %d existing FUT manager item(s) with native FIFA 20 definitions
+INSERT INTO items(id,resource_id,pile,data) VALUES(?,?,?,?)
+Build the nested dynamic row used by FIFA 20 consumable stacks.
+unknown FIFA 20 consumable definition 
+rareFlag
+development
+resourceGameYear
+amount
+unknown FIFA 20 club-item definition 
+Equip one owned club item and persist one active item per slot.
+SELECT id,data FROM items
+UPDATE items SET data=? WHERE id=?
+UPDATE items SET pile='club',data=? WHERE id=?
+Backfill metadata and migrate pre-0.9.15 non-native Icon IDs.
+UPDATE items SET resource_id=?,data=? WHERE id=?
+Enriched %d existing FUT player items and migrated legacy Icon IDs
+Repair legacy Moments IDs inside saved squads, drafts, and auctions.
+SELECT 
+,data FROM 
+UPDATE 
+ SET data=? WHERE 
+SELECT trade_id,resource_id,item_data FROM auctions
+UPDATE auctions SET resource_id=?,item_data=? WHERE trade_id=?
+Migrated legacy Icon IDs in %d saved container(s)
+starter_players
+reserve_players
+SELECT data FROM items WHERE pile=? ORDER BY id
+SELECT data FROM items ORDER BY id
+SELECT data FROM items WHERE id=?
+UPDATE items SET pile=?, data=? WHERE id=?
+UPDATE items SET pile=?,data=? WHERE id=?
+SELECT data FROM squads WHERE active=1 ORDER BY id LIMIT 1
+SELECT data FROM squads ORDER BY id LIMIT 1
+SELECT id,data FROM items WHERE resource_id=? ORDER BY id
+DELETE FROM items WHERE id=?
+Delete owned item instances and credit their stored server-side values.
+
+Never trusts a discard value supplied by the FIFA client. Each item is
+looked up in SQLite and its expected value is recalculated from players.json.
+
+SELECT resource_id, data FROM items WHERE id=?
+keys
+squad
+Refused discard of squad-bound item %d
+QUICKSELL items=%s payout=%d newCredits=%d
+Remove all transient items from a pile and return the number removed.
+DELETE FROM items WHERE pile=?
+Return player definitions already owned in the club or a squad.
+
+Unassigned pack items are intentionally excluded: FIFA's duplicate marker
+should compare a newly opened card against cards the user already owns,
+not against the rest of the current pack reveal.
+
+Return an already-owned club/squad item for a player definition.
+Return item-instance IDs whose player definition is already owned.
+unassigned
+Persist only a conservative duplicate marker/pile state.
+duplicate
+isDuplicate
+Return one stored FUT item by item-instance id.
+True when moving this player into club/squad would duplicate a definition.
+squad_id
+squad_name
+Local Test XI
+INSERT INTO squads(id,name,active,data) VALUES(?,?,?,?)
+SELECT data FROM squads ORDER BY active DESC,id
+Ignoring malformed saved squad row
+SELECT data FROM squads WHERE id=?
+SELECT COALESCE(MAX(id),0) + 1 FROM squads
+SELECT 1 FROM squads WHERE id=?
+UPDATE squads SET active=?,data=? WHERE id=?
+definitionId
+defId
+squadId
+squadName
+Squad 
+f[0-9a-z_]{2,16}
+squadType
+REGULAR_SQUAD
+dream
+concept
+dreamSquad
+DREAM_SQUAD
+index
+kitNumber
+captain
+starRating
+chemistry
+kicktakers
+[0,0,0,0,0,0,0,0,0,0,0]
+UPDATE squads SET active=0
+INSERT INTO squads(id,name,active,data) VALUES(?,?,?,?) ON CONFLICT(id) DO UPDATE SET name=excluded.name,active=excluded.active,data=excluded.data
+SQUAD SAVE id=%d slots=%d starters=%d formation=%s chemistry=%d rating=%d managerItem=%d managerResource=%d managerAsset=%d managerContracts=%d
+DELETE FROM squads WHERE id=?
+SELECT id FROM squads WHERE active=1 ORDER BY id LIMIT 1
+SELECT id FROM squads ORDER BY id LIMIT 1
+UPDATE squads SET active=1,data=? WHERE id=?
+Unknown pack id 
+content_type
+CUSTOM_PACK
+tier
+rare
+common
+Configured guaranteed special pool is empty
+Configured rare/special pool is empty
+Configured common pool is empty
+CUSTOM PACK id=%s name=%s size=%d rareSlots=%d minRating=%d guaranteedSpecials=%d specialChance=%.1f%%
+PACK HEADLINE CANDIDATE id=%s resource=%s rating=%s rareflag=%s discardValue=%s
+UPDATE unopened_packs SET pack_id=? WHERE pack_id=?
+SELECT pack_id,COUNT(*) AS quantity FROM unopened_packs GROUP BY pack_id ORDER BY pack_id
+pack_id
+quantity
+Consume one earned pack token before opening its contents.
+SELECT id FROM unopened_packs WHERE pack_id=? ORDER BY id LIMIT 1
+DELETE FROM unopened_packs WHERE id=?
+Grant one unopened pack token (also used to roll back failed opens).
+INSERT INTO unopened_packs(pack_id,data) VALUES(?,?)
+SELECT challenge_id,times_completed FROM sbc_completions
+SELECT set_id,times_completed FROM sbc_set_completions
+challenge_id
+times_completed
+set_id
+SELECT data FROM sbc_squads WHERE challenge_id=?
+Save owned player-instance IDs in an SBC's eleven on-pitch slots.
+INSERT INTO sbc_squads(challenge_id,data,updated_at) VALUES(?,?,?) ON CONFLICT(challenge_id) DO UPDATE SET data=excluded.data,updated_at=excluded.updated_at
+Consume a valid SBC squad and grant all rewards in one transaction.
+the submitted squad contains duplicate item instances
+type
+count
+COINS
+PACK
+packId
+unknown SBC reward pack 
+BEGIN IMMEDIATE
+SELECT times_completed FROM sbc_completions WHERE challenge_id=?
+this challenge has already been completed
+?
+SELECT id,pile,data FROM items WHERE id IN (
+)
+one or more submitted players are no longer owned
+SBC squads can contain player items only
+submitted players must be in the Club
+DELETE FROM items WHERE id IN (
+INSERT INTO sbc_completions(challenge_id,times_completed,completed_at) VALUES(?,?,?) ON CONFLICT(challenge_id) DO UPDATE SET times_completed=excluded.times_completed,completed_at=excluded.completed_at
+DELETE FROM sbc_squads WHERE challenge_id=?
+SBC challenge 
+SELECT times_completed FROM sbc_set_completions WHERE set_id=?
+INSERT INTO sbc_set_completions(set_id,times_completed,completed_at) VALUES(?,?,?) ON CONFLICT(set_id) DO UPDATE SET times_completed=excluded.times_completed,completed_at=excluded.completed_at
+SBC set 
+SELECT value FROM kv WHERE key='credits'
+INSERT INTO kv(key,value) VALUES('credits',?) ON CONFLICT(key) DO UPDATE SET value=excluded.value
+Return the item shape used by native FUT pack/unassigned responses.
+
+Keep the real resourceId (the client uses it to resolve the player/card), but
+omit local-only/derived keys that are not part of the original pack item
+payload.  In particular, do not send assetId alongside resourceId here: the
+native client derives the base asset from resourceId.
+
+status.json
+pack
+coin
+Encode one catalog rule using FIFA 20's flattened elgReq wire format.
+kind
+scope
+min
+quality
+PLAYER_COUNT
+SCOPE
+PLAYER_LEVEL
+rare_count
+PLAYER_RARITY
+DEFAULT
+BRICK
+any
+invalid
+challenges
+repeatable
+setId
+priority
+categoryId
+category_id
+description
+challengesCount
+hidden
+tagged
+endTime
+challengesCompletedCount
+awards
+tutorial
+timesCompleted
+taggedByProduction
+taggedByUser
+setImageId
+-localfut20-sbc
+categories
+rules
+player_count
+COMPLETED
+NOT_STARTED
+challengeId
+elgReq
+elgOperation
+AND
+OPEN_CHALLENGE
+BRICK_CHALLENGE
+challengeImageId
+exact
+max
+text
+display_name
+Return the pre-auth account-discovery document used by FUT 20.
+
+This is deliberately *not* a session response.  Retail FUT first reads a
+persona and a club SKU from this document, obtains a Nucleus auth code,
+and only then POSTs /ut/auth.  Supplying sid/token fields here made the
+native client treat an unauthenticated account lookup as a malformed
+session and stop before its Nucleus hand-off.
+
+2020
+pc
+userAccountInfo
+entries
+LOCAL_GOLD
+Local Gold Pack
+12 local player items
+pack_cost
+pack_size
+pow.
+POW-
+session.json
+expiresAt
+sessionId
+ut.
+UT-
+coins
+points
+Migrate the old bootstrap-only customization set into SQLite once.
+Return the persisted Home/Away/Badge/Stadium/Ball selections.
+Normalize locally stored items to FIFA 20's native player-item shape.
+posMods
+list[int] | None
+_MARKET_GOLD_POOL
+_MARKET_SPECIAL_POOL
+_MARKET_SILVER_POOL
+_MARKET_BRONZE_POOL
+_MARKET_MANAGER_POOL
+Return a stable, card-aware local valuation on FIFA's price ladder.
+Return the card's native listing range on FIFA's transfer-price ladder.
+Compatibility accessor for callers that need gold and special players.
+Remove exact-card batches manufactured by the old Compare Price path.
+
+Versions 0.9.2/0.9.3 created at least four CPU copies of one resource in
+the same second. A few cards in a batch may since have sold, so creation
+time plus resource is the durable signature. Ordinary stock is replenished
+after cleanup, while watched or bid-on cards are always preserved.
+
+market_compare_seed_cleanup_v094
+cpu
+TRANSFER MARKET removed %d legacy Compare Price duplicate listing(s)
+Maintain a persistent, varied set of local CPU auctions.
+market_next_restock_at
+trade
+forSale
+marketDataMinPrice
+marketDataMaxPrice
+TRANSFER MARKET replenished %d mixed CPU listings
+Start a fresh restock window after a user completes a purchase.
+_deliveredItemId
+_cpuBuyAt
+user
+sold
+TRANSFER MARKET bot bought trade=%s buyNow=%s
+_cpuActionAt
+_cpuMaxBid
+_cpuBidCount
+TRANSFER MARKET bot bid trade=%s amount=%s ceiling=%s
+won
+TRANSFER MARKET won bid trade=%s price=%s item=%s
+TRANSFER MARKET bot won user listing trade=%s price=%s
+expired
+Credit one completed user sale immediately and exactly once.
+tradeId
+TRANSFER MARKET credited sale trade=%s gross=%s tax=%s net=%s balance=%s
+FUT Trader
+closed
+highest
+pos
+lev
+level
+maskedDefId
+nat
+leag
+league
+team
+minb
+minimumBid
+maxb
+maximumBid
+micr
+minBuy
+minimumBuyNowPrice
+macr
+maxBuy
+maximumBuyNowPrice
+minRating
+minr
+maxRating
+maxr
+rarity
+start
+num
+Return the raw array consumed by FIFA's MarketDataDelegate.
+Price-range form used when FIFA asks about owned item instance IDs.
+Wrap an unlisted transfer-pile card in FIFA's native auction envelope.
+inactive
+Refresh selected auctions without making FIFA leave Ultimate Team.
+auctionInfo
+ITEM_NOT_FOUND
+ITEM_UNTRADEABLE
+ITEM_ALREADY_LISTED
+startingBid
+buyNowPrice
+TRANSFER MARKET listed item=%s resource=%s trade=%s start=%s buyNow=%s duration=%s
+AUCTION_NOT_FOUND
+CANNOT_BID_ON_OWN_AUCTION
+AUCTION_EXPIRED
+bid
+currentBid
+BID_TOO_LOW
+INSUFFICIENT_CREDITS
+bought
+TRANSFER MARKET buy-now trade=%s price=%s deliveredItem=%s balance=%s
+TRANSFER MARKET bid trade=%s amount=%s balance=%s
+AUCTION_STILL_ACTIVE
+Return FIFA 20's native /club player or manager search envelope.
+DEFENDER
+MIDFIELDER
+FORWARD
+ATTACKER
+GOALKEEPER
+min-ovr
+max-ovr
+loan
+excldef
+exclid
+exclude
+sort
+desc
+asc
+sortBy
+ovr
+CLUB ITEM SEARCH type=%s position=%s level=%s start=%d count=%d matched=%d returned=%d
+ANY
+Search the definition catalog used by FIFA's Concept Player picker.
+zone
+conceptResourceId
+CONCEPT SEARCH definition=%d position=%s level=%s matched=%d returned=%d
+Local XI
+personaId
+valid
+newSquad
+newsquad
+changed
+Build the complete FutSquadListServerResponse expected by CardsDLL.
+
+FIFA does not treat entries in ``squad`` as lightweight summaries. It
+sends every row through the same squad factory as a direct squad load;
+that factory immediately reads all 23 player slots. Returning only name,
+formation, rating, and chemistry therefore crashes before the create-
+squad request can be sent.
+
+Return a formation-safe squad for the FUT Hub response.
+
+CardsDLL builds the Hub formation immediately and assumes that all eleven
+starter item objects are real cards.  Empty or partly edited squads are
+valid in the Squad screen, but sending one as the Hub's active squad makes
+the native formation builder dereference player zero.  Keep the user's
+saved/active state intact and use the first complete saved squad only for
+this presentation payload.
+
+SQUAD HUB FALLBACK activeId=%d fallbackId=%d reason=incomplete-active
+SQUAD HUB PRESENTATION_FILL activeId=%d ownedFill=%d catalogFill=%d reason=sbc-depleted-squads
+SQUAD HUB UNSAFE activeId=%d starters=%d reason=no-presentation-fill-available
+mode
+SINGLE_PLAYER
+ONLINE
+seed
+fut20-draft-reward:
+:
+f3412
+f3421
+f343
+f352
+f41212
+f4141
+f4222
+f4231
+f4312
+f4321
+f433
+f4411
+f451
+f5212
+f5221
+f532
+f541
+Normalize a stored manager to the native FUT manager subtype.
+managerId
+Return a real FUT manager for opponent/native squads.
+state
+PICK_DIFFICULTY
+FORMATION_DRAFT
+difficulty
+formationChoices
+picked
+currentChoices
+currentChoiceKind
+currentPositionId
+seenAssets
+choiceSerial
+nextItemId
+wins
+losses
+Return the pick rounds boosted to contain a 99/98/97-rated card.
+
+Deterministic for a run's seed so reopening a choice does not reroll the
+chance. Tuned for an "insane" Draft: almost every run fires, and when it
+does it boosts the large majority of rounds whose slot can actually take
+a top-end card.
+
+fut20-draft-elite99:
+No deliberately weak rounds -- the Draft is tuned to stay stacked.
+RF
+RW
+LF
+RWB
+RB
+LWB
+LB
+DRAFT WEIGHT pick=%s guaranteed99=%s badPick=%s ratings=%s rarities=%s
+choices
+CAPTAIN_DRAFT
+PLAYER_DRAFT
+MANAGER_DRAFT
+READY_FOR_MATCH
+Persist the current Draft XI/bench order sent with a later pick.
+
+The chosen card for this request is not in ``swapPlayerDefIds`` yet, so the
+caller applies the order before adding that selection. Item instances stay
+intact while moving by resourceId.
+
+Draft Squad
+DRAFT_SQUAD
+actives
+stadiumAssetId
+stadiumId
+Return the object-shaped result used by native Draft autocomplete.
+
+``FutGetDraftCurrentStateServerResponse`` is list-shaped, but FIFA binds
+the autocomplete command to the distinct operation-result contract.
+Returning the current-state row at the response root exposes its
+``READY_FOR_MATCH`` state to the global navigation handler and sends FIFA
+back to the FUT Hub even though every pick was saved.  Return the native
+operation envelope instead: success/mode plus a nested state and the
+completed squad/player aliases consumed by the Draft screen.
+
+Project the Draft editor squad into FIFA's playable match contract.
+INVALID
+0
+PLAYER
+23
+Seeded, positionally valid 23-man CPU squad around a target rating.
+
+Squad Battles uses a tighter shortlist and stronger weighting so its high
+tiers really field stronger teams. Draft keeps the original defaults.
+
+fut20-draft-opponent:
+FIFA 20 player catalog cannot fill a Draft opponent squad
+Build CPU-only customization items for the selected real club.
+
+These are deliberately not read from the user's active club items.  The
+old implementation copied the user's equipped badge and both kits into
+every CPU squad, even though the opponent's name/teamId was different.
+
+One complete playable CPU opponent squad for a Draft round.
+clubName
+clubAbbr
+teamId
+badgeAssetId
+home
+isHomeTeam
+Emirates Stadium
+ENGLAND
+GunnerAce
+Etihad Stadium
+BlueMoon20
+Signal Iduna Park
+GERMANY
+YellowWall
+Estadio Santiago Bernabeu
+SPAIN
+RoyalFUT
+FUT club metadata and scalar customization IDs used by the SB detail UI.
+ballId
+est
+establishedTime
+clubEstablished
+homeKitId
+awayKitId
+homeKitResourceId
+awayKitResourceId
+homeKitAssetId
+awayKitAssetId
+homeKitTeamId
+awayKitTeamId
+badgeId
+homeKit
+awayKit
+Stable daily key so a day's hub and opponent squads stay consistent.
+fut20-squad-battles:
+eventId
+competitionId
+startTime
+startTimeStamp
+eventStartTime
+endTimeStamp
+eventEndTime
+currentTime
+crtTime
+serverCrtTime
+serverTimeInSeconds
+secondsUntilStart
+secondsUntilEnd
+timeUntilStart
+timeUntilEnd
+untilStartSeconds
+untilEndSeconds
+nextEventStartTime
+gamesPlayed
+numberOfMatchesPlayed
+matchesPlayed
+gamesRemaining
+remainingMatches
+squadsRemaining
+totalGames
+maxMatches
+maxNumberOfMatches
+maxRegularGames
+userPoints
+pointsWon
+squadBattleEnabled
+weeklyRewardsAutoClaimed
+teamName
+ownerName
+personaName
+difficultyName
+location
+foundationYear
+clubInfo
+stadiumName
+basePointsWin
+basePointsLoss
+sqbt2data
+homeKitItem
+awayKitItem
+topPlayers
+sqbtEventId
+sqbtMatchDifficulty
+sqbtOpponentSquadId
+sqbtOppid
+squadBattleCouchPlayEnabled
+isActive
+available
+battlePoints
+pointMatchesPlayed
+pendingPrize
+squad_battles_v1
+schema
+competitionStart
+competitionEnd
+refreshId
+refreshesUsed
+generatedAt
+nextRefresh
+opponents
+selectedOpponentId
+selectedDifficulty
+matchInProgress
+lastMatchStart
+lastSettledMatchStart
+lastMatchResponse
+played
+score
+oppScore
+penaltyScore
+oppPenaltyScore
+CPU Squad
+CPU
+FUT Challenger
+INTERNATIONAL
+Sanderson Park
+ 
+rank
+userTierLevel
+isPrizeAvailable
+gameModeRestriction
+matchResultWin
+matchResultLoss
+difficultyModifiers
+winDifficultyModifiers
+lossDifficultyModifiers
+prizeTiers
+NO_SQUAD_BATTLE_OPPONENTS
+reason
+NO_SQUAD_BATTLE_MATCH
+endReason
+result
+LOSS
+WIN
+DRAW
+draws
+secondsPlayed
+matchDifficulty
+opponentTeamId
+completionAward
+rewardCoins
+totalCoins
+squadBattlePoints
+tierName
+draw
+SQUAD-BATTLES MATCH_END result=%s difficulty=%s points=%s coins=%s total=%s
+fut20-squad-battles-top100:
+CPU Elite 
+LocalCPU
+03d
+scoreValue
+persona
+badge
+insetUrl
+source
+squad_battles
+BRONZE 3
+tierLevel
+featuredsquad
+/stats
+/history
+prize
+reward
+leaderboard
+top100
+/standing
+/rank
+/(?:opponentsquad|opponent/squad|squad)/(\d+)$
+/refresh
+opponent
+Rank I
+Rank II
+Rank III
+Rank IV
+Gold 1
+Gold 2
+Gold 3
+Silver 1
+Silver 2
+Silver 3
+rivals_progress
+weekIndex
+division
+skillRating
+titleWins
+weeklyWins
+weeklyGames
+weeklyPoints
+rewardsClaimedWeek
+champion_progress
+games
+seasonal_mode
+rivals
+champion
+rivalsEventId
+seasonId
+crtRivalDivision
+crtDivision
+currentDivision
+divisionId
+rivalsScore
+skillPoints
+skillRatingScore
+relegationBuffer
+eloThresholdUp
+eloThresholdDown
+current
+serverTime
+end
+untilEnd
+nextReset
+nextResetTime
+weeklyResetTime
+competitionClosed
+rivalGamesPlayed
+weeklyGamesPlayed
+weeklyDraws
+weeklyLosses
+gamesWon
+gamesLost
+gamesDraw
+weeklyGamesRemaining
+maxWeeklyGames
+inPlacement
+inPlacementMatches
+placementComplete
+placementMatchesRequired
+placementMatchesPlayed
+gamesPlayedPlacement
+rivalsNumberOfSqbtPlacementMatches
+rivalsPlacementSqbtGamesPlayed
+rivalsSqbtPlacementMatchesDisplayThreshold
+rivalsEventMatchesSoftCap
+rivalsEventMatchesSoftCapMax
+rivalsThresholdBeforeSoftCap
+rivalsSkillPointsCapValue
+weekendLeagueEnabled
+weekendLeaguePoints
+weekendLeaguePointsForWin
+weekendLeagueThreshold
+weekendLeagueGamesPlayed
+qualifiedInWeekendLeague
+prizes
+prizesInError
+prizesRivalPoints
+unclaimedPrizeWaiting
+hasRewardsToClaim
+needsAutoClaim
+needsMilestonesAutoClaim
+NUMBER_OF_WINS_TYPE
+championEventId
+championEventType
+localizedName
+FUT_CHAMPIONS_WKND_LG
+registrationCloseTime
+minMatchesToRank
+activeChampionLeagues
+previousChampionEvents
+upcomingChampionEvents
+unclaimedPrizesChampionEvents
+qualifiedChampionLeagueIds
+qualifiedChampionEventId
+hasEntry
+entryTokens
+registered
+isRegistered
+currentChampionEvent
+userRegistration
+EG
+ME
+userStats
+period
+curr
+base
+ranking
+expectedTierLevel
+predictedTierLevel
+goalsFor
+goalsAgainst
+winStreak
+bestWinStreak
+matchesRemaining
+remainingGames
+numGames
+numGamesRemaining
+regularGamesRemaining
+regularMatchesRemaining
+weekendLeagueGamesRemaining
+gamesLeft
+numberOfGamesRemaining
+numberOfMatchesRemaining
+Local FC
+fut20-seasonal-reward:
+RIVALS-REWARD rank=%s div=%s coins=%s players=%sx%s
+CHAMPION-REWARD tier=%s wins=%s coins=%s players=%sx%s
+pileClubPlayers
+pileSquadPlayers
+pileConsumables
+pileManagers
+pileClubItems
+pileClubTotal
+pilePack
+kitCount
+badgeCount
+stadiumCount
+ballCount
+clubPlayers
+clubItemCount
+clubCount
+accountCreatedPlatformName
+Build the exact FutStickerBookStats2ServerResponse wire shape.
+
+The retail Cards DLL accepts only ``category`` and ``stat`` at the top
+level.  ``category`` is a required string enum; omitting it leaves the
+native destination index at -1 and crashes at CardsDLL+0x28DB7C.
+
+playersBronze
+playersSilver
+playersGold
+rarePlayers
+staff
+staffManager
+kitsHome
+kitsAway
+stadia
+Return consumable totals in the native sticker-book response.
+consumablesContract
+consumablesTrainingManager
+consumablesFitness
+consumablesTraining
+consumablesFormationManager
+Training
+Return owned development cards in FIFA's native stack envelope.
+promo
+mypacks
+\s+
+STORE skipped duplicate %s pack name=%s id=%s
+packAssetId
+unopenedQuantity
+unopened
+isReward
+isMyPack
+tradable
+tradeable
+packName
+title
+packDescription
+longDescription
+shortDescription
+label
+displayLabel
+storePackName
+finalPrice
+originalPrice
+currencies
+categoryList
+displayGroup
+purchaseGroup
+group
+packType
+Consumable resource %s acknowledged without mutation targets=%s
+Consumable target item not found item=%s resource=%s
+Rejected position modifier resource=%s item=%s expected=%s actual=%s
+Consumable resource %s (%s/%s) was valid but no eligible target changed
+//pow/
+/ut/ut/
+/ut/
+/game/fifa20/
+/v2/
+/ut
+/auth
+/shards
+Host
+host
+[FUT-REQ] host=%s method=%s raw=%s normalized=%s query=%s body=%s
+/connect/
+/proxy/identity/
+/pid/
+/ids/
+accounts.ea.com
+gateway.ea.com
+fut20-local-phish-
+NUCLEUS
+FUT
+[FUT-HANDOFF] Nucleus/OAuth host=%s method=%s path=%s response_type=%s
+response_type
+/connect/auth
+GET
+code
+[FUT-HANDOFF] issuing local auth code; expecting POST /ut/auth next sid=%s
+no-store, no-cache, must-revalidate
+no-cache
+LOCAL-FUT20-AUTH-CODE
+Content-Type
+pid
+T00:00:00Z
+Bearer
+local@localhost
+STORE-SCOUT REQUEST method=%s path=%s query=%s accept=%s contentType=%s body=%s
+Accept
+accept
+content-type
+/pow/auth
+AUTH
+X-POW-SID
+/pow/
+/pow/bank/user/account
+pow_funds
+daily
+weekly
+/pow/store/game/fifa20/catalog/list
+catalogs
+FUT Store
+FIFAPoints
+/catalog/0/item/list
+DELETE
+FUT_AUTH
+local_host
+127.0.0.1
+fut_port
+[FIX21] /ut/auth method=%s host=%s body=%s -> sid=%s
+FFA20PCC
+FUT20PCC
+FFA20PCE
+FFA20PCA
+FFA20PCG
+FUT20PCE
+FUT20PCA
+FUT20PCG
+protocol
+http
+ipPort
+phishingToken
+remoteConfigEnabled
+nucleusPersonaId
+nucleusUserId
+authCode
+sku
+skuAccessList
+onlineAccess
+returningUser
+http://
+/ut/game/fifa20/hub
+[FIX21] /ut/auth enriched sid=%s hubUrl advertised
+FUT_INIT
+shardInfo
+FIFA20LocalFUT
+RESOURCE_MAPPING
+ACCOUNT
+[FIX22] accountinfo schema=retail-preauth persona=%s sku=%s sid=%s query=%s; expecting /connect/auth then /ut/auth
+MASS_INFO
+[HANDOFF] userMassInfo called - LOCAL auth mode startup data
+[HANDOFF] userMassInfo returning startup payload: userInfo + squad + loans
+/fut/loc/pc/leaderboards.eng_us.xml
+text/plain
+/fut/tutorials/cmn
+/fut/packs/loc/storepackdescriptions.en_us.xml
+FUT_STORE_PACK_
+_NAME
+      <trans-unit id="
+" resname="
+"><source>
+</source></trans-unit>
+_DESC
+_NAME_MOBILE
+
+
+STORE-SCOUT LOC RESPONSE xml=%s
+STORE PACK LOC XLIFF packs=%s
+application/xml; charset=utf-8
+Serving bundled FUT startup content path=%s bytes=%d
+public, max-age=86400
+/fut/sbc/
+image/png
+public, max-age=31536000, immutable
+no-store, no-cache, must-revalidate, max-age=0
+close
+/fut/
+/p?(\d{3,})\.(?:dds|png|jpg|jpeg|webp)$
+/ut/game/fifa20/settings
+configs
+IsStoreEnabled
+cardPackStoreEnabled
+pointsPackStoreEnabled
+enableDraftMode
+enableOfflineDraftMode
+enableSinglePlayerDraftMode
+enableSquadBuildingChallenges
+isSBCEnabled
+enableRivals
+enableDivisionRivals
+divisionRivalsEnabled
+enableFUTChampions
+futChampionsEnabled
+enableWeekendLeague
+enableSeasonalCampaigns
+squadBattlesEnabled
+enableSquadBattles
+squadBattleFeatureEnabled
+singlePlayerSquadBattleEnabled
+enableOfflineSquadBattles
+/ut/game/fifa20/sqbt/user/hub
+SQUAD_BATTLES
+Cache-Control
+no-store
+/ut/game/fifa20/sqbt/user/opponentsquad/(\d+)
+/ut/game/fifa20/featuredsquad/user/stats
+sqbt
+squadbattle
+squad/battle
+squad_battle
+RIVALS
+/ut/game/fifa20/rivals/user/(?:rewards|prize|prizes|claim)
+/rivals/.*(?:reward|prize|claim)
+/ut/game/fifa20/rivals/
+CHAMPIONS
+/ut/game/fifa20/champion/events/upcoming
+championEvents
+/ut/game/fifa20/champion/user/stats
+/ut/game/fifa20/champion/leaderboard
+/ut/game/fifa20/champion/type/[^/]+/period/[^/]+/friends/stats
+/ut/game/fifa20/champion/user/(?:prize|prizes|rewards|claim)
+/champion/.*(?:reward|prize|claim)
+/ut/game/fifa20/champion/
+/ut/game/fifa20/sbs/sets
+sets
+SBC SETS categories=%d sets=%d
+/ut/game/fifa20/sbs/setid/(\d+)/challenges
+SBC_SET_NOT_FOUND
+SBC CHALLENGES set=%d count=%d
+/ut/game/fifa20/sbs/challenge/(\d+)/squad
+SBC_CHALLENGE_NOT_FOUND
+saved
+savedPlayerCount
+SBC SQUAD SAVE challenge=%d players=%d
+/ut/game/fifa20/sbs/challenge/(\d+)/validate
+/ut/game/fifa20/sbs/challenge/(\d+)(/submit)?
+skipusersquadvalidation
+POST
+SBC WORKSPACE OPEN challenge=%d isolated=true
+SBC SUBMIT REJECT challenge=%d checks=%s
+SBC_REQUIREMENTS_NOT_MET
+Squad does not meet the challenge requirements
+SBC SUBMIT CONFLICT challenge=%d error=%s
+SBC_SUBMISSION_CONFLICT
+SBC COMPLETE challenge=%d set=%d consumed=%s setComplete=%s rewards=%s
+setCompleted
+/ut/game/fifa20/phishing/trusteddevice
+/ut/game/fifa20/phishing
+/ut/game/fifa20/match/reset
+reset
+/ut/game/fifa20/user
+/ut/game/fifa20/user/club
+CLUB
+/ut/game/fifa20/userdata
+/ut/v2/game/fifa20/store/transaction
+NOTRANSACTION
+/ut/game/fifa20/clientdata/tutorialpopups
+/ut/game/fifa20/clientdata/onboarding
+/ut/game/fifa20/clientdata/squad
+/ut/game/fifa20/clientdata/pilesize
+/ut/game/fifa20/clientdata/userhubdata
+/ut/game/fifa20/clientdata/managerquest
+/ut/game/fifa20/clientdata/loanplayerreward
+/ut/game/fifa20/clientdata/squadbuildingsets
+clientdata_squad_building_sets
+/ut/game/fifa20/loan/players
+/ut/game/fifa20/squad/list
+/ut/game/fifa20/squad
+CONCEPT CREATE inferred requestedTemplate=%d emptyTemplate=%s nameHint=%s nativeFlow=%s
+SQUAD CREATE id=%d name=%s type=%s
+/ut/game/fifa20/squad/active
+SQUAD
+/ut/game/fifa20/squad/(\d+)/clone
+SQUAD_NOT_FOUND
+SQUAD CLONE source=%d id=%d type=%s
+/ut/game/fifa20/squad/clone
+srcId
+dstSquadName
+Squad Copy
+/ut/game/fifa20/squad/(\d+)
+SQUAD SELECT activeId=%d
+/ut/delete/(?:game/)?fifa20/squad/(\d+)
+/ut/game/fifa20/eventfeed
+Local FUT
+[FIX21] HUB reached — marking FUT READY sid=%s
+auctionCount
+liveAuctions
+liveTransfers
+tradePile
+watchlist
+nucleusId
+clubId
+/ut/game/fifa20/clubuser
+/ut/game/fifa20/leaderboards/options
+Squad Battles
+Division Rivals
+champions
+FUT Champions
+/ut/game/fifa20/club/stats/consumables
+Consumable sticker-book stats requested; category=%s rows=%s
+stat
+/ut/game/fifa20/club/stats/year
+My Club year stats requested; category=%s rows=%s
+/ut/game/fifa20/club/stats/staff
+My Club staff stats requested; returning empty bonus array
+bonus
+/ut/game/fifa20/club/consumables
+Consumable club search requested path=%s query=%s; returned=%s total=%s
+total
+/ut/game/fifa20/club/stats/
+/club/stats/
+/ut/game/fifa20/club
+filter
+CONCEPT SEARCH automatic squadId=%s originalPath=%s
+clubItemIds requested; returning %d owned item ids
+itemIds
+/ut/game/fifa20/user/credits
+STORE
+STORE-SCOUT PURCHASEGROUP RESPONSE %s
+/ut/game/fifa20/purchased/items
+PACKS
+PACK OPEN BLOCKED packId=%s reason=no-earned-token
+PACK_NOT_OWNED
+useCredits
+CARDS-SCOUT PACK_OPEN_BEGIN packId=%s ownedClub=%d ownedSquad=%d
+CARDS-SCOUT PACK_OPEN_ITEMS ids=%s resources=%s duplicates=%s
+duplicateItemIdList
+PACK DISPLAY ORDER ratings=%s rareflags=%s ids=%s timestamps=%s resources=%s
+numberItems
+purchasedPackId
+UNASSIGNED DISPLAY ORDER ratings=%s rareflags=%s resources=%s
+/ut/game/fifa20/tradepile
+tradeState
+TRANSFER MARKET trade pile count=%s inactive=%s selling=%s sold=%s
+selling
+/ut/game/fifa20/marketdata/pricelimits
+TRANSFER MARKET price limits defId=%s response=%s
+/ut/game/fifa20/marketdata/item/pricelimits
+TRANSFER MARKET item price limits itemIds=%s response=%s
+includeBankInfo
+TRANSFER MARKET status tradeIds=%s found=%s includeBank=%s
+/ut/game/fifa20/transfermarket
+TRANSFER MARKET search query=%s results=%s total=%s
+/ut/game/fifa20/auctionhouse
+/ut/game/fifa20/auctionhouse(?:/(\d+))?
+PUT
+AUCTION_NOT_RELISTABLE
+/ut/game/fifa20/(?:trade|auctionhouse)/(\d+)/(?:bid|offer)
+/ut/game/fifa20/(?:trade|tradepile)/(\d+)
+/ut/game/fifa20/watchlist(?:/(\d+))?
+/ut/game/fifa20/item/resource/(\d+)/?
+itemid
+Applied FUT consumable resource=%s targets=%s updated=%s
+/ut/game/fifa20/item
+idList
+Resolved FUT item lookup requested=%s found=%s
+/ut/game/fifa20/item/(\d+)
+item not found
+activateSlotNumber
+slot
+club item not found
+Activated club item id=%s resource=%s state=%s slot=%s
+^/ut/game/fifa20/item/(\d+)$
+/ut/delete/game/fifa20/item
+Store All kept duplicate item %d visibly unassigned
+Kept duplicate item %d in unassigned using native UI marker
+TRANSFER MARKET moved owned item=%s to inactive trade pile success=%s
+^/ut/(?:game/)?[^/]+/(.*)$
+/defid
+draft
+DRAFT-SCOUT REQUEST method=%s path=%s query=%s body=%s
+/ut/game/fifa20/squad/mode/draft/state
+DRAFT-SCOUT STATE_RESPONSE mode=%s payload=%s
+/ut/game/fifa20/purchase/mode/(\d+)/draft
+currency
+insufficientCoins
+DRAFT-SCOUT PURCHASE mode=%s currency=%s resumed=%s state=%s balance=%s
+/ut/game/fifa20/squad/mode/draft/choose/difficulty
+DRAFT_NOT_ACTIVE
+AMATEUR
+PRO
+WORLDCLASS
+DRAFT-SCOUT CHOOSE_DIFFICULTY value=%s index=%s
+/draft/choices/(difficulty|formation|captain|player|manager)$
+positionId
+positionid
+DRAFT-SCOUT CHOICES kind=%s position=%s count=%s state=%s
+/draft/choose
+choiceIndex
+swapPlayerDefIds
+DRAFT-SCOUT CHOOSE oldState=%s choice=%s position=%s newState=%s picks=%s layoutApplied=%s
+/draft/autocomplete
+fut20-draft-autofill-selection:
+DRAFT-SCOUT AUTOCOMPLETE picks=%s manager=%s selectedIndices=%s response=operation-envelope bytes=%s
+/draft/mode/1/stats
+/squad/mode/
+READY_FOR_REWARDS
+/grant/award
+pendingCoinReward
+pendingPackRewards
+DRAFT-SCOUT AWARD coins=%s packs=%s
+/ut/game/fifa20/match/end
+gid
+items
+DNF
+currentMatchGid
+lastSettledGid
+lastMatchEndResponse
+gameId
+matchReportId
+currentOpponentTeamId
+draftWins
+gamesWonCurrentMatch
+squadState
+draftEliminated
+DRAFT-SCOUT MATCH_CANCELLED gid=0 wins=%s state=READY_FOR_MATCH
+DRAFT-SCOUT MATCH_END duplicate gid=%s wins=%s
+draftsCompleted
+DRAFT-SCOUT MATCH_END reason=%s wins=%s state=%s
+/ut/game/fifa20/match
+MATCH rejected planning-only concept squad id=%s
+CONCEPT_SQUAD_NOT_PLAYABLE
+SQUAD-BATTLES MATCH_HANDSHAKE gid=%s draftBypassed=%s
+SQUAD-BATTLES MATCH event=%s opponent=%s difficulty=%s draftBypassed=%s
+DRAFT_NOT_READY_FOR_MATCH
+DRAFT-SCOUT MATCH starters=%s opponentTeamId=%s difficulty=%s
+/ut/game/fifa20/offlinesquad/(\d+)
+SQUAD-BATTLES OFFLINE_SQUAD id=%s draftBypassed=%s
+DRAFT-SCOUT OFFLINE_SQUAD id=%s round=%s
+SQUAD-BATTLES OFFLINE_SQUAD id=%s
+debug_unknown_http
+Unknown FUT/POW request: %s %s body=%s
+[HANDOFF-UNKNOWN] FIFA tried /ut/ path but no handler: %s %s
+X-FIFA20LocalFUT-Unknown
+FutHandler
+HTTP/1.1
+FIFA20LocalFUT/0.3
+FUT8080 %s - %s
+Content-Length
+cipher
+https
+[FUT-TRANSPORT] scheme=%s host=%s method=%s path=%s
+localhost
+[FUT-HOST] Host=%s path=%s method=%s (external hostname pinned to local)
+FUT handler error
+error
+local server exception
+Connection
+keep-alive
+Easw-Session-Data-Nucleus-Id
+Nucleus-Id
+Persona-Id
+X-UT-SID
+X-UT-PHISHING-TOKEN
+Access-Control-Allow-Origin
+*
+Access-Control-Expose-Headers
+X-UT-SID,X-UT-PHISHING-TOKEN,Nucleus-Id,Persona-Id
+RedirectHandler
+LocalFUT20Redirector/0.1
+REDIR42231 %s - %s
+X-BLAZE-SEQNO
+[Redirector] request method=%s path=%s seq=%s requestBytes=%d bodyPreview=%s
+SERVER_INSTANCE
+Redirector
+<?xml version="1.0" encoding="UTF-8"?>
+<serverinstanceinfo>
+    <address member="0">
+        <valu>
+            <hostname>
+</hostname>
+            <ip>
+</ip>
+            <port>
+blaze_port
+</port>
+        </valu>
+    </address>
+    <secure>0</secure>
+</serverinstanceinfo>
+application/xml
+QoS
+QosHandler
+FIFA 20 QoS HTTP service learned from the successful V3 capture.
+LocalFUT20QoS/0.1
+QOS17502 %s - %s
+/qos/qos
+qtyp
+<?xml version="1.0" encoding="utf-8"?><qos><numprobes>10</numprobes><qosport>
+qos_port
+</qosport><probesize>1200</probesize><qosip>
+</qosip><requestid>1234</requestid><reqsecret>5678</reqsecret></qos>
+<?xml version="1.0" encoding="utf-8"?><qos><numprobes>0</numprobes><qosport>
+</qosport><probesize>0</probesize><qosip>
+</qosip><requestid>1</requestid><reqsecret>0</reqsecret></qos>
+/qos/firewall
+<?xml version="1.0" encoding="utf-8"?><firewall><ips><ips>
+</ips><ips>
+</ips></ips><numinterfaces>2</numinterfaces><ports><ports>
+</ports><ports>
+</ports></ports><requestid>1234</requestid><reqsecret>5678</reqsecret></firewall>
+/qos/firetype
+EaswHandler
+Legacy EASW service used between Blaze login and FUT /ut/auth.
+FIFA20LocalEASW/0.3
+easw_port
+<?xml version="1.0" encoding="UTF-8"?>
+<routing fileVersion="1" refresh="0">
+  <route key="FUT_RS4_BASE_URL" value="http://
+/ut/" />
+  <route key="FIFA_POW_URL" value="http://
+/" />
+  <route key="FIFA_RS4_URL" value="http://
+" />
+  <route key="ONLINE/SERVER_RS4" value="http://
+" />
+  <route key="FUT_URI" value="http://
+/ut/" />
+  <route key="ROSTERUPDATE_URL" value="http://
+/roster" />
+  <route key="ROUTINGCFGFILE_URL" value="http://
+/routing" />
+</routing>
+<?xml version="1.0" encoding="UTF-8"?>
+<ctl>
+  <status>ok</status>
+  <serverTime>
+</serverTime>
+</ctl>
+EASW42232 %s - %s
+EASW
+text/xml
+/roster
+EASW_ROSTER
+/routing
+EASW_ROUTING
+/ctl
+/easw/
+Encode a 1-4 character Blaze TDF tag plus type byte.
+ascii
+TDF tag must be 1-4 bytes: 
+Encode Blaze Heat2 ObjectId: component, entity type, then 64-bit id as varints.
+truncated TDF varint
+Return every string field with *tag* from a Blaze TDF payload.
+Approve FIFA 20 user text using Blaze Util.FilterForProfanity's schema.
+
+FIFA sends a TLST list of FilteredUserText structures with DIRT set to
+FILTER_RESULT_UNPROCESSED (2).  The response uses the same structure and
+must return each UTXT with DIRT set to FILTER_RESULT_PASSED (0).  An empty
+success body makes the native squad-name workflow abort before POST /squad.
+
+UTXT
+DIRT
+TLST
+Best-effort non-mutating TDF scout used only for compatibility logging.
+<empty>
+big
+hex=
+ ascii=
+ tags=
+FIFA 20 PC PreAuth payload reconstructed from the successful Aurora trace.
+
+The important part is QOSS: FIFA uses the Blaze reply to discover the QoS
+HTTP service. 0.1.8 conflated that service with Blaze itself; the original
+topology uses Blaze on 44321 and QoS on 17502.
+
+CONF
+nucleusConnect
+identityRedirectUri
+localfut/callback
+PSA
+PSP
+SNA
+qos
+ea-sjc
+BWPS
+LNP
+LTPS
+SVID
+TIME
+ASRC
+303107
+CIDS
+EEFA
+ESRC
+INST
+fifa-2020-pc
+MAID
+MINR
+NASP
+cem_ea_id
+PILD
+PLAT
+QOSS
+RSRC
+SVER
+Blaze 15.1.1.8.2
+1CON
+BUID
+FRST
+accessToken
+KEY
+LLOG
+MAIL
+DSNM
+LAST
+PID
+STAS
+XREF
+PDTL
+UID
+CNTX
+ERRC
+SKEY
+ANON
+NTOS
+SESS
+SPAM
+UNDR
+DEVI
+GDAY
+2014-09-25T00:00Z
+GNAM
+FIFA15PC
+ID
+ISCO
+PJID
+1024871
+PRCA
+PRID
+FIFA15_PC_ONLINE_ACCESS
+STAT
+STRC
+TAG
+TDAY
+TYPE
+UCNT
+VER
+NLST
+ADRS
+DISA
+FILT
+-UION/****
+PORT
+SDLY
+LOCALFUT15
+SPCT
+TMOP
+TELE
+TICK
+UROP
+STIM
+Fire2Packet
+int
+payload_size
+metadata_size
+component
+command
+msg_num
+msg_type
+bytes
+metadata
+payload
+raw
+unreasonable Fire2 sizes payload=
+ metadata=
+fire2-
+-c
+-k
+-m
+.bin
+.hex.txt
+Exact FIFA 20 c35/k10 login-response shape learned from the V3 trace.
+DBPS
+NATT
+UBPS
+Minimal UserSessionExtendedData used in the captured login notifications.
+HWFG
+QDAT
+UATT
+UserSessions notification 2 (UserAdded), rebuilt with local identity.
+AID
+ALOC
+EXBB
+EXID
+NAME
+ORIG
+PIDI
+DATA
+USER
+FIFA 20's UserSessions notification 8 captured immediately after c35/k10.
+CGID
+USTP
+UserSessions notification 1, the small login-time extended-data update.
+USID
+UserSessions notification 5 (UserUpdated).
+FLGS
+UserSessions.UserAdded
+UserSessions.LoginSession
+UserSessions.ExtendedDataUpdate
+UserSessions.UserUpdated
+utf-8-sig
+legitimate_ea_copy
+LOCAL
+[EA-LOCAL-BRIDGE] Legitimate EA copy: EA App owns launch entitlement; FIFA title auth switched to LOCAL (OSDK_AUTH_REQUIRED=0 AUTOLOGIN=1)
+[FIFA21-PORT] OSDK mode: AUTH_TYPE=NUCLEUS OSDK_AUTH_REQUIRED=1 ORIGIN_LOGIN_ENABLED=1
+AUTH_TYPE
+CONTENT_URL
+/content
+CTL_UPDATE_URL
+FIFA_POW_CONTENT_SERVER_URL
+FIFA_POW_NUCLEUS_PROXY_URL
+FIFA_POW_URL
+FUT_URI
+FUT_RS4_BASE_URL
+FUTBOOTCFGFILE_URL
+FUTDYNAMICMESSAGES_CUSTOMURL
+FUTDYNAMICMESSAGES_URL_BASE
+NUCLEUS_LOGIN_ENABLED
+nucleusHost
+nucleusPort
+nucleusPortSSL
+ONLINE/FUTDYNAMICMESSAGES_CUSTOMURL
+ONLINE/FUTDYNAMICMESSAGES_TUTORIAL_MSG_URL
+ONLINE/SERVER_RS4
+FIFA_RS4_URL
+ORIGIN_LOGIN_ENABLED
+OSDK_AUTH_REQUIRED
+AUTOLOGIN
+OSDK_EASW_AUTH_URL
+/easw/auth
+OSDK_EASW_EVENT_URL
+/easw/event
+OSDK_EASW_MEDIA_URL
+/easw/media
+OSDK_EASW_REQ_URL
+/easw/req
+ROSTER_URL
+ROSTERUPDATE_URL
+ROUTINGCFGFILE_URL
+USE_TOKEN_AUTH
+FUT_AUTH_URL
+/ut/auth
+FUT_HUB_URL
+UT_AUTH_URL
+UT_HUB_URL
+UTAS_BASE_URL
+UTAS_AUTH_URL
+OSDK_CORE
+[FUT-HANDOFF] OSDK_CORE advertises FUT_RS4_BASE_URL=%s
+ITYP
+TOKN
+LOC
+NOOK
+RPRT
+TIID
+PSS
+grantName
+tag
+Build the asynchronous success result FIFA waits for after full time.
+
+SubmitOfflineGameReport itself has an empty RPC response.  The Blaze
+GameReporting contract completes that operation with ResultNotification
+(component 28, notification 0x72).  Without it FIFA waits for its roughly
+45-second result timeout while all players stand on the pitch.
+
+GRID
+EROR
+FNL
+GHID
+BLAZE_PREAUTH
+Blaze
+component=0x
+X
+ command=0x
+Util.PreAuth
+Util.Ping
+CFID
+CONFIG
+FetchClientConfig 
+Util.FetchClientConfig CFID=%s
+Util.FetchClientConfig(
+SESSION
+Util.PostAuth
+Util.GetTelemetryServer
+SMAP
+Util.GetUserOptions
+FirstTimeFlag
+Util.GetUserOption(
+TEXT_FILTER
+approved=
+Util.FilterForProfanity
+RSUB
+Subscription.SetState
+FIFA35.LoginSession
+FIFA35 login request: payload=%s; replying with captured-compatible local session
+UserSessions.GetLoginSession
+UserSessions.UpdateNetworkInfo
+O_TKfilter
+LOCF
+TOGG
+LSST
+Ticker.GetSettings
+O_SG_TCKR
+LSET
+LGRP
+Ticker.GetGroups
+ENTITLEMENT
+Authentication.ListEntitlements
+Authentication.LocalLogin(0x
+Authentication.Entitlements(0x
+Authentication.GetAuthToken
+Authentication.AccountPersona(0x
+BlazeOrHttpHandler
+Port 44321 local Blaze listener (with legacy HTTP fallback).
+BLAZE_CONNECTED
+blaze44321-unparsed-
+44321 Fire2 framing failed; saved %s: %s
+44321 client %s:%s timed out
+rx
+FIRE2 RX c=%d cmd=%d(0x%X) msg=%d type=%d payload=%d metadata=%d saved=%s
+FIRE2 TX PingReply msg=%d
+FIRE2 TX %s c=%d cmd=%d msg=%d payload=%d
+GameReporting.SubmitOfflineGameReport
+FIRE2 TX NOTIFY GameReporting.Result c=28 cmd=114 payload=%d grid=%d
+Authentication.LocalLogin(0xA)
+[FIFA21-PORT] FIRE2 TX NOTIFY %s c=%d cmd=%d payload=%d after native login
+Authentication.Logout
+force_title_login_after_logout
+_natural_login_sent
+_fix12_title_login_sent
+[FIX12] Sent fallback FIFA35.LoginSession after Authentication.Logout msg=%d
+[FIX12] FIRE2 TX NOTIFY %s c=%d cmd=%d payload=%d
+[FIX14] FIRE2 TX NOTIFY Authentication.ListEntitlements payload=%d
+[FIX14] Completed forced title-session + UserSessions + entitlements bootstrap after Logout
+FIRE2 TX NOTIFY %s c=%d cmd=%d payload=%d
+CARDS-SCOUT Unhandled Blaze request c=%d cmd=%d(0x%X) msg=%d payload=%d :: %s
+cards-scout-c
+.json
+CARDS-SCOUT saved %s
+CARDS-SCOUT failed to save diagnostic
+iso-8859-1
+
+
+OK
+Error
+HTTP/1.1 
+: 
+ThreadingTCPServer
+OriginRandom
+Origin/EA SDK deterministic PRNG used for LSX session-key derivation.
+OriginCrypto
+cryptography package is unavailable: 
+challenge response was too short
+strict
+ChallengeResponse.response is too short
+Unknown
+.//Request
+}
+<LSX><Response id="
+" sender="
+">
+</Response></LSX>
+GetConfig
+<GetConfigResponse>
+<Service Name="
+" Facility="
+" />
+</GetConfigResponse>
+GetSettings
+<GetSettingsResponse Language="en_US" Environment="production" IsIGOAvailable="false" IsIGOEnabled="false" IsTelemetryEnabled="false" IsManualOffline="false" />
+GetSetting
+SettingId
+en_US
+production
+false
+<GetSettingResponse Setting="
+GetInternetConnectedState
+<InternetConnectedState connected="1" />
+GetUtcTime
+%Y-%m-%dT%H:%M:%SZ
+<GetUtcTimeResponse Time="
+GetAuthToken
+<AuthToken value="LOCAL-FUT15-ACCESS" />
+GetAuthCode
+<AuthCode value="LOCAL-FUT15-AUTH-CODE" />
+GetProfile
+true
+<GetProfileResponse UserIndex="0" UserId="
+" PersonaId="
+" Persona="
+" AvatarId="" Country="PT" IsUnderAge="
+" IsSubscriber="false" IsTrialSubscriber="false" SubscriberLevel="0" GeoCountry="PT" CommerceCountry="PT" CommerceCurrency="EUR" IsSteamSubscriber="false" />
+GetBlockList
+<GetBlockListResponse />
+QueryFriends
+<QueryFriendsResponse />
+QueryAreFriends
+<QueryAreFriendsResponse />
+<QueryContentResponse />
+<QueryEntitlementsResponse />
+GetPresence
+<GetPresenceResponse />
+QueryPresence
+<QueryPresenceResponse />
+GetWalletBalance
+<GetWalletBalanceResponse Balance="0" Currency="EUR" />
+GetGameInfo
+GameInfoId
+en_US,pt_PT,fr_FR,de_DE,es_ES,it_IT
+0000-00-00T00:00:00
+1.0.0.0
+EA SPORTS FIFA 20
+2014-09-25T00:00:00
+LSX GetGameInfo %s -> %s
+<missing>
+<GetGameInfoResponse GameInfo="
+GetAllGameInfo
+%Y-%m-%dT%H:%M:%S
+<GetAllGameInfoResponse UpToDate="true" Languages="en_US,pt_PT,fr_FR,de_DE,es_ES,it_IT" FreeTrial="false" FullGamePurchased="true" FullGameReleased="true" FullGameReleaseDate="2014-09-25T00:00:00" Expiration="" SystemTime="
+" HasExpiration="false" InstalledVersion="1.0.0.0" InstalledLanguage="en_US" AvailableVersion="1.0.0.0" DisplayName="EA SPORTS FIFA 20" MaxGroupSize="22" EntitlementSource="LOCAL" />
+RequestLicense
+<RequestLicenseResponse License="" />
+<ErrorSuccess Code="0" Description="Local FUT success" />
+LSX unmodelled request %s; returning generic ErrorSuccess
+LSXHandler
+Origin LSX client connected from %s:%s
+Origin LSX requires the Python 'cryptography' package: %s
+<LSX><Event sender="EALS"><Challenge key="
+" version="3" build="10.6.1.8" /></Event></LSX>
+LSX challenge sent to %s:%s key=%s
+LSX client disconnected before ChallengeResponse
+LSX plaintext handshake request: %s
+ChallengeResponse
+Expected ChallengeResponse, received %s
+response
+key
+LSX ChallengeResponse had no usable response attribute
+version
+LSX challenge response validated for protocol %s
+LSX challenge response did not validate; expected=%s got=%s
+LSX ChallengeResponse is missing the client key attribute
+LSX client key attribute: %s
+LSX protocol 2 retaining primary OriginSDK AES key
+LSX protocol 3 using ChallengeAccepted-derived session key (seed=%d)
+Unsupported LSX ChallengeResponse version %s
+<ChallengeAccepted response="
+EALS
+LSX challenge accepted for %s:%s; protocol=%s session seed=%d
+<LSX><Event sender="EbisuSDK"><Login IsLoggedIn="true" UserIndex="0" LoginReasonCode="ALREADY_ONLINE" /></Event></LSX>
+LSX local signed-in Login event sent to %s:%s
+Unable to send LSX Login event to %s:%s
+lsx-decode-fail-
+LSX encrypted frame could not be decoded/decrypted: %s
+LSX decrypted request: %s
+LSX encrypted response: %s
+Origin LSX client %s:%s timed out/closed
+Origin LSX client %s:%s disconnected
+Origin LSX handler failed for %s:%s
+--host
+bind_host
+Bound REQUIRED %s on %s:%d
+FAILED REQUIRED %s on %s:%d: %s
+Bound optional %s on %s:%d
+Skipping optional %s on %s:%d: %s
+FIFA 20 cannot continue until the REQUIRED port above is free.
+Run CHECK_PORTS.cmd and send the output/screenshot.
+legacy_fut_port
+FUT-compat
+redirect_port
+Cleartext-redirector-debug
+lsx_port
+Origin-LSX
+certificate_path
+runtime-source
+certs
+spring18-cert.pem
+certificate_key_path
+spring18-key.pem
+fut_tls_port
+main.<locals>._TlsFutServer
+[FIX19] TLS handshake failed (client rejected cert or protocol): %s
+[FIX19] TLS accept error: %s
+_TlsFutServer
+DEFAULT:@SECLEVEL=0
+[FUT-TLS] ClientHello SNI=%s
+<none>
+FUT-TLS
+Bound optional FUT-TLS on %s:%d cert=%s
+Skipping optional FUT-TLS on 443: %s (run as Admin if access denied)
+Skipping optional FUT-TLS (cert/ssl setup failed)
+FUT-8080
+Blaze-44321
+Redirector-debug
+OriginLSX
+FUT-TLS-443
+======================================================================
+LOCAL_SERVICES_READY
+Blaze 
+ FUT 
+ LOCAL SERVICES READY
+ REQUIRED Blaze : 
+  
+FAILED
+ REQUIRED FUT   : http://
+/  
+ Optional FUT-TLS: https://
+:443/  
+SKIPPED
+ Optional LSX   : 
+ Optional QoS   : http://
+ Optional EASW  : http://
+ Optional FUTc  : http://
+ Optional RDBG  : 
+ Local club     : 
+ / 
+ coins
+ State/logs     : 
+[FIFA20] Required localhost services ready; FUT READY is not reported until /ut/game/fifa20/hub is reached
+[FIX22] Retail hand-off after ACCOUNT is /connect/auth?response_type=code, then POST /ut/auth
+[FIX22] After ACCOUNT watch for: [FUT-HANDOFF], /ut/auth, /ut/game/fifa20/hub, or TLS handshake lines
+[FIX18] FUT-TLS listening on 443 — post-accountinfo HTTPS auth should appear here if client uses utas.* hosts
+__main__

@@ -1,0 +1,2613 @@
+====================================================================================================
+localfut20.sbc_catalog :: <module>
+filename='localfut20/sbc_catalog.py' firstlineno=1 argcount=0 posonly=0 kwonly=0 locals=3 stacksize=34 flags=0x1000000
+====================================================================================================
+   0            RESUME                   0
+
+   1            SETUP_ANNOTATIONS
+                LOAD_CONST               0 ('Permanent FIFA 20 Squad Building Challenge catalog.\n\nThe live-service SBC rotation is intentionally not reproduced here: those\nchallenges expired years ago.  This catalog contains the always-available\nonboarding, foundation, advanced hybrid, and upgrade groups from FIFA 20.\n')
+                STORE_NAME               0 (__doc__)
+
+   7            LOAD_CONST               1 (0)
+                LOAD_CONST               2 (('annotations',))
+                IMPORT_NAME              1 (__future__)
+                IMPORT_FROM              2 (annotations)
+                STORE_NAME               2 (annotations)
+                POP_TOP
+
+   9            LOAD_CONST               1 (0)
+                LOAD_CONST               3 (('Any',))
+                IMPORT_NAME              3 (typing)
+                IMPORT_FROM              4 (Any)
+                STORE_NAME               4 (Any)
+                POP_TOP
+
+  12            EXTENDED_ARG             1
+                LOAD_CONST             257 ((1,))
+                EXTENDED_ARG             1
+                LOAD_CONST             258 (('pack_id', 'int', 'count', 'int', 'return', 'dict[str, Any]'))
+                LOAD_CONST               5 (<code object pack at 0x7fb7bd131a00, file "localfut20/sbc_catalog.py", line 12>)
+                MAKE_FUNCTION
+                SET_FUNCTION_ATTRIBUTE   4 (annotations)
+                SET_FUNCTION_ATTRIBUTE   1 (defaults)
+                STORE_NAME               5 (pack)
+
+  16            EXTENDED_ARG             1
+                LOAD_CONST             259 (('amount', 'int', 'return', 'dict[str, Any]'))
+                LOAD_CONST               6 (<code object coins at 0x7fb7c5005100, file "localfut20/sbc_catalog.py", line 16>)
+                MAKE_FUNCTION
+                SET_FUNCTION_ATTRIBUTE   4 (annotations)
+                STORE_NAME               6 (coins)
+
+  20            EXTENDED_ARG             1
+                LOAD_CONST             260 (('min', -1, ''))
+                EXTENDED_ARG             1
+                LOAD_CONST             261 (('kind', 'str', 'value', 'int', 'scope', 'str', 'count', 'int', 'text', 'str', 'return', 'dict[str, Any]'))
+                LOAD_CONST               9 (<code object rule at 0x7fb7c560cb00, file "localfut20/sbc_catalog.py", line 20>)
+                MAKE_FUNCTION
+                SET_FUNCTION_ATTRIBUTE   4 (annotations)
+                SET_FUNCTION_ATTRIBUTE   1 (defaults)
+                STORE_NAME               7 (rule)
+
+  30            NOP
+
+  31            NOP
+
+  30            NOP
+
+  32            NOP
+
+  30            NOP
+
+  33            NOP
+
+  30            NOP
+
+  34            NOP
+
+  30            NOP
+
+  35            NOP
+
+  30            NOP
+
+  36            NOP
+
+  30            NOP
+
+  37            NOP
+
+  30            EXTENDED_ARG             1
+                LOAD_CONST             262 (('challenge_id', 'int', 'name', 'str', 'description', 'str', 'players', 'int', 'rules', 'list[dict[str, Any]]', 'awards', 'list[dict[str, Any]]', 'return', 'dict[str, Any]'))
+                LOAD_CONST              12 (<code object challenge at 0x7fb7c5697d80, file "localfut20/sbc_catalog.py", line 30>)
+                MAKE_FUNCTION
+                SET_FUNCTION_ATTRIBUTE   4 (annotations)
+                STORE_NAME               8 (challenge)
+
+  51            LOAD_CONST               4 (1)
+                LOAD_CONST               4 (1)
+                LOAD_CONST              13 ('BASIC')
+                LOAD_CONST               4 (1)
+
+  52            LOAD_CONST              14 ("Let's Get Started")
+                LOAD_CONST              15 ('Learn the basics of exchanging players for rewards.')
+
+  53            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              17 (1010)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  55            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              18 (101)
+                LOAD_CONST              19 ('First Exchange')
+                LOAD_CONST              20 ('Exchange one Bronze player from your Club.')
+                LOAD_CONST               4 (1)
+
+  56            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              23 ('Player Quality: Exactly Bronze')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  55            BUILD_LIST               1
+
+  57            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              24 (1005)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  55            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  58            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              25 (102)
+                LOAD_CONST              26 ('The Second Step')
+                LOAD_CONST              27 ('Exchange three Common players.')
+                LOAD_CONST              28 (3)
+
+  59            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST               1 (0)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              30 ('Common Players: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  60            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              32 (12)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              33 ('Team Chemistry: Min. 12')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  58            BUILD_LIST               2
+
+  61            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              34 (1001)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  58            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  62            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              35 (103)
+                LOAD_CONST              36 ('The Third Step')
+                LOAD_CONST              37 ('Exchange four players from three different nations.')
+                LOAD_CONST              38 (4)
+
+  63            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              40 ('Nationalities: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  64            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              41 (17)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              42 ('Team Chemistry: Min. 17')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  62            BUILD_LIST               2
+
+  65            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              43 (1002)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  62            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  54            BUILD_LIST               3
+
+  50            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+  69            LOAD_CONST              45 (2)
+                LOAD_CONST               4 (1)
+                LOAD_CONST              13 ('BASIC')
+                LOAD_CONST              45 (2)
+
+  70            LOAD_CONST              46 ('League and Nation Basics')
+                LOAD_CONST              47 ('Build squads with basic League and Nation requirements.')
+
+  71            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              48 (1004)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  73            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              49 (201)
+                LOAD_CONST              50 ('One League Attack')
+                LOAD_CONST              51 ('Use players from one league and several nations.')
+                LOAD_CONST              52 (7)
+
+  74            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              54 ('Leagues: Exactly 1')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  75            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              56 ('Nationalities: Exactly 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  76            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              57 (45)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              58 ('Team Chemistry: Min. 45')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  73            BUILD_LIST               3
+
+  77            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              59 (1014)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  73            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  78            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              60 (202)
+                LOAD_CONST              61 ('One Nation Midfield')
+                LOAD_CONST              62 ('Use players from one nation and several leagues.')
+                LOAD_CONST              55 (5)
+
+  79            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              45 (2)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              63 ('Silver Players: Min. 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  80            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              64 ('Leagues: Exactly 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  81            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              65 ('Nationalities: Exactly 1')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  82            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              57 (45)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              58 ('Team Chemistry: Min. 45')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  78            BUILD_LIST               4
+
+  83            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              24 (1005)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  78            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  84            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              66 (203)
+                LOAD_CONST              67 ('Multi League & Nation')
+                LOAD_CONST              68 ('Use chemistry links across clubs, leagues and nations.')
+                LOAD_CONST              69 (6)
+
+  85            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              70 ('club_count')
+                LOAD_CONST              69 (6)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              71 ('Clubs: Exactly 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  86            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              74 ('Players from the same League: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  87            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              76 ('Players from the same Nation: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  88            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST              78 (55)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              79 ('Team Rating: Min. 55')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  89            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              57 (45)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              58 ('Team Chemistry: Min. 45')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  84            BUILD_LIST               5
+
+  90            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              24 (1005)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  84            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  72            BUILD_LIST               3
+
+  68            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+  94            LOAD_CONST              80 (10)
+                LOAD_CONST               4 (1)
+                LOAD_CONST              13 ('BASIC')
+                LOAD_CONST              28 (3)
+
+  95            LOAD_CONST              81 ("Let's Keep Going")
+                LOAD_CONST              82 ('Learn more Squad Building techniques.')
+
+  96            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              83 (1019)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  98            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              34 (1001)
+                LOAD_CONST              84 ('Brick Slots')
+                LOAD_CONST              85 ('Use the open slots to build chemistry.')
+                LOAD_CONST              45 (2)
+
+  99            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              86 ('Leagues: Exactly 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 100            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              87 ('Nationalities: Exactly 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 101            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              88 (43)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              89 ('Team Chemistry: Min. 43')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  98            BUILD_LIST               3
+
+ 102            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              34 (1001)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+  98            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 103            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              43 (1002)
+                LOAD_CONST              90 ('The Correct Position')
+                LOAD_CONST              91 ('Place players in their correct positions.')
+                LOAD_CONST              28 (3)
+
+ 104            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              92 ('Leagues: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 105            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              40 ('Nationalities: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 106            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST              32 (12)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              33 ('Team Chemistry: Min. 12')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 103            BUILD_LIST               3
+
+ 107            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              93 (1018)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 103            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 108            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              94 (1003)
+                LOAD_CONST              95 ('Perfect Link')
+                LOAD_CONST              96 ('Use strong club, league and nation links.')
+                LOAD_CONST              55 (5)
+
+ 109            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              45 (2)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              97 ('Silver Players: Min. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 110            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              98 ('same_club')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              99 ('Players from the same Club: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 111            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              76 ('Players from the same Nation: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 112            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             100 (40)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             101 ('Team Chemistry: Min. 40')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 108            BUILD_LIST               4
+
+ 113            LOAD_NAME                6 (coins)
+                PUSH_NULL
+                LOAD_CONST             102 (500)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              43 (1002)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               2
+
+ 108            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 114            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST              48 (1004)
+                LOAD_CONST             103 ('Loyal Lads')
+                LOAD_CONST             104 ('Use loyalty to reach the chemistry target.')
+                LOAD_CONST              28 (3)
+
+ 115            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              92 ('Leagues: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 116            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              65 ('Nationalities: Exactly 1')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 117            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             105 (30)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             106 ('Team Chemistry: Min. 30')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 114            BUILD_LIST               3
+
+ 118            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              43 (1002)
+                LOAD_CONST              45 (2)
+                CALL                     2
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 114            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+  97            BUILD_LIST               4
+
+  93            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 122            LOAD_CONST             107 (11)
+                LOAD_CONST               4 (1)
+                LOAD_CONST              13 ('BASIC')
+                LOAD_CONST              38 (4)
+
+ 123            LOAD_CONST             108 ("Let's Move Forward")
+                LOAD_CONST             109 ('Exchange Bronze players to improve your starter squad.')
+
+ 124            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             110 (1023)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 126            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             111 (1101)
+                LOAD_CONST             112 ('Defensive Development')
+                LOAD_CONST             113 ('Exchange Bronze players for a Gold defender reward.')
+                LOAD_CONST              45 (2)
+
+ 127            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              23 ('Player Quality: Exactly Bronze')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 128            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             114 (8)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             115 ('Team Chemistry: Min. 8')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 126            BUILD_LIST               2
+
+ 129            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             116 (1020)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 126            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 130            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             117 (1102)
+                LOAD_CONST             118 ('A Better Buildup')
+                LOAD_CONST             119 ('Exchange Bronze players for a Gold midfielder reward.')
+                LOAD_CONST              28 (3)
+
+ 131            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              23 ('Player Quality: Exactly Bronze')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 132            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             114 (8)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             115 ('Team Chemistry: Min. 8')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 130            BUILD_LIST               2
+
+ 133            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             120 (1021)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 130            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 134            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             121 (1103)
+                LOAD_CONST             122 ('Advancing Attack')
+                LOAD_CONST             123 ('Exchange Bronze players for a Gold attacker reward.')
+                LOAD_CONST              28 (3)
+
+ 135            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              23 ('Player Quality: Exactly Bronze')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 136            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             124 (9)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             125 ('Team Chemistry: Min. 9')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 134            BUILD_LIST               2
+
+ 137            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             126 (1022)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 134            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 125            BUILD_LIST               3
+
+ 121            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 141            LOAD_CONST             127 (20)
+                LOAD_CONST              45 (2)
+                LOAD_CONST             128 ('ADVANCED')
+                LOAD_CONST               4 (1)
+
+ 142            LOAD_CONST             129 ('Hybrid Leagues')
+                LOAD_CONST             130 ('Exchange multi-league squads that increase in difficulty.')
+
+ 143            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             131 (1009)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 145            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             132 (2001)
+                LOAD_CONST             133 ('Rare Fives')
+                LOAD_CONST             134 ('Exchange a squad featuring exactly five leagues.')
+                LOAD_CONST             107 (11)
+
+ 146            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             135 ('Rare Players: Min. 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 147            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              64 ('Leagues: Exactly 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 148            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             136 ('Players from the same League: Max. 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 149            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             137 (68)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             138 ('Team Rating: Min. 68')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 150            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             139 (80)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             140 ('Team Chemistry: Min. 80')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 145            BUILD_LIST               5
+
+ 151            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             141 (1015)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 145            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 152            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             142 (2002)
+                LOAD_CONST             143 ('Seven Suspects')
+                LOAD_CONST             144 ('Exchange a squad featuring exactly seven leagues.')
+                LOAD_CONST             107 (11)
+
+ 153            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              52 (7)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             145 ('Leagues: Exactly 7')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 154            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             136 ('Players from the same League: Max. 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 155            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             146 (78)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             147 ('Team Rating: Min. 78')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 156            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             148 (85)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             149 ('Team Chemistry: Min. 85')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 152            BUILD_LIST               4
+
+ 157            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             150 (1016)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 152            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 158            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             151 (2003)
+                LOAD_CONST             152 ('Prime Nine')
+                LOAD_CONST             153 ('Exchange a squad featuring exactly nine leagues.')
+                LOAD_CONST             107 (11)
+
+ 159            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             135 ('Rare Players: Min. 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 160            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST             124 (9)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             154 ('Leagues: Exactly 9')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 161            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              74 ('Players from the same League: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 162            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             155 (79)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             156 ('Team Rating: Min. 79')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 163            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             157 (99)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             158 ('Team Chemistry: Min. 99')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 158            BUILD_LIST               5
+
+ 164            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             159 (1006)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 158            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 165            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             160 (2004)
+                LOAD_CONST             161 ('Squad Goals')
+                LOAD_CONST             162 ('Exchange an all-Gold squad featuring eleven leagues.')
+                LOAD_CONST             107 (11)
+
+ 166            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              69 (6)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             163 ('Rare Players: Min. 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 167            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             164 ('Player Quality: Exactly Gold')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 168            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST             107 (11)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             165 ('Leagues: Exactly 11')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 169            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             166 (100)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             167 ('Team Chemistry: Exactly 100')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 165            BUILD_LIST               4
+
+ 170            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             168 (1008)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 165            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 144            BUILD_LIST               4
+
+ 140            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 174            LOAD_CONST             169 (21)
+                LOAD_CONST              45 (2)
+                LOAD_CONST             128 ('ADVANCED')
+                LOAD_CONST              45 (2)
+
+ 175            LOAD_CONST             170 ('Hybrid Nations')
+                LOAD_CONST             171 ('Exchange multi-nation squads that increase in difficulty.')
+
+ 176            LOAD_CONST              16 (False)
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             131 (1009)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 178            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             172 (2101)
+                LOAD_CONST             173 ('Quads')
+                LOAD_CONST             174 ('Exchange a squad featuring exactly four nations.')
+                LOAD_CONST             107 (11)
+
+ 179            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              38 (4)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             175 ('Rare Players: Min. 4')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 180            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              38 (4)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             176 ('Nationalities: Exactly 4')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 181            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             177 ('Players from the same Nation: Max. 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 182            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             178 (75)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             179 ('Team Rating: Min. 75')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 183            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             139 (80)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             140 ('Team Chemistry: Min. 80')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 178            BUILD_LIST               5
+
+ 184            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             180 (1013)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 178            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 185            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             181 (2102)
+                LOAD_CONST             182 ('The Six')
+                LOAD_CONST             183 ('Exchange a squad featuring exactly six nations.')
+                LOAD_CONST             107 (11)
+
+ 186            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              69 (6)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             184 ('Nationalities: Exactly 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 187            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              76 ('Players from the same Nation: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 188            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             185 (70)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             186 ('Team Rating: Min. 70')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 189            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             148 (85)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             149 ('Team Chemistry: Min. 85')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 185            BUILD_LIST               4
+
+ 190            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              24 (1005)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 185            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 191            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             187 (2103)
+                LOAD_CONST             188 ('It Takes Eight')
+                LOAD_CONST             189 ('Exchange an all-Gold squad featuring eight nations.')
+                LOAD_CONST             107 (11)
+
+ 192            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             164 ('Player Quality: Exactly Gold')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 193            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             135 ('Rare Players: Min. 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 194            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST             114 (8)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             190 ('Nationalities: Exactly 8')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 195            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              76 ('Players from the same Nation: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 196            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             191 (88)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             192 ('Team Chemistry: Min. 88')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 191            BUILD_LIST               5
+
+ 197            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             159 (1006)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 191            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 198            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             193 (2104)
+                LOAD_CONST             194 ('National Pride')
+                LOAD_CONST             195 ('Exchange a squad featuring ten nations.')
+                LOAD_CONST             107 (11)
+
+ 199            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              29 ('rare_count')
+                LOAD_CONST              52 (7)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             196 ('Rare Players: Min. 7')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 200            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              80 (10)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             197 ('Nationalities: Exactly 10')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 201            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             139 (80)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             198 ('Team Rating: Min. 80')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 202            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             166 (100)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             167 ('Team Chemistry: Exactly 100')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 198            BUILD_LIST               4
+
+ 203            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             168 (1008)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 198            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 177            BUILD_LIST               4
+
+ 173            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 207            LOAD_CONST             199 (22)
+                LOAD_CONST              45 (2)
+                LOAD_CONST             128 ('ADVANCED')
+                LOAD_CONST              28 (3)
+
+ 208            LOAD_CONST             200 ('League and Nation Hybrid')
+                LOAD_CONST             201 ('Exchange squads with multiple Leagues and Nations.')
+
+ 209            LOAD_CONST              16 (False)
+                LOAD_NAME                6 (coins)
+                PUSH_NULL
+                LOAD_CONST             202 (12000)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 211            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             203 (2201)
+                LOAD_CONST             204 ('The Puzzler')
+                LOAD_CONST             205 ('Build a squad with three nations and two leagues.')
+                LOAD_CONST             107 (11)
+
+ 212            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              86 ('Leagues: Exactly 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 213            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              69 (6)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             206 ('Players from the same League: Max. 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 214            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              40 ('Nationalities: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 215            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              38 (4)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             207 ('Players from the same Nation: Max. 4')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 216            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             208 (77)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             209 ('Team Rating: Min. 77')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 217            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             166 (100)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             210 ('Team Chemistry: Min. 100')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 211            BUILD_LIST               6
+
+ 218            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             180 (1013)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 211            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 219            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             211 (2202)
+                LOAD_CONST             212 ('Intermediate')
+                LOAD_CONST             213 ('Build a squad with five nations and three leagues.')
+                LOAD_CONST             107 (11)
+
+ 220            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              92 ('Leagues: Exactly 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 221            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              38 (4)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             214 ('Players from the same League: Max. 4')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 222            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              55 (5)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              56 ('Nationalities: Exactly 5')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 223            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             177 ('Players from the same Nation: Max. 3')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 224            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             146 (78)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             147 ('Team Rating: Min. 78')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 225            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             166 (100)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             210 ('Team Chemistry: Min. 100')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 219            BUILD_LIST               6
+
+ 226            LOAD_NAME                6 (coins)
+                PUSH_NULL
+                LOAD_CONST             215 (1500)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             216 (1017)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               2
+
+ 219            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 227            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             217 (2203)
+                LOAD_CONST             218 ('Tough')
+                LOAD_CONST             219 ('Build a squad with six nations and six leagues.')
+                LOAD_CONST             107 (11)
+
+ 228            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              69 (6)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             220 ('Leagues: Exactly 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 229            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              72 ('same_league')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              74 ('Players from the same League: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 230            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST              69 (6)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             184 ('Nationalities: Exactly 6')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 231            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              75 ('same_nation')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              73 ('max')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              76 ('Players from the same Nation: Max. 2')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 232            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             139 (80)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             198 ('Team Rating: Min. 80')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 233            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             221 (89)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             222 ('Team Chemistry: Min. 89')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 227            BUILD_LIST               6
+
+ 234            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             168 (1008)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 227            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 235            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             223 (2204)
+                LOAD_CONST             224 ('Hybrid Master')
+                LOAD_CONST             225 ('Build a squad with nine nations and seven leagues.')
+                LOAD_CONST             107 (11)
+
+ 236            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              53 ('league_count')
+                LOAD_CONST              52 (7)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             145 ('Leagues: Exactly 7')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 237            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              39 ('nation_count')
+                LOAD_CONST             124 (9)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             226 ('Nationalities: Exactly 9')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 238            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              77 ('team_rating')
+                LOAD_CONST             227 (82)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             228 ('Team Rating: Min. 82')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 239            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              31 ('chemistry')
+                LOAD_CONST             229 (86)
+                LOAD_CONST               7 ('min')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             230 ('Team Chemistry: Min. 86')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 235            BUILD_LIST               4
+
+ 240            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             231 (1007)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 235            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 210            BUILD_LIST               4
+
+ 206            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 244            LOAD_CONST             105 (30)
+                LOAD_CONST              28 (3)
+                LOAD_CONST             232 ('UPGRADES')
+                LOAD_CONST               4 (1)
+
+ 245            LOAD_CONST             233 ('Bronze Upgrade')
+                LOAD_CONST             234 ('Exchange Bronze players for Two Silver Players.')
+
+ 246            LOAD_CONST             235 (True)
+                BUILD_LIST               0
+
+ 247            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             236 (3001)
+                LOAD_CONST             233 ('Bronze Upgrade')
+                LOAD_CONST             237 ('Exchange eleven Bronze players.')
+                LOAD_CONST             107 (11)
+
+ 248            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST               4 (1)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST              23 ('Player Quality: Exactly Bronze')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 247            BUILD_LIST               1
+
+ 249            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             238 (1012)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 247            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 243            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 252            LOAD_CONST             239 (31)
+                LOAD_CONST              28 (3)
+                LOAD_CONST             232 ('UPGRADES')
+                LOAD_CONST              45 (2)
+
+ 253            LOAD_CONST             240 ('Silver Upgrade')
+                LOAD_CONST             241 ('Exchange Silver players for Three Common Gold Players.')
+
+ 254            LOAD_CONST             235 (True)
+                BUILD_LIST               0
+
+ 255            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             242 (3101)
+                LOAD_CONST             240 ('Silver Upgrade')
+                LOAD_CONST             243 ('Exchange eleven Silver players.')
+                LOAD_CONST             107 (11)
+
+ 256            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              45 (2)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             244 ('Player Quality: Exactly Silver')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 255            BUILD_LIST               1
+
+ 257            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST             245 (1011)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 255            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 251            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+ 260            LOAD_CONST             246 (32)
+                LOAD_CONST              28 (3)
+                LOAD_CONST             232 ('UPGRADES')
+                LOAD_CONST              28 (3)
+
+ 261            LOAD_CONST             247 ('Gold Upgrade')
+                LOAD_CONST             248 ('Exchange Gold players for Two Rare Gold Players.')
+
+ 262            LOAD_CONST             235 (True)
+                BUILD_LIST               0
+
+ 263            LOAD_NAME                8 (challenge)
+                PUSH_NULL
+                LOAD_CONST             249 (3201)
+                LOAD_CONST             247 ('Gold Upgrade')
+                LOAD_CONST             250 ('Exchange eleven Gold players.')
+                LOAD_CONST             107 (11)
+
+ 264            LOAD_NAME                7 (rule)
+                PUSH_NULL
+                LOAD_CONST              21 ('quality')
+                LOAD_CONST              28 (3)
+                LOAD_CONST              22 ('exact')
+                LOAD_CONST               8 (-1)
+                LOAD_CONST             164 ('Player Quality: Exactly Gold')
+                CALL                     5
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+
+ 263            BUILD_LIST               1
+
+ 265            LOAD_NAME                5 (pack)
+                PUSH_NULL
+                LOAD_CONST              17 (1010)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 263            CALL                     6
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                BUILD_LIST               1
+
+ 259            LOAD_CONST              44 (('set_id', 'category_id', 'category', 'priority', 'name', 'description', 'repeatable', 'awards', 'challenges'))
+                BUILD_CONST_KEY_MAP      9
+
+  49            BUILD_LIST              10
+                STORE_NAME               9 (SBC_CATALOG)
+                LOAD_CONST              11 ('list[dict[str, Any]]')
+                LOAD_NAME               10 (__annotations__)
+                LOAD_CONST             251 ('SBC_CATALOG')
+                STORE_SUBSCR
+                CACHE                    0 (counter: 0)
+
+ 270            LOAD_NAME                9 (SBC_CATALOG)
+                GET_ITER
+                LOAD_FAST_AND_CLEAR      0 (entry)
+                SWAP                     2
+        L1:     BUILD_MAP                0
+                SWAP                     2
+                GET_ITER
+        L2:     FOR_ITER                15 (to L3)
+                CACHE                    0 (counter: 0)
+                STORE_FAST               0 (entry)
+                LOAD_NAME               11 (int)
+                PUSH_NULL
+                LOAD_FAST                0 (entry)
+                LOAD_CONST             252 ('set_id')
+                BINARY_SUBSCR
+                CACHE                    0 (counter: 0)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                LOAD_FAST                0 (entry)
+                MAP_ADD                  2
+                JUMP_BACKWARD           17 (to L2)
+                CACHE                    0 (counter: 0)
+        L3:     END_FOR
+                POP_TOP
+        L4:     SWAP                     2
+                STORE_FAST               0 (entry)
+                STORE_NAME              12 (SET_BY_ID)
+
+ 273            LOAD_NAME                9 (SBC_CATALOG)
+                GET_ITER
+
+ 271            LOAD_FAST_AND_CLEAR      1 (set_entry)
+                LOAD_FAST_AND_CLEAR      2 (challenge_entry)
+                SWAP                     3
+        L5:     BUILD_MAP                0
+                SWAP                     2
+
+ 273            GET_ITER
+        L6:     FOR_ITER                29 (to L9)
+                CACHE                    0 (counter: 0)
+                STORE_FAST               1 (set_entry)
+
+ 274            LOAD_FAST                1 (set_entry)
+                LOAD_CONST             253 ('challenges')
+                BINARY_SUBSCR
+                CACHE                    0 (counter: 0)
+                GET_ITER
+                GET_ITER
+        L7:     FOR_ITER                16 (to L8)
+                CACHE                    0 (counter: 0)
+                STORE_FAST               2 (challenge_entry)
+
+ 272            LOAD_NAME               11 (int)
+                PUSH_NULL
+                LOAD_FAST                2 (challenge_entry)
+                LOAD_CONST              10 ('challenge_id')
+                BINARY_SUBSCR
+                CACHE                    0 (counter: 0)
+                CALL                     1
+                CACHE                    0 (counter: 0)
+                CACHE                    0 (func_version: 0)
+                CACHE                    0
+                LOAD_FAST_LOAD_FAST     18 (set_entry, challenge_entry)
+                BUILD_TUPLE              2
+                MAP_ADD                  3
+                JUMP_BACKWARD           18 (to L7)
+                CACHE                    0 (counter: 0)
+
+ 274    L8:     END_FOR
+                POP_TOP
+
+ 272            JUMP_BACKWARD           31 (to L6)
+                CACHE                    0 (counter: 0)
+
+ 273    L9:     END_FOR
+                POP_TOP
+
+ 271   L10:     SWAP                     3
+                STORE_FAST               2 (challenge_entry)
+                STORE_FAST               1 (set_entry)
+                STORE_NAME              13 (CHALLENGE_BY_ID)
+                LOAD_CONST             254 ('dict[int, tuple[dict[str, Any], dict[str, Any]]]')
+                LOAD_NAME               10 (__annotations__)
+                LOAD_CONST             255 ('CHALLENGE_BY_ID')
+                STORE_SUBSCR
+                CACHE                    0 (counter: 0)
+                EXTENDED_ARG             1
+                RETURN_CONST           256 (None)
+
+  --   L11:     SWAP                     2
+                POP_TOP
+
+ 270            SWAP                     2
+                STORE_FAST               0 (entry)
+                RERAISE                  0
+
+  --   L12:     SWAP                     2
+                POP_TOP
+
+ 271            SWAP                     3
+                STORE_FAST               2 (challenge_entry)
+                STORE_FAST               1 (set_entry)
+                RERAISE                  0
+ExceptionTable:
+  L1 to L4 -> L11 [2]
+  L5 to L10 -> L12 [3]
+
+Disassembly of <code object pack at 0x7fb7bd131a00, file "localfut20/sbc_catalog.py", line 12>:
+ 12           RESUME                   0
+
+ 13           LOAD_CONST               1 ('PACK')
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (pack_id)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (count)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 (('type', 'pack_id', 'count'))
+              BUILD_CONST_KEY_MAP      3
+              RETURN_VALUE
+
+Disassembly of <code object coins at 0x7fb7c5005100, file "localfut20/sbc_catalog.py", line 16>:
+ 16           RESUME                   0
+
+ 17           LOAD_CONST               1 ('COINS')
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (amount)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 (1)
+              LOAD_CONST               3 (('type', 'value', 'count'))
+              BUILD_CONST_KEY_MAP      3
+              RETURN_VALUE
+
+Disassembly of <code object rule at 0x7fb7c560cb00, file "localfut20/sbc_catalog.py", line 20>:
+ 20           RESUME                   0
+
+ 22           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (kind)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 23           LOAD_GLOBAL              3 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 24           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (scope)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 25           LOAD_GLOBAL              3 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (count)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 26           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                4 (text)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 21           LOAD_CONST               1 (('kind', 'value', 'scope', 'count', 'text'))
+              BUILD_CONST_KEY_MAP      5
+              RETURN_VALUE
+
+Disassembly of <code object challenge at 0x7fb7c5697d80, file "localfut20/sbc_catalog.py", line 30>:
+ 30           RESUME                   0
+
+ 39           LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (challenge_id)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 40           LOAD_GLOBAL              3 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (name)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 41           LOAD_GLOBAL              3 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (description)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 42           LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (players)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 43           LOAD_CONST               1 ('f442')
+
+ 44           LOAD_GLOBAL              5 (rule + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               2 ('player_count')
+              LOAD_FAST                3 (players)
+              LOAD_CONST               3 ('exact')
+              LOAD_CONST               4 ('Players in the Squad: ')
+              LOAD_FAST                3 (players)
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              LOAD_CONST               5 (('text',))
+              CALL_KW                  4
+              BUILD_LIST               1
+              LOAD_FAST                4 (rules)
+              LIST_EXTEND              1
+
+ 45           LOAD_FAST                5 (awards)
+
+ 38           LOAD_CONST               6 (('challenge_id', 'name', 'description', 'players', 'formation', 'rules', 'awards'))
+              BUILD_CONST_KEY_MAP      7
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.sbc_catalog :: pack
+filename='localfut20/sbc_catalog.py' firstlineno=12 argcount=2 posonly=0 kwonly=0 locals=2 stacksize=5 flags=0x1000003
+====================================================================================================
+ 12           RESUME                   0
+
+ 13           LOAD_CONST               1 ('PACK')
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (pack_id)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (count)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 (('type', 'pack_id', 'count'))
+              BUILD_CONST_KEY_MAP      3
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.sbc_catalog :: coins
+filename='localfut20/sbc_catalog.py' firstlineno=16 argcount=1 posonly=0 kwonly=0 locals=1 stacksize=4 flags=0x1000003
+====================================================================================================
+ 16           RESUME                   0
+
+ 17           LOAD_CONST               1 ('COINS')
+              LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (amount)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+              LOAD_CONST               2 (1)
+              LOAD_CONST               3 (('type', 'value', 'count'))
+              BUILD_CONST_KEY_MAP      3
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.sbc_catalog :: rule
+filename='localfut20/sbc_catalog.py' firstlineno=20 argcount=5 posonly=0 kwonly=0 locals=5 stacksize=7 flags=0x1000003
+====================================================================================================
+ 20           RESUME                   0
+
+ 22           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (kind)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 23           LOAD_GLOBAL              3 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (value)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 24           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (scope)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 25           LOAD_GLOBAL              3 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (count)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 26           LOAD_GLOBAL              1 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                4 (text)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 21           LOAD_CONST               1 (('kind', 'value', 'scope', 'count', 'text'))
+              BUILD_CONST_KEY_MAP      5
+              RETURN_VALUE
+
+
+====================================================================================================
+localfut20.sbc_catalog :: challenge
+filename='localfut20/sbc_catalog.py' firstlineno=30 argcount=6 posonly=0 kwonly=0 locals=6 stacksize=12 flags=0x1000003
+====================================================================================================
+ 30           RESUME                   0
+
+ 39           LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                0 (challenge_id)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 40           LOAD_GLOBAL              3 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                1 (name)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 41           LOAD_GLOBAL              3 (str + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                2 (description)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 42           LOAD_GLOBAL              1 (int + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_FAST                3 (players)
+              CALL                     1
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (func_version: 0)
+              CACHE                    0
+
+ 43           LOAD_CONST               1 ('f442')
+
+ 44           LOAD_GLOBAL              5 (rule + NULL)
+              CACHE                    0 (counter: 0)
+              CACHE                    0 (index: 0)
+              CACHE                    0 (module_keys_version: 0)
+              CACHE                    0 (builtin_keys_version: 0)
+              LOAD_CONST               2 ('player_count')
+              LOAD_FAST                3 (players)
+              LOAD_CONST               3 ('exact')
+              LOAD_CONST               4 ('Players in the Squad: ')
+              LOAD_FAST                3 (players)
+              FORMAT_SIMPLE
+              BUILD_STRING             2
+              LOAD_CONST               5 (('text',))
+              CALL_KW                  4
+              BUILD_LIST               1
+              LOAD_FAST                4 (rules)
+              LIST_EXTEND              1
+
+ 45           LOAD_FAST                5 (awards)
+
+ 38           LOAD_CONST               6 (('challenge_id', 'name', 'description', 'players', 'formation', 'rules', 'awards'))
+              BUILD_CONST_KEY_MAP      7
+              RETURN_VALUE
+
+

@@ -1,0 +1,81 @@
+{
+  "sourceCsv": "source-data/Fifa 20 Fut Players.csv",
+  "sourceCsvRows": 25034,
+  "finalPlayerDefinitions": 25340,
+  "csvRowsMappedToExistingResourceIds": 23962,
+  "csvRowsAddedAsNewResourceIds": 1072,
+  "compatibilityHoldovers": 306,
+  "syntheticBaseAssets": [
+    {
+      "assetId": 15000000,
+      "identity": {
+        "nameKey": "ivanusec",
+        "countryKey": "croatia",
+        "height": 175,
+        "weight": 76
+      }
+    },
+    {
+      "assetId": 15000001,
+      "identity": {
+        "nameKey": "mujicagarcia",
+        "countryKey": "spain",
+        "height": null,
+        "weight": null
+      }
+    }
+  ],
+  "starterPlayerIdsPreserved": true,
+  "rarityCounts": {
+    "Non-Rare Silver": 7130,
+    "Non-Rare Bronze": 5133,
+    "Rare Silver": 3777,
+    "Rare Bronze": 2618,
+    "Non-Rare Gold": 1545,
+    "Rare Gold": 981,
+    "Team of the Week": 785,
+    "Champions League": 595,
+    "Sudamericana": 525,
+    "Libertadores": 486,
+    "Team of the Season So Far": 280,
+    "Icon": 271,
+    "TOTW Moments": 123,
+    "Summer Heat": 106,
+    "MOTM": 103,
+    "Icon Moments": 89,
+    "TOTY Nominee": 56,
+    "Flashback": 55,
+    "Future Stars": 49,
+    "Season Reward": 47,
+    "UEL Man of the Match": 41,
+    "SBC Reward": 40,
+    "FUT Birthday": 37,
+    "Player Moments": 37,
+    "Headliners": 35,
+    "UCL Road to the Knockouts": 33,
+    "Out of Position": 32,
+    "FUTMAS": 31,
+    "Libertadores Kick-Off": 31,
+    "Ultimate Scream": 31,
+    "Ones to Watch": 28,
+    "Hero": 23,
+    "Team of the Group Stage": 23,
+    "Winter Refresh": 20,
+    "Champions League MOTM": 18,
+    "UEL Road to the Knockouts": 17,
+    "Libertadores MOTM": 12,
+    "Premium SBC Reward": 12,
+    "TOTS Moments": 12,
+    "Team of the Year": 12,
+    "Bundesliga POTM": 11,
+    "Objective Player": 10,
+    "Premier League POTM": 10,
+    "Euro Make Your Mark": 6,
+    "La Liga POTM": 6,
+    "Award Winner": 5,
+    "Ligue 1 POTM": 5,
+    "TOTGS Europa League": 4,
+    "Player of the Month": 2,
+    "Record Breaker": 2
+  }
+}

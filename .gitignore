@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local saves and generated runtime state
+runtime/data/*
+!runtime/data/.gitkeep
+runtime/backups/*
+!runtime/backups/.gitkeep
+runtime/logs/*
+!runtime/logs/.gitkeep
+logs/crash-reports/*
+!logs/crash-reports/.gitkeep
+runtime/*.log
+runtime/*.error.log
+runtime/status.json
+runtime/launcher-status.json
+runtime/launcher-profile.json
+runtime/launcher-processes.json
+runtime/session.json
+runtime/build-info.json
+
+# Diagnostics / local distributions
+OpenFUT20-Diagnostics-*.zip
+OpenFUT20-PlayerPick-Crash-*.zip
+*.zip

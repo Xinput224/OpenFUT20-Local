@@ -1,0 +1,55 @@
+localfut20
+certificate_path
+certificate_key_path
+redirector_port
+blaze_port
+redirector_bind_host
+0.0.0.0
+local_host
+127.0.0.1
+runtime_root
+status.json
+<?xml version="1.0" encoding="UTF-8"?>
+<serverinstanceinfo>
+  <address member="0">
+    <valu>
+      <hostname>{host}</hostname>
+      <ip>2130706433</ip>
+      <port>{port}</port>
+    </valu>
+  </address>
+  <secure>0</secure>
+</serverinstanceinfo>
+utf-8
+milestones
+%Y-%m-%dT%H:%M:%SZ
+TLS
+ OBSERVED
+at
+[FIFA20] State: 
+ component=TLS detail=
+Handler
+HTTP/1.1
+[REDIRECTOR]
+Content-Length
+0
+TLS_CONNECTED
+:
+SERVER_INSTANCE
+ 
+[Redirector] method=%s path=%s requestBytes=%d responseBytes=%d bodyPreview=%r
+Content-Type
+application/xml
+Connection
+close
+Missing certs. Run GENERATE_LOCAL_CERT.cmd first.
+AES256-SHA:@SECLEVEL=0
+AES256-SHA
+REDIRECTOR_READY
+FIFA 20 TLS redirector listening on 
+SNI target: 
+redirector_host
+spring18.gosredirector.ea.com
+Certificate issuer: local GOS 2015 Certificate Authority bridge
+Returning local Blaze endpoint 
+__main__

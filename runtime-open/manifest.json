@@ -1,0 +1,45 @@
+{
+  "format": "OpenFUT20-plaintext-runtime-v1",
+  "modules": {
+    "localfut20.auth_guard": {
+      "file": "localfut20/auth_guard.py",
+      "marshal_sha256": "10b05d37c8c48f5fd1e641c658442f37e10e5e45622094f71ab5a32b5940c6f9",
+      "marshal_bytes": 261
+    },
+    "localfut20.config_loader": {
+      "file": "localfut20/config_loader.py",
+      "marshal_sha256": "a9bc349b968b918ea2787b6cf152d7a9329eefeb3cad2d12c8e65bc911ab862b",
+      "marshal_bytes": 9313
+    },
+    "localfut20.sbc_catalog": {
+      "file": "localfut20/sbc_catalog.py",
+      "marshal_sha256": "ccb024df62f1eae03e414d9280bcbddf84dafd3b62e6cc9795eb8b1a97194c34",
+      "marshal_bytes": 13834
+    },
+    "localfut20.offline_data": {
+      "file": "localfut20/offline_data.py",
+      "marshal_sha256": "728d9e2e108ea3cca7d13568db413d8a196189cbe22abbc75a07a4961e69d9cb",
+      "marshal_bytes": 16038
+    },
+    "localfut20.control_server": {
+      "file": "localfut20/control_server.py",
+      "marshal_sha256": "6f7e3fde2419e01312e10823b0638034fe9d7acda57d8bdca143c4d257aecd6a",
+      "marshal_bytes": 8129
+    },
+    "localfut20.server": {
+      "file": "localfut20/server.py",
+      "marshal_sha256": "840fb8ff2822ac5c688d46e25e41eeba0f9e6412d263989005c54c570f822418",
+      "marshal_bytes": 730070
+    },
+    "redirector_tls": {
+      "file": "runtime-source/redirector_tls.py",
+      "marshal_sha256": "1908626a4cff204e500e775516d527dd809f56e5a0c07bd3255b4ed0be37f637",
+      "marshal_bytes": 7355
+    },
+    "trust_patch": {
+      "file": "runtime-source/PATCH_RUNNING_FIFA20_TRUST.py",
+      "marshal_sha256": "410e6a3b93c9f81f21bf2509c1ea6489a076514469072b9c6a144adf7428ce0d",
+      "marshal_bytes": 16150
+    }
+  }
+}

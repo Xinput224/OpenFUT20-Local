@@ -1,0 +1,168 @@
+Permanent FIFA 20 Squad Building Challenge catalog.
+
+The live-service SBC rotation is intentionally not reproduced here: those
+challenges expired years ago.  This catalog contains the always-available
+onboarding, foundation, advanced hybrid, and upgrade groups from FIFA 20.
+
+PACK
+COINS
+min
+challenge_id
+list[dict[str, Any]]
+f442
+player_count
+exact
+Players in the Squad: 
+BASIC
+Let's Get Started
+Learn the basics of exchanging players for rewards.
+First Exchange
+Exchange one Bronze player from your Club.
+quality
+Player Quality: Exactly Bronze
+The Second Step
+Exchange three Common players.
+rare_count
+Common Players: Exactly 3
+chemistry
+Team Chemistry: Min. 12
+The Third Step
+Exchange four players from three different nations.
+nation_count
+Nationalities: Exactly 3
+Team Chemistry: Min. 17
+League and Nation Basics
+Build squads with basic League and Nation requirements.
+One League Attack
+Use players from one league and several nations.
+league_count
+Leagues: Exactly 1
+Nationalities: Exactly 5
+Team Chemistry: Min. 45
+One Nation Midfield
+Use players from one nation and several leagues.
+Silver Players: Min. 3
+Leagues: Exactly 5
+Nationalities: Exactly 1
+Multi League & Nation
+Use chemistry links across clubs, leagues and nations.
+club_count
+Clubs: Exactly 6
+same_league
+max
+Players from the same League: Max. 2
+same_nation
+Players from the same Nation: Max. 2
+team_rating
+Team Rating: Min. 55
+Let's Keep Going
+Learn more Squad Building techniques.
+Brick Slots
+Use the open slots to build chemistry.
+Leagues: Exactly 2
+Nationalities: Exactly 2
+Team Chemistry: Min. 43
+The Correct Position
+Place players in their correct positions.
+Leagues: Exactly 3
+Perfect Link
+Use strong club, league and nation links.
+Silver Players: Min. 2
+same_club
+Players from the same Club: Max. 2
+Team Chemistry: Min. 40
+Loyal Lads
+Use loyalty to reach the chemistry target.
+Team Chemistry: Min. 30
+Let's Move Forward
+Exchange Bronze players to improve your starter squad.
+Defensive Development
+Exchange Bronze players for a Gold defender reward.
+Team Chemistry: Min. 8
+A Better Buildup
+Exchange Bronze players for a Gold midfielder reward.
+Advancing Attack
+Exchange Bronze players for a Gold attacker reward.
+Team Chemistry: Min. 9
+ADVANCED
+Hybrid Leagues
+Exchange multi-league squads that increase in difficulty.
+Rare Fives
+Exchange a squad featuring exactly five leagues.
+Rare Players: Min. 5
+Players from the same League: Max. 3
+Team Rating: Min. 68
+Team Chemistry: Min. 80
+Seven Suspects
+Exchange a squad featuring exactly seven leagues.
+Leagues: Exactly 7
+Team Rating: Min. 78
+Team Chemistry: Min. 85
+Prime Nine
+Exchange a squad featuring exactly nine leagues.
+Leagues: Exactly 9
+Team Rating: Min. 79
+Team Chemistry: Min. 99
+Squad Goals
+Exchange an all-Gold squad featuring eleven leagues.
+Rare Players: Min. 6
+Player Quality: Exactly Gold
+Leagues: Exactly 11
+Team Chemistry: Exactly 100
+Hybrid Nations
+Exchange multi-nation squads that increase in difficulty.
+Quads
+Exchange a squad featuring exactly four nations.
+Rare Players: Min. 4
+Nationalities: Exactly 4
+Players from the same Nation: Max. 3
+Team Rating: Min. 75
+The Six
+Exchange a squad featuring exactly six nations.
+Nationalities: Exactly 6
+Team Rating: Min. 70
+It Takes Eight
+Exchange an all-Gold squad featuring eight nations.
+Nationalities: Exactly 8
+Team Chemistry: Min. 88
+National Pride
+Exchange a squad featuring ten nations.
+Rare Players: Min. 7
+Nationalities: Exactly 10
+Team Rating: Min. 80
+League and Nation Hybrid
+Exchange squads with multiple Leagues and Nations.
+The Puzzler
+Build a squad with three nations and two leagues.
+Players from the same League: Max. 6
+Players from the same Nation: Max. 4
+Team Rating: Min. 77
+Team Chemistry: Min. 100
+Intermediate
+Build a squad with five nations and three leagues.
+Players from the same League: Max. 4
+Tough
+Build a squad with six nations and six leagues.
+Leagues: Exactly 6
+Team Chemistry: Min. 89
+Hybrid Master
+Build a squad with nine nations and seven leagues.
+Nationalities: Exactly 9
+Team Rating: Min. 82
+Team Chemistry: Min. 86
+UPGRADES
+Bronze Upgrade
+Exchange Bronze players for Two Silver Players.
+Exchange eleven Bronze players.
+Silver Upgrade
+Exchange Silver players for Three Common Gold Players.
+Exchange eleven Silver players.
+Player Quality: Exactly Silver
+Gold Upgrade
+Exchange Gold players for Two Rare Gold Players.
+Exchange eleven Gold players.
+SBC_CATALOG
+set_id
+challenges
+dict[int, tuple[dict[str, Any], dict[str, Any]]]
+CHALLENGE_BY_ID
